@@ -337,18 +337,6 @@
     [id] { scroll-margin-top: calc(var(--header-h, 52px) + 12px); }
   </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4FV8TJKWYK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4FV8TJKWYK');
-</script>
-
-  
 <body>
   <header>
     <div class="header-inner">
@@ -1344,7 +1332,7 @@
     (function () {
       /* ----- À RENSEIGNER ----- */
       var GTM_ID = '';   // ex. 'GTM-ABC1234'  (recommandé : GA4 se configure ensuite dans GTM)
-      var GA4_ID = '';   // ex. 'G-ABCDE12345' (à n'utiliser que si GTM_ID est vide)
+      var GA4_ID = 'G-4FV8TJKWYK';   // GA4 direct (GTM_ID vide)
       /* ------------------------ */
 
       var KEY = 'pub-consent';
