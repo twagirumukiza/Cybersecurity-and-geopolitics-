@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dépendances numériques et résilience organisationnelle | Digital Dependencies and Organisational Resilience</title>
-  <meta name="description" content="Une grille d'analyse du risque cyber d'origine géopolitique — An Analytical Grid for Geopolitically Driven Cyber Risk. Innocent Twagirumukiza, October 2026.">
+  <meta name="description" content="Une grille d'analyse du risque cyber en contexte géopolitique — An Analytical Grid for Cyber Risk in a Geopolitical Context. Innocent Twagirumukiza, October 2026.">
   <meta name="author" content="Innocent Twagirumukiza">
   <style>
     :root {
@@ -321,7 +321,16 @@
         max-width: var(--max-width);
       }
       .overlay { display: none !important; }
+      /* Le sommaire se place sous l'en-tête pour ne pas masquer le bouton ☰ */
+      .sidebar {
+        top: var(--header-h, 52px);
+        height: calc(100vh - var(--header-h, 52px));
+        z-index: 900;
+      }
     }
+
+    /* Ancres : ne pas disparaître sous l'en-tête fixe */
+    [id] { scroll-margin-top: calc(var(--header-h, 52px) + 12px); }
   </style>
 </head>
 <body>
@@ -451,7 +460,7 @@
   <main id="mainContent">
     <!-- ==================== FRENCH ==================== -->
     <article id="content-fr" class="lang-block active">
-      <h1>Dépendances numériques et résilience organisationnelle : une grille d'analyse du risque cyber d'origine géopolitique</h1>
+      <h1>Dépendances numériques et résilience organisationnelle : une grille d'analyse du risque cyber en contexte géopolitique</h1>
       <p class="meta">Innocent Twagirumukiza · Octobre 2026</p>
 
       <div class="download-btns">
@@ -462,7 +471,7 @@
       <section id="fr-abstract" class="abstract-box">
         <h2>Résumé</h2>
         <p><strong>Contexte.</strong> Le risque cyber est encore largement pensé à partir du périmètre technique que l'organisation administre elle-même. Les rapports institutionnels récents et plusieurs incidents majeurs montrent pourtant que son exposition tient aussi à des ressources qu'elle ne contrôle pas : fournisseurs logiciels, intermédiaires de services, infrastructures, composants matériels, capacités de calcul.</p>
-        <p><strong>Objectif.</strong> L'article cherche à déterminer dans quelles conditions une dépendance externe devient un vecteur de propagation d'un risque d'origine géopolitique, et comment en tenir compte dans la gouvernance du risque cyber.</p>
+        <p><strong>Objectif.</strong> L'article cherche à déterminer dans quelles conditions une dépendance externe devient un vecteur de propagation d'un risque cyber, y compris lorsque celui-ci s'inscrit dans un contexte géopolitique, quel rôle y joue la dimension géopolitique, et comment en tenir compte dans la gouvernance du risque cyber.</p>
         <p><strong>Méthode.</strong> Une analyse conceptuelle propose une typologie de cinq catégories de dépendances et une grille de cinq dimensions (dépendance, concentration, substitution, propagation, résilience). La grille est ensuite appliquée à six situations documentées par des sources publiques : NotPetya et Maersk, SolarWinds, le réseau électrique ukrainien de 2015, Change Healthcare, les terres rares et les dépendances liées à l'intelligence artificielle. Chaque cas reçoit un niveau de preuve quant à sa dimension géopolitique.</p>
         <p><strong>Résultats.</strong> La distinction entre périmètre technique de sécurité et périmètre de dépendance permet de lire ensemble des événements de nature différente. Dans les cas étudiés, la criticité d'une dépendance paraît liée davantage à la concentration de l'offre, au délai de substitution et à l'absence de mode dégradé qu'à la nature de l'acteur à l'origine de la perturbation. Un lien géopolitique formellement établi n'existe que pour une partie des cas.</p>
         <p><strong>Implications.</strong> Six orientations sont proposées aux fonctions de gouvernance, de risque et de conformité (GRC), de la cartographie des dépendances réelles au test du fonctionnement dégradé, en passant par la prise en compte de la chaîne d'approvisionnement de l'IA.</p>
@@ -478,7 +487,7 @@
       <p>Ce déplacement pose un problème à la fois de recherche et de pratique. Les travaux sur l'interdépendance et la coercition portent surtout sur les États. Ceux qui traitent des chaînes d'approvisionnement abordent souvent les perturbations de manière générique. Les dispositifs de gestion du risque cyber, enfin, restent centrés sur le périmètre technique. Ces trois corpus se croisent peu, et aucun ne donne à un responsable de la sécurité des systèmes d'information (RSSI) une méthode pour décider quelles dépendances externes méritent une attention particulière quand le contexte géopolitique se dégrade.</p>
 
       <h3 id="fr-1-2">1.2 Question de recherche et contribution</h3>
-      <p>La question centrale de l'article est la suivante : dans quelles conditions une dépendance externe devient-elle un vecteur de propagation d'un risque d'origine géopolitique, et comment la gouvernance du risque cyber peut-elle en rendre compte ? Trois sous-questions la déclinent. Comment caractériser une dépendance qui compte, par opposition à une simple relation commerciale ? Quels mécanismes de propagation distinguent des événements de nature différente, qu'ils relèvent ou non d'une cyberattaque ? Quelles conséquences en tirer pour les fonctions de gouvernance, de risque et de conformité (GRC) ?</p>
+      <p>La question centrale de l'article est la suivante : dans quelles conditions une dépendance externe devient-elle un vecteur de propagation d'un risque cyber en contexte géopolitique, quel rôle la dimension géopolitique y joue-t-elle, et comment la gouvernance du risque cyber peut-elle en rendre compte ? Trois sous-questions la déclinent. Comment caractériser une dépendance qui compte, par opposition à une simple relation commerciale ? Quels mécanismes de propagation distinguent des événements de nature différente, qu'ils relèvent ou non d'une cyberattaque ? Quelles conséquences en tirer pour les fonctions de gouvernance, de risque et de conformité (GRC) ?</p>
       <p>L'article apporte quatre contributions. Il distingue un périmètre technique de sécurité et un périmètre de dépendance. Il propose une typologie de cinq catégories de dépendances et une grille d'analyse de cinq dimensions. Il applique cette grille à six situations documentées, en précisant pour chacune le niveau de preuve du lien géopolitique. Il en déduit six orientations opérationnelles pour la GRC. La démarche est celle d'un article conceptuel : elle procède par synthèse de la littérature puis par confrontation du cadre proposé à des cas (Jaakkola, 2020). Elle ne prétend pas à un test statistique.</p>
 
       <h3 id="fr-1-3">1.3 Statut des énoncés et plan</h3>
@@ -556,7 +565,7 @@
       <p>La dimension géopolitique n'entre pas dans la grille comme un score de plus. Elle est lue à travers des facteurs observables : restrictions commerciales, tensions diplomatiques, concentration industrielle, dépendance à des infrastructures situées à l'étranger, contraintes juridiques, possibilité de sanctions, difficultés d'accès aux services de maintenance. Pour les cas étudiés, elle est consignée à part, sous la forme d'un niveau de preuve défini en 4.4.</p>
 
       <h3 id="fr-3-5">3.5 Propositions</h3>
-      <p>Le cadre conduit à trois propositions, que la section 6 confronte aux cas.</p>
+      <p>Le cadre conduit à trois propositions, que la section 6 confronte aux cas. Elles sont formulées comme des hypothèses de travail : P1 et P3 sont proches de l'intuition et servent surtout à vérifier que la grille ordonne correctement les cas, tandis que P2, qui oppose le caractère étatique de l'acteur à la position structurelle de la dépendance, est la plus discriminante.</p>
       <p><strong>P1.</strong> La criticité d'une dépendance augmente avec la concentration de l'offre et avec le délai de substitution, quelle que soit la nature, cyber ou non, de l'événement qui la révèle.</p>
       <p><strong>P2.</strong> La gravité de l'impact sur une organisation dépend moins du caractère étatique de l'acteur à l'origine de la perturbation que de la place qu'occupe la dépendance dans l'architecture des fonctions essentielles, en particulier lorsqu'elle s'accompagne de privilèges étendus ou d'une position centrale dans un secteur.</p>
       <p><strong>P3.</strong> La capacité de fonctionner en mode dégradé modère la relation entre indisponibilité d'une ressource et perte de fonction : plus elle est solide, plus la durée de la perte est limitée.</p>
@@ -570,7 +579,7 @@
       <h3 id="fr-4-3">4.3 Sources</h3>
       <p>Le corpus mobilise des rapports d'agences publiques et d'institutions européennes, des textes réglementaires, des communications officielles d'attribution, des rapports annuels d'entreprise et des rapports d'audit publics. Les sources primaires sont préférées. La presse spécialisée n'intervient que pour des éléments factuels absents des autres sources, et elle est alors identifiée comme telle. Chaque affirmation factuelle du texte renvoie à une source de la liste de références.</p>
       <h3 id="fr-4-4">4.4 Codage</h3>
-      <p>Chaque cas est analysé selon les cinq dimensions de la grille (3.4). Les quatre premières reçoivent un niveau d'exposition (faible, modérée, élevée), la cinquième un niveau de capacité (faible, partielle, solide). Le codage est qualitatif et argumenté dans le texte du cas.</p>
+      <p>Chaque cas est analysé selon les cinq dimensions de la grille (3.4). Les quatre premières reçoivent un niveau d'exposition (faible, modérée, élevée), la cinquième un niveau de capacité (faible, partielle, solide). Le codage est qualitatif ; il est argumenté dans le texte du cas et justifié dimension par dimension à l'annexe D.</p>
       <p>La dimension géopolitique est traitée séparément, par un niveau de preuve en quatre positions. Le niveau A désigne une attribution étatique officielle ou une inculpation documentée. Le niveau B correspond à un contexte géopolitique documenté sans attribution formelle partagée. Le niveau C signale un impact systémique documenté sans lien géopolitique établi. Le niveau D s'applique à une perturbation résultant d'une décision ou d'une politique publique qui n'est pas une opération cyber. Cette séparation évite de présumer une dimension géopolitique là où elle n'est pas démontrée, et de la nier là où elle l'est.</p>
       <h3 id="fr-4-5">4.5 Validité et biais</h3>
       <p>La validité de construit repose sur la triangulation des sources et sur la distinction explicite entre faits, interprétations et propositions. Les biais probables sont de trois ordres. La disponibilité de la documentation avantage les incidents de grande ampleur et très commentés. Le regard rétrospectif tend à rendre l'enchaînement des causes plus lisible qu'il ne l'était pour les acteurs. Enfin, le codage a été réalisé par un seul analyste, ce qui limite la fiabilité inter-codeurs. La section 8 revient sur ces limites.</p>
@@ -580,7 +589,7 @@
       <p>L'incident NotPetya de juin 2017 offre un exemple net de propagation du risque au-delà de l'organisation initialement exposée. Le logiciel malveillant s'est diffusé à l'échelle internationale après avoir été introduit dans une chaîne de distribution logicielle utilisée en Ukraine. A. P. Moller-Maersk, groupe de transport maritime et de logistique, a confirmé que ses systèmes avaient été touchés et que ses activités avaient été perturbées. Dans son rapport annuel 2017, l'entreprise estime l'impact de l'attaque entre 250 et 300 millions de dollars, concentré sur Maersk Line (A. P. Moller-Maersk, 2018). Des récits journalistiques détaillés rapportent que la reconstruction du réseau a dépendu en partie d'une copie préservée presque par hasard d'un contrôleur de domaine (Greenberg, 2018).</p>
       <p>La dépendance mobilisée est logicielle : la confiance accordée à un canal de mise à jour. L'intérêt du cas tient moins à l'ampleur des dommages informatiques qu'à la manière dont une compromission logicielle a atteint une entreprise dont les opérations reposent sur la coordination de systèmes numériques, d'installations portuaires, de flux de marchandises et de partenaires. La perturbation interne a gagné les opérations physiques, les clients et les partenaires commerciaux : un incident informatique est devenu un problème de continuité économique.</p>
       <p>La dimension géopolitique est établie. Les autorités britanniques et américaines ont publiquement attribué NotPetya à l'armée russe le 15 février 2018 (The White House, 2018), et l'inculpation d'officiers du renseignement militaire russe en 2020 y a rattaché l'opération (U.S. Department of Justice, 2020). Le cas relève du niveau A. Il montre qu'une action menée dans un contexte régional peut produire des effets économiques bien au-delà de son théâtre initial.</p>
-      <p>Lecture par la grille : la dépendance est élevée, la concentration modérée (un logiciel répandu mais local), la substitution modérée, la propagation élevée et la résilience faible, la reprise ayant tenu à des circonstances en partie fortuites. Pour l'organisation, l'enseignement est qu'elle doit être en mesure de contenir les effets d'une attaque qui ne la visait pas nécessairement en priorité.</p>
+      <p>Lecture par la grille : la dépendance est élevée, la concentration modérée (un logiciel répandu mais local), la substitution modérée (le logiciel comptable est lui-même remplaçable ; c'est la reconstruction du parc informatique, de l'ordre de quelques jours à quelques semaines selon les récits disponibles, qui a conditionné la reprise), la propagation élevée et la résilience faible, la reprise ayant tenu à des circonstances en partie fortuites. Pour l'organisation, l'enseignement est qu'elle doit être en mesure de contenir les effets d'une attaque qui ne la visait pas nécessairement en priorité.</p>
 
       <h3 id="fr-5-2">5.2 SolarWinds (2020)</h3>
       <p>La compromission de la plateforme de supervision Orion de SolarWinds, révélée en décembre 2020, illustre une autre forme de dépendance : celle qui repose sur la confiance accordée aux outils logiciels et à leurs mécanismes de mise à jour. Des versions légitimes du logiciel avaient été altérées pour y intégrer le code malveillant SUNBURST. Les mises à jour distribuées aux clients ont ainsi servi de vecteur d'intrusion. Selon l'éditeur, qui avait notifié environ 33 000 clients d'Orion, moins de 18 000 clients auraient installé une version contenant le code malveillant (SolarWinds Corporation, 2020). Le CERT-FR a documenté l'incident et recommandé aux organisations concernées de vérifier leurs versions, de rechercher des signes de compromission et de tenir compte du risque pesant sur les environnements administrés par la plateforme (CERT-FR, 2020). La CISA américaine a, de son côté, imposé aux agences fédérales la déconnexion des produits Orion concernés (CISA, 2020).</p>
@@ -591,13 +600,13 @@
       <h3 id="fr-5-3">5.3 Le réseau électrique ukrainien (2015)</h3>
       <p>L'attaque de décembre 2015 contre des opérateurs de distribution d'électricité en Ukraine est un cas central pour comprendre les conséquences physiques d'une opération numérique. Les coupures ont touché environ 225 000 clients pendant plusieurs heures, jusqu'à environ six heures selon les analyses. Les attaquants, qui disposaient d'identifiants légitimes, ont pris le contrôle d'interfaces de commande pour provoquer les interruptions, puis ont effacé des systèmes au moyen du logiciel KillDisk, ce qui a compliqué la reprise à distance et obligé les opérateurs à passer en mode manuel (CISA, 2016 ; Lee et al., 2016).</p>
       <p>Le cas met en évidence l'interdépendance entre systèmes d'information, technologies opérationnelles et fonctions essentielles d'un territoire. L'indisponibilité d'un système de contrôle ne se traduit pas seulement par une perte de données ou une interruption d'application : elle peut affecter directement la distribution d'une ressource indispensable. Les infrastructures civiles peuvent donc être visées dans un contexte de confrontation et devenir des instruments de pression stratégique.</p>
-      <p>Le niveau de preuve est A : l'inculpation américaine de 2020 vise des officiers du renseignement militaire russe pour les attaques contre le réseau ukrainien (U.S. Department of Justice, 2020), et l'alerte publiée par la CISA attribue la campagne à des acteurs étatiques russes (CISA, 2016).</p>
-      <p>Lecture par la grille : dépendance élevée, concentration modérée (trois distributeurs aux architectures proches), substitution faible, une conduite manuelle des équipements restant possible, propagation modérée, résilience partielle. Ce dernier point mérite d'être souligné : la durée relativement courte des interruptions tient aux procédures manuelles de reprise que les opérateurs avaient conservées. Protéger une infrastructure critique, c'est préserver sa capacité à fournir un service même lorsque ses systèmes numériques sont compromis.</p>
+      <p>Le niveau de preuve est A, sur la base de l'inculpation américaine de 2020, qui vise des officiers du renseignement militaire russe pour les attaques contre le réseau électrique ukrainien (U.S. Department of Justice, 2020). L'alerte publiée en 2016 décrit l'attaque et ses mécanismes sans, à notre connaissance, en désigner l'auteur (CISA, 2016) : l'attribution repose donc sur l'inculpation seule.</p>
+      <p>Lecture par la grille : dépendance élevée, concentration modérée (trois distributeurs aux architectures proches), substitution modérée (le courant a été rétabli en quelques heures grâce à la conduite manuelle, mais la remise en état des systèmes de contrôle numériques a été bien plus longue ; la conduite manuelle relève de la résilience, non de la substitution), propagation modérée, résilience partielle. Ce dernier point mérite d'être souligné : la durée relativement courte des interruptions tient aux procédures manuelles de reprise que les opérateurs avaient conservées. Protéger une infrastructure critique, c'est préserver sa capacité à fournir un service même lorsque ses systèmes numériques sont compromis.</p>
 
       <h3 id="fr-5-4">5.4 Change Healthcare (2024)</h3>
-      <p>La cyberattaque par rançongiciel subie par Change Healthcare en février 2024 montre les conséquences d'une forte dépendance à un intermédiaire numérique dans un secteur essentiel. Ce prestataire américain intervient notamment dans le traitement des paiements et des opérations administratives liées aux soins de santé. Selon le Government Accountability Office, l'attaque, qui a comporté un vol de données, a entraîné des pertes estimées à 874 millions de dollars et des répercussions étendues sur les prestataires de soins et sur la prise en charge des patients (U.S. GAO, 2024). Ce chiffre n'est qu'un instantané. Dans son rapport annuel 2024, la maison mère UnitedHealth Group déclare 2,2 milliards de dollars de coûts directs de réponse sur l'exercice, hors pertes d'activité, ainsi que plus de 9 milliards de dollars de prêts sans intérêt consentis aux prestataires de soins, et estime à environ 190 millions le nombre de personnes concernées (UnitedHealth Group, 2025).</p>
+      <p>La cyberattaque par rançongiciel subie par Change Healthcare en février 2024 montre les conséquences d'une forte dépendance à un intermédiaire numérique dans un secteur essentiel. Ce prestataire américain intervient notamment dans le traitement des paiements et des opérations administratives liées aux soins de santé. Selon le Government Accountability Office, l'attaque, qui a comporté un vol de données, a entraîné des pertes estimées à 874 millions de dollars et des répercussions étendues sur les prestataires de soins et sur la prise en charge des patients (U.S. GAO, 2024). Ce chiffre n'est qu'un instantané : la maison mère UnitedHealth Group fait état, pour l'exercice 2024, de coûts directs de réponse dépassant les deux milliards de dollars, hors pertes d'activité, et d'un programme de prêts aux prestataires de soins de plus de neuf milliards de dollars (UnitedHealth Group, 2025).</p>
       <p>Ce cas révèle un risque de concentration. Lorsqu'un prestataire occupe une position centrale dans le fonctionnement d'un secteur, son indisponibilité peut toucher simultanément des organisations qui restent juridiquement et opérationnellement indépendantes. Chacune peut disposer de son propre dispositif de cybersécurité et se retrouver pourtant face au même point de défaillance.</p>
-      <p>L'impact systémique doit toutefois être distingué de l'intention stratégique. L'attaque est le fait d'acteurs relevant de la cybercriminalité (UnitedHealth Group, 2024). Elle démontre les conséquences d'une dépendance centralisée, mais elle ne suffit pas à établir une opération de déstabilisation étatique : niveau C.</p>
+      <p>L'impact systémique doit toutefois être distingué de l'intention stratégique. Il s'agit d'une attaque par rançongiciel, et aucun élément public ne la relie, à notre connaissance, à une stratégie étatique (U.S. GAO, 2024). Elle démontre les conséquences d'une dépendance centralisée, mais elle ne suffit pas à établir une opération de déstabilisation étatique : niveau C.</p>
       <p>Lecture par la grille : dépendance élevée, concentration élevée, substitution élevée, propagation élevée, résilience faible. Le cas est précieux pour la proposition P2 : il produit un impact sectoriel considérable sans acteur étatique avéré.</p>
 
       <h3 id="fr-5-5">5.5 Les terres rares (2025)</h3>
@@ -608,13 +617,13 @@
 
       <h3 id="fr-5-6">5.6 L'intelligence artificielle et les dépendances de calcul (cas prospectif)</h3>
       <p>Le développement de systèmes d'IA avancés repose sur des ressources interdépendantes : semi-conducteurs spécialisés, infrastructures de calcul, centres de données, énergie, données d'entraînement, modèles, compétences scientifiques et services d'informatique en nuage. Leur maîtrise est inégalement répartie entre États et acteurs industriels. Une organisation peut posséder ses données et définir ses politiques de sécurité tout en dépendant d'un fournisseur extérieur pour accéder à un modèle, exécuter des traitements ou maintenir un service essentiel.</p>
-      <p>L'IA transforme aussi le paysage des menaces. L'ENISA observe un recours croissant à l'IA par des groupes malveillants, principalement pour faciliter ou amplifier leurs activités, et note que l'intégration de systèmes d'IA dans les environnements professionnels élargit la surface d'attaque : ces systèmes sont à la fois des outils et des cibles (ENISA, 2025 ; ENISA, 2026b). Le NIST a par ailleurs formalisé les catégories d'attaques contre les systèmes d'apprentissage automatique : évasion, empoisonnement et atteintes à la confidentialité pour l'IA prédictive, auxquelles s'ajoutent, pour l'IA générative, les attaques sur la chaîne d'approvisionnement, l'injection d'instructions et les détournements d'usage (Vassilev et al., 2025). Les restrictions à l'exportation de technologies de calcul avancé montrent enfin que les composants nécessaires à l'IA sont devenus des instruments de politique de sécurité nationale. Le cadre dit de diffusion de l'IA, publié en janvier 2025 (U.S. Department of Commerce / BIS, 2025), a toutefois été désavoué par le BIS en mai 2025, avant son entrée en application, et son remplacement n'était toujours pas publié à la mi-2026, les contrôles antérieurs sur les puces avancées demeurant en vigueur (Miller & Chevalier, 2026). Cette instabilité illustre elle-même le caractère mouvant de ces leviers.</p>
+      <p>L'IA transforme aussi le paysage des menaces. L'ENISA observe un recours croissant à l'IA par des groupes malveillants, principalement pour faciliter ou amplifier leurs activités, et note que l'intégration de systèmes d'IA dans les environnements professionnels élargit la surface d'attaque : ces systèmes sont à la fois des outils et des cibles (ENISA, 2025 ; ENISA, 2026b). Le NIST a par ailleurs formalisé les catégories d'attaques contre les systèmes d'apprentissage automatique : évasion, empoisonnement et atteintes à la confidentialité pour l'IA prédictive, auxquelles s'ajoutent, pour l'IA générative, les attaques sur la chaîne d'approvisionnement, l'injection d'instructions et les détournements d'usage (Vassilev et al., 2025). Les restrictions à l'exportation de technologies de calcul avancé montrent enfin que les composants nécessaires à l'IA sont devenus des instruments de politique de sécurité nationale. Le cadre dit de diffusion de l'IA, publié en janvier 2025 (U.S. Department of Commerce / BIS, 2025), a toutefois fait l'objet d'une annonce d'abrogation par le BIS en mai 2025, avant son entrée en application, et son remplacement n'était toujours pas publié à la mi-2026, les contrôles antérieurs sur les puces avancées demeurant en vigueur (Miller & Chevalier, 2026). Cette instabilité illustre elle-même le caractère mouvant de ces leviers.</p>
       <p>Ce cas diffère des précédents : il ne s'appuie pas sur un incident documenté de perturbation massive. Il est retenu parce que la structure de dépendance y est visible avant toute crise, ce qui permet d'éprouver la grille de manière préventive. La question devient : de quoi dépend notre IA ? Modèle, nuage, données, interfaces de programmation, infrastructure, éditeur, processeurs graphiques, chaîne logicielle. Une indisponibilité de quarante-huit heures d'un fournisseur de modèle serait-elle supportable pour les fonctions qui s'appuient sur lui ?</p>
       <p>Lecture par la grille : le codage est indicatif : dépendance modérée à élevée selon les organisations, concentration élevée, substitution élevée, propagation modérée, résilience à documenter. Le niveau de preuve est D, pour la couche de calcul.</p>
 
       <h2 id="fr-6">6. Synthèse et discussion</h2>
       <h3 id="fr-6-1">6.1 Synthèse comparative</h3>
-      <p>Le tableau suivant reprend le codage de chaque cas. Les quatre premières dimensions expriment une exposition, la cinquième une capacité, la dernière colonne le niveau de preuve géopolitique défini en 4.4. Le codage est celui de l'auteur et reste argumentable.</p>
+      <p>Le tableau suivant reprend le codage de chaque cas. Les quatre premières dimensions expriment une exposition, la cinquième une capacité, la dernière colonne le niveau de preuve géopolitique défini en 4.4. Le codage est celui de l'auteur, justifié à l'annexe D, et reste argumentable.</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -623,7 +632,7 @@
           <tbody>
             <tr><td>NotPetya / Maersk (2017)</td><td>Logicielle</td><td>Élevée</td><td>Modérée</td><td>Modérée</td><td>Élevée</td><td>Faible</td><td>A</td></tr>
             <tr><td>SolarWinds (2020)</td><td>Logicielle</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Faible</td><td>A</td></tr>
-            <tr><td>Réseau ukrainien (2015)</td><td>Industrielle (OT)</td><td>Élevée</td><td>Modérée</td><td>Faible</td><td>Modérée</td><td>Partielle</td><td>A</td></tr>
+            <tr><td>Réseau ukrainien (2015)</td><td>Industrielle (OT)</td><td>Élevée</td><td>Modérée</td><td>Modérée</td><td>Modérée</td><td>Partielle</td><td>A</td></tr>
             <tr><td>Change Healthcare (2024)</td><td>Intermédiaire de service</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Faible</td><td>C</td></tr>
             <tr><td>Terres rares (2025)</td><td>Matérielle</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Élevée</td><td>Partielle</td><td>D</td></tr>
             <tr><td>IA et calcul (prospectif)</td><td>Algorithmique</td><td>Modérée à élevée</td><td>Élevée</td><td>Élevée</td><td>Modérée</td><td>À documenter</td><td>D</td></tr>
@@ -637,12 +646,13 @@
       <p>Le troisième est que les vulnérabilités peuvent naître aussi bien d'une attaque informatique que d'une concentration industrielle ou d'une décision commerciale ou politique. Mettre sur le même plan un rançongiciel et une restriction d'exportation n'a de sens que si l'on garde en tête leurs statuts différents, ce que le niveau de preuve géopolitique rend explicite.</p>
 
       <h3 id="fr-6-3">6.3 Retour sur les propositions</h3>
-      <p><strong>P1</strong> trouve un appui dans les cas. Les situations de concentration et de substitution élevées sont celles dont la portée est la plus large. L'inverse se vérifie dans le cas ukrainien : la substitution y est faible, une conduite manuelle restant possible, et l'interruption est courte malgré un acteur étatique. La proposition tient donc au-delà de la frontière entre événements cyber et non cyber, puisque le cas des terres rares la confirme sans aucune cyberattaque.</p>
+      <p>Le codage ayant été réalisé par l'auteur à l'aide de la grille elle-même, la concordance relevée ci-dessous vérifie la cohérence interne du cadre plus qu'elle ne le valide : P1 et P3 sont proches de l'intuition, et P2 est la proposition la plus discriminante.</p>
+      <p><strong>P1</strong> est cohérente avec les cas. Les situations de concentration et de substitution élevées (SolarWinds, Change Healthcare, terres rares) sont celles dont la portée est la plus large, alors que le cas ukrainien, où concentration, substitution et propagation sont modérées, reste circonscrit à trois distributeurs. La proposition tient au-delà de la frontière entre événements cyber et non cyber, puisque le cas des terres rares la confirme sans aucune cyberattaque.</p>
       <p><strong>P2</strong> est cohérente avec les cas. Change Healthcare produit un impact sectoriel considérable sans acteur étatique avéré, alors que l'attaque ukrainienne, imputée à un acteur étatique, a eu une durée limitée. Ce qui différencie les situations tient davantage à la place de la dépendance dans l'architecture des fonctions et à ses privilèges (SolarWinds) qu'à l'identité de l'attaquant. La nature de l'acteur modifie toutefois d'autres paramètres, comme la probabilité d'un ciblage délibéré ou la durée d'une restriction, que le présent corpus ne permet pas d'apprécier.</p>
       <p><strong>P3</strong> est également soutenue. Le cas ukrainien, où les opérateurs ont gardé des procédures manuelles, présente des interruptions de quelques heures ; Maersk, dont la reprise a tenu à des circonstances en partie fortuites, subit une perturbation plus profonde. Dans le cas des terres rares, certains constructeurs ont pu réduire leur production plutôt que l'arrêter. Ces rapprochements restent des indices. Ils ne constituent pas un test, et d'autres facteurs interviennent dans chaque cas.</p>
 
       <h3 id="fr-6-4">6.4 Apport par rapport aux dispositifs existants</h3>
-      <p>La grille ne remplace ni l'analyse d'impact de l'ISO 22301, ni les exigences fournisseurs de NIS2 et de DORA. Elle les complète sur trois points. Elle fait du délai de substitution et du mode dégradé des critères explicites et comparables, là où les textes exigent seulement que les risques soient traités. Elle traite la dépendance matérielle et la dépendance algorithmique dans le même cadre que la dépendance numérique. Elle propose enfin de lire l'exposition géopolitique à partir de facteurs observables plutôt qu'à partir de la nationalité des fournisseurs.</p>
+      <p>La grille ne prétend pas inventer ses notions : concentration, délai de substitution et stratégies de sortie existent déjà, séparément, dans l'ISO 22301, dans DORA et dans la littérature sur les chaînes d'approvisionnement. Sa contribution est de les articuler dans une même grille, applicable à des dépendances de natures différentes. Elle ne remplace ni l'analyse d'impact de l'ISO 22301, ni les exigences fournisseurs de NIS2 et de DORA. Elle les complète sur trois points. Elle fait du délai de substitution et du mode dégradé des critères explicites et comparables, là où les textes exigent seulement que les risques soient traités. Elle traite la dépendance matérielle et la dépendance algorithmique dans le même cadre que la dépendance numérique. Elle propose enfin de lire l'exposition géopolitique à partir de facteurs observables plutôt qu'à partir de la nationalité des fournisseurs.</p>
 
       <h3 id="fr-6-5">6.5 Ce que la géopolitique ajoute, et ce qu'elle n'explique pas</h3>
       <p>Un lien géopolitique formellement établi n'existe que pour trois des cinq cas observés (niveau A), le sixième étant prospectif. Dans les autres, la dimension géopolitique est soit absente (niveau C), soit indirecte (niveau D). Ce constat invite à la prudence : le cadre ne démontre pas que toute dépendance critique est un instrument géopolitique. Il montre qu'une dépendance critique est un vecteur de propagation quelle que soit l'origine de la perturbation, et que la géopolitique agit surtout comme un modulateur : elle augmente la probabilité d'un ciblage, elle peut allonger la durée d'une restriction, elle peut compliquer l'accès à la maintenance ou aux mises à jour. C'est pourquoi la lecture géopolitique doit rester une couche d'analyse ajoutée à la grille, et non un critère qui la remplace.</p>
@@ -701,6 +711,7 @@
         <li>Jaakkola, E. (2020). Designing conceptual articles: Four approaches. <em>AMS Review, 10</em>, 18-26.</li>
         <li>Keohane, R. O., &amp; Nye, J. S. (1977). <em>Power and interdependence: World politics in transition</em>. Little, Brown.</li>
         <li>Lee, R. M., Assante, M. J., &amp; Conway, T. (2016). <em>Analysis of the cyber attack on the Ukrainian power grid: Defense use case</em>. SANS ICS / E-ISAC.</li>
+        <li>Miller &amp; Chevalier. (2026, 12 août). <em>BIS export controls 2025 year-in-review and 2026 mid-year update</em>. https://www.millerchevalier.com/publication/bis-export-controls-2025-year-review-and-2026-mid-year-update</li>
         <li>Perrow, C. (1984). <em>Normal accidents: Living with high-risk technologies</em>. Basic Books.</li>
         <li>Règlement (UE) 2022/2554 (DORA). <em>Journal officiel de l'Union européenne</em>, L 333, 27 décembre 2022.</li>
         <li>Règlement (UE) 2024/1689 (règlement sur l'IA). <em>Journal officiel de l'Union européenne</em>, L, 12 juillet 2024.</li>
@@ -708,12 +719,14 @@
         <li>Rid, T. (2012). Cyber war will not take place. <em>Journal of Strategic Studies, 35</em>(1), 5-32.</li>
         <li>Ross, R., et al. (2021). <em>Developing cyber-resilient systems</em> (NIST SP 800-160 Vol. 2 Rev. 1). NIST.</li>
         <li>Sheffi, Y. (2005). <em>The resilient enterprise: Overcoming vulnerability for competitive advantage</em>. MIT Press.</li>
+        <li>SolarWinds Corporation. (2020, 14 décembre). <em>Form 8-K</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm</li>
         <li>The White House. (2018, 15 février). Statement from the Press Secretary.</li>
         <li>The White House. (2021, 15 avril). Fact sheet: Imposing costs for harmful foreign activities by the Russian government.</li>
         <li>U.S. Department of Commerce / BIS. (2025). Framework for Artificial Intelligence Diffusion. <em>Federal Register, 90</em> FR 4544.</li>
         <li>U.S. Department of Justice. (2020, 19 octobre). Six Russian GRU officers charged… [Communiqué de presse].</li>
         <li>U.S. Government Accountability Office. (2024). <em>Healthcare cybersecurity: HHS continues to have challenges as lead agency</em> (GAO-25-107755).</li>
-        <li>Vassilev, A., et al. (2024). <em>Adversarial machine learning: A taxonomy and terminology of attacks and mitigations</em> (NIST AI 100-2e2023).</li>
+        <li>UnitedHealth Group. (2025). <em>Form 10-K for the fiscal year ended December 31, 2024</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/731766/000073176625000063/unh-20241231.htm</li>
+        <li>Vassilev, A., Oprea, A., Fordyce, A., Anderson, H., Davies, X., &amp; Hamin, M. (2025). <em>Adversarial machine learning: A taxonomy and terminology of attacks and mitigations</em> (NIST AI 100-2 E2025). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-2e2025</li>
         <li>Yin, R. K. (2018). <em>Case study research and applications: Design and methods</em> (6e éd.). Sage.</li>
       </ul>
 
@@ -740,7 +753,7 @@
             <tr><td>NotPetya et Maersk</td><td>A. P. Moller-Maersk (2018) ; The White House (2018) ; U.S. Department of Justice (2020) ; Greenberg (2018)</td></tr>
             <tr><td>SolarWinds</td><td>CERT-FR (2020) ; CISA (2020) ; SolarWinds Corporation (2020) ; The White House (2021)</td></tr>
             <tr><td>Réseau électrique ukrainien</td><td>CISA (2016) ; Lee et al. (2016) ; U.S. Department of Justice (2020)</td></tr>
-            <tr><td>Change Healthcare</td><td>U.S. GAO (2024) ; UnitedHealth Group (2024, 2025)</td></tr>
+            <tr><td>Change Healthcare</td><td>U.S. GAO (2024) ; UnitedHealth Group (2025)</td></tr>
             <tr><td>Terres rares</td><td>IEA (2025)</td></tr>
             <tr><td>IA et calcul</td><td>ENISA (2025, 2026b) ; Vassilev et al. (2025) ; U.S. Department of Commerce / BIS (2025) ; Miller &amp; Chevalier (2026)</td></tr>
           </tbody>
@@ -757,10 +770,26 @@
         <li><strong>TIC</strong> : technologies de l'information et de la communication.</li>
       </ul>
 
+      <h3>Annexe D. Justification du codage</h3>
+      <p>Les jugements relatifs à la substitution et à la résilience sont ceux de l'auteur ; ils devront être soumis à un second codeur (voir 8.2).</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cas</th><th>Justification par dimension</th></tr></thead>
+          <tbody>
+            <tr><td>NotPetya / Maersk</td><td>Dépendance élevée : canal de mise à jour d'un logiciel comptable et parc informatique interconnecté. Concentration modérée : logiciel répandu surtout en Ukraine. Substitution modérée : reconstruction du parc en quelques jours à quelques semaines. Propagation élevée : perturbation des opérations portuaires et logistiques. Résilience faible : reprise liée à une copie préservée par hasard (Greenberg, 2018).</td></tr>
+            <tr><td>SolarWinds</td><td>Dépendance et concentration élevées : plateforme de supervision installée chez des milliers de clients, dotée de privilèges étendus. Substitution élevée : remplacer un outil de supervision est un chantier de plusieurs mois (jugement de l'auteur). Propagation élevée : clients répartis dans de nombreux secteurs. Résilience faible : détection tardive.</td></tr>
+            <tr><td>Réseau ukrainien</td><td>Dépendance élevée : commande à distance des postes de distribution. Concentration modérée : trois distributeurs aux architectures proches. Substitution modérée : courant rétabli en quelques heures, systèmes de contrôle remis en état plus lentement. Propagation modérée : environ 225 000 clients. Résilience partielle : procédures manuelles conservées.</td></tr>
+            <tr><td>Change Healthcare</td><td>Dépendance, concentration et propagation élevées : intermédiaire central du traitement des paiements et des opérations administratives de santé. Substitution classée élevée (migration de flux, de contrats et d'intégrations) ; ce codage est à discuter, certains prestataires ayant pu recourir à d'autres intermédiaires en des délais plus courts. Résilience faible : répercussions étendues sur les prestataires de soins (U.S. GAO, 2024).</td></tr>
+            <tr><td>Terres rares</td><td>Dépendance, concentration et propagation élevées : parts de la Chine dans la chaîne des terres rares et des aimants (IEA, 2025). Substitution élevée : développer des capacités de raffinage et de fabrication hors de Chine demande des années (jugement de l'auteur). Résilience partielle : certains constructeurs ont réduit leur production sans l'arrêter.</td></tr>
+            <tr><td>IA et calcul</td><td>Codage indicatif, sans incident documenté : concentration et substitution élevées (calcul, modèles, nuage), dépendance modérée à élevée selon les organisations, propagation modérée, résilience à documenter.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h3>Déclarations</h3>
       <ul>
         <li><strong>Conflits d'intérêts :</strong> aucun.</li>
-        <li><strong>Financement :</strong> Twagirumukiza.</li>
+        <li><strong>Financement :</strong> fonds propres de l'auteur (marque Twagirumukiza).</li>
         <li><strong>Disponibilité des données :</strong> les données proviennent de sources publiques citées dans les références. Le codage des cas figure en 6.1 et à l'annexe A.</li>
         <li><strong>Usage d'outils d'intelligence artificielle générative :</strong> usage de l'IA pour la correction.</li>
       </ul>
@@ -768,7 +797,7 @@
 
     <!-- ==================== ENGLISH ==================== -->
     <article id="content-en" class="lang-block">
-      <h1>Digital Dependencies and Organisational Resilience: An Analytical Grid for Geopolitically Driven Cyber Risk</h1>
+      <h1>Digital Dependencies and Organisational Resilience: An Analytical Grid for Cyber Risk in a Geopolitical Context</h1>
       <p class="meta">Innocent Twagirumukiza · October 2026</p>
 
       <div class="download-btns">
@@ -779,7 +808,7 @@
       <section id="en-abstract" class="abstract-box">
         <h2>Abstract</h2>
         <p><strong>Background.</strong> Cyber risk is still largely framed around the technical perimeter an organisation administers itself. Recent institutional reports and several major incidents show, however, that exposure also stems from resources the organisation does not control: software suppliers, service intermediaries, infrastructure, hardware components and computing capacity.</p>
-        <p><strong>Purpose.</strong> The article asks under what conditions an external dependency becomes a vector for the propagation of geopolitically driven risk, and how cyber risk governance can account for it.</p>
+        <p><strong>Purpose.</strong> The article asks under what conditions an external dependency becomes a vector for the propagation of cyber risk, including when that risk arises in a geopolitical context, what role the geopolitical dimension plays, and how cyber risk governance can account for it.</p>
         <p><strong>Method.</strong> A conceptual analysis yields a typology of five categories of dependency and a five-dimension grid (dependency, concentration, substitution, propagation, resilience). The grid is then applied to six situations documented in public sources: NotPetya and Maersk, SolarWinds, the 2015 Ukrainian power grid attack, Change Healthcare, rare earths, and dependencies linked to artificial intelligence. Each case is given an evidence level for its geopolitical dimension.</p>
         <p><strong>Findings.</strong> Distinguishing the technical security perimeter from the dependency perimeter makes it possible to read very different events together. In the cases examined, the criticality of a dependency appears to be linked more to supply concentration, substitution time and the lack of a degraded mode than to the nature of the actor behind the disruption. A formally established geopolitical link exists for only some of the cases.</p>
         <p><strong>Implications.</strong> Six orientations are proposed to governance, risk and compliance (GRC) functions, from mapping real dependencies to testing degraded-mode operation and accounting for the AI supply chain.</p>
@@ -795,7 +824,7 @@
       <p>This shift raises a problem for both research and practice. Work on interdependence and coercion mainly concerns states. Work on supply chains often treats disruptions generically. Cyber risk management frameworks, finally, remain centred on the technical perimeter. These three bodies of work rarely intersect, and none gives a chief information security officer (CISO) a method for deciding which external dependencies deserve particular attention when the geopolitical context deteriorates.</p>
 
       <h3 id="en-1-2">1.2 Research question and contribution</h3>
-      <p>The central question of the article is the following: under what conditions does an external dependency become a vector for the propagation of geopolitically driven risk, and how can cyber risk governance account for it? Three sub-questions follow from it. How can a dependency that matters be characterised, as opposed to a mere commercial relationship? Which propagation mechanisms distinguish events of different natures, whether or not they are cyberattacks? What consequences should be drawn for governance, risk and compliance (GRC) functions?</p>
+      <p>The central question of the article is the following: under what conditions does an external dependency become a vector for the propagation of cyber risk in a geopolitical context, what role does the geopolitical dimension play in it, and how can cyber risk governance account for it? Three sub-questions follow from it. How can a dependency that matters be characterised, as opposed to a mere commercial relationship? Which propagation mechanisms distinguish events of different natures, whether or not they are cyberattacks? What consequences should be drawn for governance, risk and compliance (GRC) functions?</p>
       <p>The article makes four contributions. It distinguishes a technical security perimeter from a dependency perimeter. It proposes a typology of five categories of dependency and an analytical grid of five dimensions. It applies this grid to six documented situations, specifying for each the evidence level of the geopolitical link. It derives from this six operational orientations for GRC. The approach is that of a conceptual article: it proceeds by synthesis of the literature and then by confronting the proposed framework with cases (Jaakkola, 2020). It makes no claim to statistical testing.</p>
 
       <h3 id="en-1-3">1.3 Status of statements and outline</h3>
@@ -872,7 +901,7 @@
       <p>The geopolitical dimension does not enter the grid as one more score. It is read through observable factors: trade restrictions, diplomatic tensions, industrial concentration, dependence on infrastructure located abroad, legal constraints, the possibility of sanctions, difficulties of access to maintenance services. For the cases studied, it is recorded separately, in the form of an evidence level defined in 4.4.</p>
 
       <h3 id="en-3-5">3.5 Propositions</h3>
-      <p>The framework leads to three propositions, which Section 6 confronts with the cases.</p>
+      <p>The framework leads to three propositions, which Section 6 confronts with the cases. They are formulated as working hypotheses: P1 and P3 are close to intuition and serve mainly to check that the grid orders the cases correctly, whereas P2, which sets the state character of the actor against the structural position of the dependency, is the most discriminating.</p>
       <p><strong>P1.</strong> The criticality of a dependency increases with supply concentration and with substitution time, whatever the nature, cyber or otherwise, of the event that reveals it.</p>
       <p><strong>P2.</strong> The severity of the impact on an organisation depends less on the state character of the actor behind the disruption than on the place the dependency occupies in the architecture of essential functions, particularly when it comes with extended privileges or a central position in a sector.</p>
       <p><strong>P3.</strong> The capacity to operate in degraded mode moderates the relationship between the unavailability of a resource and the loss of function: the stronger it is, the more limited the duration of the loss.</p>
@@ -886,7 +915,7 @@
       <h3 id="en-4-3">4.3 Sources</h3>
       <p>The corpus draws on reports from public agencies and European institutions, regulatory texts, official attribution statements, corporate annual reports and public audit reports. Primary sources are preferred. The specialised press is used only for factual elements absent from the other sources, and is then identified as such. Every factual claim in the text refers to a source in the reference list.</p>
       <h3 id="en-4-4">4.4 Coding</h3>
-      <p>Each case is analysed along the five dimensions of the grid (3.4). The first four receive an exposure level (low, moderate, high), the fifth a capacity level (low, partial, strong). The coding is qualitative and argued in the text of each case.</p>
+      <p>Each case is analysed along the five dimensions of the grid (3.4). The first four receive an exposure level (low, moderate, high), the fifth a capacity level (low, partial, strong). The coding is qualitative; it is argued in the text of each case and justified dimension by dimension in Appendix D.</p>
       <p>The geopolitical dimension is treated separately, through an evidence level with four positions. Level A denotes an official state attribution or a documented indictment. Level B corresponds to a documented geopolitical context without shared formal attribution. Level C signals a documented systemic impact with no established geopolitical link. Level D applies to a disruption resulting from a public decision or policy that is not a cyber operation. This separation avoids presuming a geopolitical dimension where it has not been demonstrated, and denying it where it has.</p>
       <h3 id="en-4-5">4.5 Validity and bias</h3>
       <p>Construct validity rests on the triangulation of sources and on the explicit distinction between facts, interpretations and propositions. The likely biases are of three kinds. The availability of documentation favours large-scale and heavily commented incidents. Hindsight tends to make the sequence of causes more legible than it was for the actors. Finally, the coding was carried out by a single analyst, which limits inter-coder reliability. Section 8 returns to these limitations.</p>
@@ -896,7 +925,7 @@
       <p>The NotPetya incident of June 2017 offers a clear example of risk propagating beyond the organisation initially exposed. The malicious software spread internationally after being introduced into a software distribution chain used in Ukraine. A. P. Moller-Maersk, a shipping and logistics group, confirmed that its systems had been affected and its operations disrupted. In its 2017 annual report, the company estimates the impact of the attack at between 250 and 300 million dollars, concentrated on Maersk Line (A. P. Moller-Maersk, 2018). Detailed journalistic accounts report that the rebuilding of the network depended in part on a copy of a domain controller preserved almost by chance (Greenberg, 2018).</p>
       <p>The dependency at play is software-based: the trust placed in an update channel. The interest of the case lies less in the extent of the IT damage than in the way a software compromise reached a company whose operations rely on the coordination of digital systems, port facilities, flows of goods and partners. The internal disruption spread to physical operations, customers and business partners: an IT incident became an economic continuity problem.</p>
       <p>The geopolitical dimension is established. The British and American authorities publicly attributed NotPetya to the Russian military on 15 February 2018 (The White House, 2018), and the 2020 indictment of Russian military intelligence officers linked the operation to them (U.S. Department of Justice, 2020). The case falls under level A. It shows that an action conducted in a regional context can produce economic effects well beyond its initial theatre.</p>
-      <p>Reading through the grid: dependency is high, concentration moderate (widespread but local software), substitution moderate, propagation high and resilience low, recovery having owed to partly fortuitous circumstances. For the organisation, the lesson is that it must be able to contain the effects of an attack that did not necessarily target it in the first place.</p>
+      <p>Reading through the grid: dependency is high, concentration moderate (widespread but local software), substitution moderate (the accounting software is itself replaceable; it was the rebuilding of the IT estate, of the order of a few days to a few weeks according to available accounts, that conditioned recovery), propagation high and resilience low, recovery having owed to partly fortuitous circumstances. For the organisation, the lesson is that it must be able to contain the effects of an attack that did not necessarily target it in the first place.</p>
 
       <h3 id="en-5-2">5.2 SolarWinds (2020)</h3>
       <p>The compromise of SolarWinds’ Orion monitoring platform, revealed in December 2020, illustrates another form of dependency: one that rests on the trust placed in software tools and their update mechanisms. Legitimate versions of the software had been altered to embed the SUNBURST malicious code. The updates distributed to customers thus served as an intrusion vector. According to the vendor, which had notified approximately 33,000 Orion customers, fewer than 18,000 customers are believed to have installed a version containing the malicious code (SolarWinds Corporation, 2020). CERT-FR documented the incident and recommended that the organisations concerned check their versions, look for signs of compromise and take into account the risk weighing on the environments administered by the platform (CERT-FR, 2020). The American CISA, for its part, ordered federal agencies to disconnect the affected Orion products (CISA, 2020).</p>
@@ -907,13 +936,13 @@
       <h3 id="en-5-3">5.3 The Ukrainian power grid (2015)</h3>
       <p>The December 2015 attack on electricity distribution operators in Ukraine is a central case for understanding the physical consequences of a digital operation. The outages affected approximately 225,000 customers for several hours, up to about six hours according to analyses. The attackers, who held legitimate credentials, took control of command interfaces to cause the interruptions, then wiped systems using the KillDisk software, which complicated remote recovery and forced operators to switch to manual mode (CISA, 2016; Lee et al., 2016).</p>
       <p>The case highlights the interdependence between information systems, operational technologies and the essential functions of a territory. The unavailability of a control system does not simply translate into data loss or an application outage: it can directly affect the distribution of an indispensable resource. Civilian infrastructure can therefore be targeted in a context of confrontation and become an instrument of strategic pressure.</p>
-      <p>The evidence level is A: the 2020 American indictment charges Russian military intelligence officers for the attacks on the Ukrainian grid (U.S. Department of Justice, 2020), and the alert published by CISA attributes the campaign to Russian state actors (CISA, 2016).</p>
-      <p>Reading through the grid: high dependency, moderate concentration (three distributors with similar architectures), low substitution, manual operation of the equipment remaining possible, moderate propagation, partial resilience. This last point deserves emphasis: the relatively short duration of the interruptions owes to the manual recovery procedures that the operators had retained. Protecting a critical infrastructure means preserving its capacity to deliver a service even when its digital systems are compromised.</p>
+      <p>The evidence level is A, on the basis of the 2020 American indictment, which charges Russian military intelligence officers for the attacks on the Ukrainian grid (U.S. Department of Justice, 2020). The alert published in 2016 describes the attack and its mechanisms without, to our knowledge, naming its perpetrator (CISA, 2016): attribution therefore rests on the indictment alone.</p>
+      <p>Reading through the grid: high dependency, moderate concentration (three distributors with similar architectures), moderate substitution (power was restored within hours through manual operation, but restoring the digital control systems took much longer; manual operation belongs to resilience, not to substitution), moderate propagation, partial resilience. This last point deserves emphasis: the relatively short duration of the interruptions owes to the manual recovery procedures that the operators had retained. Protecting a critical infrastructure means preserving its capacity to deliver a service even when its digital systems are compromised.</p>
 
       <h3 id="en-5-4">5.4 Change Healthcare (2024)</h3>
-      <p>The ransomware cyberattack suffered by Change Healthcare in February 2024 shows the consequences of a strong dependency on a digital intermediary in an essential sector. This American provider is involved in particular in the processing of payments and administrative operations related to healthcare. According to the Government Accountability Office, the attack, which included data theft, led to estimated losses of 874 million dollars and wide-ranging repercussions for care providers and patient care (U.S. GAO, 2024). This figure is only a snapshot. In its 2024 annual report, the parent company UnitedHealth Group reports 2.2 billion dollars in direct response costs for the year, excluding business losses, as well as more than 9 billion dollars in interest-free loans granted to care providers, and estimates the number of people affected at about 190 million (UnitedHealth Group, 2025).</p>
+      <p>The ransomware cyberattack suffered by Change Healthcare in February 2024 shows the consequences of a strong dependency on a digital intermediary in an essential sector. This American provider is involved in particular in the processing of payments and administrative operations related to healthcare. According to the Government Accountability Office, the attack, which included data theft, led to estimated losses of 874 million dollars and wide-ranging repercussions for care providers and patient care (U.S. GAO, 2024). This figure is only a snapshot: for 2024, the parent company UnitedHealth Group reports direct response costs exceeding two billion dollars, excluding business losses, and a loan programme for care providers of more than nine billion dollars (UnitedHealth Group, 2025).</p>
       <p>This case reveals a concentration risk. When a provider occupies a central position in the functioning of a sector, its unavailability can simultaneously affect organisations that remain legally and operationally independent. Each may have its own cybersecurity arrangements and yet find itself facing the same point of failure.</p>
-      <p>The systemic impact must nevertheless be distinguished from strategic intent. The attack was the work of actors belonging to cybercrime (UnitedHealth Group, 2024). It demonstrates the consequences of a centralised dependency, but it is not sufficient to establish a state destabilisation operation: level C.</p>
+      <p>The systemic impact must nevertheless be distinguished from strategic intent. This was a ransomware attack, and no public evidence links it, to our knowledge, to a state strategy (U.S. GAO, 2024). It demonstrates the consequences of a centralised dependency, but it is not sufficient to establish a state destabilisation operation: level C.</p>
       <p>Reading through the grid: high dependency, high concentration, high substitution, high propagation, low resilience. The case is valuable for proposition P2: it produces a considerable sectoral impact without a proven state actor.</p>
 
       <h3 id="en-5-5">5.5 Rare earths (2025)</h3>
@@ -924,13 +953,13 @@
 
       <h3 id="en-5-6">5.6 Artificial intelligence and computing dependencies (prospective case)</h3>
       <p>The development of advanced AI systems rests on interdependent resources: specialised semiconductors, computing infrastructure, data centres, energy, training data, models, scientific expertise and cloud computing services. Control of them is unevenly distributed between states and industrial actors. An organisation may own its data and define its security policies while depending on an external provider to access a model, run processing or maintain an essential service.</p>
-      <p>AI also transforms the threat landscape. ENISA observes a growing use of AI by malicious groups, mainly to facilitate or amplify their activities, and notes that the integration of AI systems into professional environments widens the attack surface: these systems are both tools and targets (ENISA, 2025; ENISA, 2026b). NIST has, moreover, formalised the categories of attacks against machine learning systems: evasion, poisoning and privacy attacks for predictive AI, to which are added, for generative AI, supply chain attacks, prompt injection and misuse (Vassilev et al., 2025). Export restrictions on advanced computing technologies finally show that the components needed for AI have become instruments of national security policy. The so-called AI diffusion framework, published in January 2025 (U.S. Department of Commerce / BIS, 2025), was however rescinded by BIS in May 2025, before it took effect, and its replacement had still not been published by mid-2026, the earlier controls on advanced chips remaining in force (Miller &amp; Chevalier, 2026). This instability itself illustrates the shifting nature of these levers.</p>
+      <p>AI also transforms the threat landscape. ENISA observes a growing use of AI by malicious groups, mainly to facilitate or amplify their activities, and notes that the integration of AI systems into professional environments widens the attack surface: these systems are both tools and targets (ENISA, 2025; ENISA, 2026b). NIST has, moreover, formalised the categories of attacks against machine learning systems: evasion, poisoning and privacy attacks for predictive AI, to which are added, for generative AI, supply chain attacks, prompt injection and misuse (Vassilev et al., 2025). Export restrictions on advanced computing technologies finally show that the components needed for AI have become instruments of national security policy. The so-called AI diffusion framework, published in January 2025 (U.S. Department of Commerce / BIS, 2025), was however announced as rescinded by BIS in May 2025, before it took effect, and its replacement had still not been published by mid-2026, the earlier controls on advanced chips remaining in force (Miller &amp; Chevalier, 2026). This instability itself illustrates the shifting nature of these levers.</p>
       <p>This case differs from the previous ones: it does not rest on a documented incident of massive disruption. It is retained because the structure of dependency is visible in it before any crisis, which makes it possible to test the grid preventively. The question becomes: what does our AI depend on? Model, cloud, data, programming interfaces, infrastructure, vendor, graphics processors, software chain. Would a forty-eight-hour unavailability of a model provider be bearable for the functions that rely on it?</p>
       <p>Reading through the grid: the coding is indicative: moderate to high dependency depending on the organisation, high concentration, high substitution, moderate propagation, resilience to be documented. The evidence level is D, for the computing layer.</p>
 
       <h2 id="en-6">6. Synthesis and discussion</h2>
       <h3 id="en-6-1">6.1 Comparative synthesis</h3>
-      <p>Table 3 reproduces the coding of each case. The first four dimensions express an exposure, the fifth a capacity, and the last column the geopolitical evidence level defined in 4.4. The coding is the author’s and remains open to argument.</p>
+      <p>Table 3 reproduces the coding of each case. The first four dimensions express an exposure, the fifth a capacity, and the last column the geopolitical evidence level defined in 4.4. The coding is the author’s, justified in Appendix D, and remains open to argument.</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -939,7 +968,7 @@
           <tbody>
             <tr><td>NotPetya / Maersk (2017)</td><td>Software</td><td>High</td><td>Moderate</td><td>Moderate</td><td>High</td><td>Low</td><td>A</td></tr>
             <tr><td>SolarWinds (2020)</td><td>Software</td><td>High</td><td>High</td><td>High</td><td>High</td><td>Low</td><td>A</td></tr>
-            <tr><td>Ukrainian grid (2015)</td><td>Industrial (OT)</td><td>High</td><td>Moderate</td><td>Low</td><td>Moderate</td><td>Partial</td><td>A</td></tr>
+            <tr><td>Ukrainian grid (2015)</td><td>Industrial (OT)</td><td>High</td><td>Moderate</td><td>Moderate</td><td>Moderate</td><td>Partial</td><td>A</td></tr>
             <tr><td>Change Healthcare (2024)</td><td>Service intermediary</td><td>High</td><td>High</td><td>High</td><td>High</td><td>Low</td><td>C</td></tr>
             <tr><td>Rare earths (2025)</td><td>Hardware</td><td>High</td><td>High</td><td>High</td><td>High</td><td>Partial</td><td>D</td></tr>
             <tr><td>AI and computing (prospective)</td><td>Algorithmic</td><td>Moderate to high</td><td>High</td><td>High</td><td>Moderate</td><td>To be documented</td><td>D</td></tr>
@@ -953,12 +982,13 @@
       <p>The third is that vulnerabilities can arise just as well from a cyberattack as from industrial concentration or from a commercial or political decision. Putting a ransomware attack and an export restriction on the same plane only makes sense if their different statuses are kept in mind, which the geopolitical evidence level makes explicit.</p>
 
       <h3 id="en-6-3">6.3 Return to the propositions</h3>
-      <p><strong>P1</strong> finds support in the cases. Situations of high concentration and high substitution are those with the widest reach. The converse holds in the Ukrainian case: substitution is low there, manual operation remaining possible, and the interruption is short despite a state actor. The proposition therefore holds across the boundary between cyber and non-cyber events, since the rare earths case confirms it without any cyberattack.</p>
+      <p>Since the coding was carried out by the author using the grid itself, the agreement noted below checks the internal consistency of the framework more than it validates it: P1 and P3 are close to intuition, and P2 is the most discriminating proposition.</p>
+      <p><strong>P1</strong> is consistent with the cases. Situations of high concentration and high substitution (SolarWinds, Change Healthcare, rare earths) are those with the widest reach, whereas the Ukrainian case, where concentration, substitution and propagation are moderate, remains confined to three distributors. The proposition holds across the boundary between cyber and non-cyber events, since the rare earths case confirms it without any cyberattack.</p>
       <p><strong>P2</strong> is consistent with the cases. Change Healthcare produces a considerable sectoral impact without a proven state actor, whereas the Ukrainian attack, attributed to a state actor, had a limited duration. What differentiates the situations owes more to the place of the dependency in the architecture of functions and to its privileges (SolarWinds) than to the attacker’s identity. The nature of the actor does, however, modify other parameters, such as the probability of deliberate targeting or the duration of a restriction, which the present corpus does not allow us to assess.</p>
       <p><strong>P3</strong> is also supported. The Ukrainian case, where operators kept manual procedures, shows interruptions of a few hours; Maersk, whose recovery owed to partly fortuitous circumstances, suffers a deeper disruption. In the rare earths case, some manufacturers were able to reduce production rather than stop it. These comparisons remain indications. They do not constitute a test, and other factors intervene in each case.</p>
 
       <h3 id="en-6-4">6.4 Contribution relative to existing frameworks</h3>
-      <p>The grid replaces neither the impact analysis of ISO 22301 nor the supplier requirements of NIS2 and DORA. It complements them on three points. It makes substitution time and degraded mode explicit and comparable criteria, where the texts merely require that risks be addressed. It treats hardware dependency and algorithmic dependency within the same framework as digital dependency. Finally, it proposes to read geopolitical exposure from observable factors rather than from suppliers’ nationality.</p>
+      <p>The grid does not claim to invent its notions: concentration, substitution time and exit strategies already exist, separately, in ISO 22301, in DORA and in the supply chain literature. Its contribution is to articulate them in a single grid, applicable to dependencies of different natures. It replaces neither the impact analysis of ISO 22301 nor the supplier requirements of NIS2 and DORA. It complements them on three points. It makes substitution time and degraded mode explicit and comparable criteria, where the texts merely require that risks be addressed. It treats hardware dependency and algorithmic dependency within the same framework as digital dependency. Finally, it proposes to read geopolitical exposure from observable factors rather than from suppliers’ nationality.</p>
 
       <h3 id="en-6-5">6.5 What geopolitics adds, and what it does not explain</h3>
       <p>A formally established geopolitical link exists for only three of the five cases observed (level A), the sixth being prospective. In the others, the geopolitical dimension is either absent (level C) or indirect (level D). This finding calls for caution: the framework does not demonstrate that every critical dependency is a geopolitical instrument. It shows that a critical dependency is a vector of propagation whatever the origin of the disruption, and that geopolitics acts mainly as a modulator: it increases the probability of targeting, it may lengthen the duration of a restriction, it may complicate access to maintenance or updates. This is why the geopolitical reading should remain a layer of analysis added to the grid, not a criterion that replaces it.</p>
@@ -1017,6 +1047,7 @@
         <li>Jaakkola, E. (2020). Designing conceptual articles. <em>AMS Review, 10</em>, 18-26.</li>
         <li>Keohane, R. O., &amp; Nye, J. S. (1977). <em>Power and interdependence</em>. Little, Brown.</li>
         <li>Lee, R. M., Assante, M. J., &amp; Conway, T. (2016). <em>Analysis of the cyber attack on the Ukrainian power grid</em>. SANS ICS / E-ISAC.</li>
+        <li>Miller &amp; Chevalier. (2026, August 12). <em>BIS export controls 2025 year-in-review and 2026 mid-year update</em>. https://www.millerchevalier.com/publication/bis-export-controls-2025-year-review-and-2026-mid-year-update</li>
         <li>Perrow, C. (1984). <span>Normal accidents</span>. Basic Books.</li>
         <li>Regulation (EU) 2022/2554 (DORA). <em>Official Journal of the European Union</em>, L 333, 27 December 2022.</li>
         <li>Regulation (EU) 2024/1689 (AI Act). <em>Official Journal of the European Union</em>, L, 12 July 2024.</li>
@@ -1024,12 +1055,14 @@
         <li>Rid, T. (2012). Cyber war will not take place. <em>Journal of Strategic Studies, 35</em>(1), 5-32.</li>
         <li>Ross, R., et al. (2021). <em>Developing cyber-resilient systems</em> (NIST SP 800-160 Vol. 2 Rev. 1). NIST.</li>
         <li>Sheffi, Y. (2005). <em>The resilient enterprise</em>. MIT Press.</li>
+        <li>SolarWinds Corporation. (2020, December 14). <em>Form 8-K</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm</li>
         <li>The White House. (2018, February 15). Statement from the Press Secretary.</li>
         <li>The White House. (2021, April 15). Fact sheet: Imposing costs for harmful foreign activities by the Russian government.</li>
         <li>U.S. Department of Commerce / BIS. (2025). Framework for Artificial Intelligence Diffusion. <em>Federal Register, 90</em> FR 4544.</li>
         <li>U.S. Department of Justice. (2020, October 19). Six Russian GRU officers charged… [Press release].</li>
         <li>U.S. Government Accountability Office. (2024). <em>Healthcare cybersecurity</em> (GAO-25-107755).</li>
-        <li>Vassilev, A., et al. (2024). <span>Adversarial machine learning</span> (NIST AI 100-2e2023).</li>
+        <li>UnitedHealth Group. (2025). <em>Form 10-K for the fiscal year ended December 31, 2024</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/731766/000073176625000063/unh-20241231.htm</li>
+        <li>Vassilev, A., Oprea, A., Fordyce, A., Anderson, H., Davies, X., &amp; Hamin, M. (2025). <em>Adversarial machine learning: A taxonomy and terminology of attacks and mitigations</em> (NIST AI 100-2 E2025). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-2e2025</li>
         <li>Yin, R. K. (2018). <em>Case study research and applications</em> (6th ed.). Sage.</li>
       </ul>
 
@@ -1056,7 +1089,7 @@
             <tr><td>NotPetya and Maersk</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018)</td></tr>
             <tr><td>SolarWinds</td><td>CERT-FR (2020); CISA (2020); SolarWinds Corporation (2020); The White House (2021)</td></tr>
             <tr><td>Ukrainian power grid</td><td>CISA (2016); Lee et al. (2016); U.S. Department of Justice (2020)</td></tr>
-            <tr><td>Change Healthcare</td><td>U.S. GAO (2024); UnitedHealth Group (2024, 2025)</td></tr>
+            <tr><td>Change Healthcare</td><td>U.S. GAO (2024); UnitedHealth Group (2025)</td></tr>
             <tr><td>Rare earths</td><td>IEA (2025)</td></tr>
             <tr><td>AI and computing</td><td>ENISA (2025, 2026b); Vassilev et al. (2025); U.S. Department of Commerce / BIS (2025); Miller &amp; Chevalier (2026)</td></tr>
           </tbody>
@@ -1073,10 +1106,26 @@
         <li><strong>OT</strong>: operational technology (industrial control systems and connected technical equipment).</li>
       </ul>
 
+      <h3>Appendix D. Justification of the coding</h3>
+      <p>The judgements on substitution and resilience are the author's; they should be submitted to a second coder (see 8.2).</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Case</th><th>Justification by dimension</th></tr></thead>
+          <tbody>
+            <tr><td>NotPetya / Maersk</td><td>High dependency: update channel of accounting software and an interconnected IT estate. Moderate concentration: software widespread mainly in Ukraine. Moderate substitution: rebuilding of the estate in a few days to a few weeks. High propagation: disruption of port and logistics operations. Low resilience: recovery tied to a copy preserved by chance (Greenberg, 2018).</td></tr>
+            <tr><td>SolarWinds</td><td>High dependency and concentration: monitoring platform installed at thousands of customers, with extended privileges. High substitution: replacing a monitoring tool is a project of several months (author's judgement). High propagation: customers spread across many sectors. Low resilience: late detection.</td></tr>
+            <tr><td>Ukrainian grid</td><td>High dependency: remote control of distribution substations. Moderate concentration: three distributors with similar architectures. Moderate substitution: power restored within hours, control systems restored more slowly. Moderate propagation: about 225,000 customers. Partial resilience: manual procedures retained.</td></tr>
+            <tr><td>Change Healthcare</td><td>High dependency, concentration and propagation: central intermediary for payment processing and administrative healthcare operations. Substitution rated high (migration of flows, contracts and integrations); this coding is open to discussion, as some providers may have turned to other intermediaries in shorter timeframes. Low resilience: wide-ranging repercussions for care providers (U.S. GAO, 2024).</td></tr>
+            <tr><td>Rare earths</td><td>High dependency, concentration and propagation: China's shares along the rare earth and magnet chain (IEA, 2025). High substitution: building refining and manufacturing capacity outside China takes years (author's judgement). Partial resilience: some manufacturers reduced production rather than stopping it.</td></tr>
+            <tr><td>AI and computing</td><td>Indicative coding, no documented incident: high concentration and substitution (computing, models, cloud), moderate to high dependency depending on the organisation, moderate propagation, resilience to be documented.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h3>Declarations</h3>
       <ul>
         <li><strong>Conflicts of interest:</strong> none.</li>
-        <li><stronge>Funding:</stronge> Twagirumukiza.</li>
+        <li><strong>Funding:</strong> the author's own resources (Twagirumukiza).</li>
         <li><strong>Data availability:</strong> the data come from public sources cited in the references. The coding of the cases is given in 6.1 and in Appendix A.</li>
         <li><strong>Use of generative AI tools:</strong> AI was used for proofreading.</li>
       </ul>
@@ -1143,9 +1192,103 @@
         }
       }
 
+      function applyTheme(t) {
+        theme = t;
+        try { localStorage.setItem('pub-theme', t); } catch (e) {}
+        if (t === 'dark') root.setAttribute('data-theme', 'dark');
+        else root.removeAttribute('data-theme');
+      }
+
+      function applyFont(px) {
+        fontSize = Math.max(13, Math.min(24, px));
+        try { localStorage.setItem('pub-font', String(fontSize)); } catch (e) {}
+        root.style.fontSize = fontSize + 'px';
+      }
+
+      const isDesktop = () => window.matchMedia('(min-width: 1100px)').matches;
+
+      function closeMobileNav() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+      }
+
+      function toggleNav() {
+        if (isDesktop()) {
+          const collapsed = sidebar.classList.toggle('collapsed');
+          mainContent.classList.toggle('expanded', collapsed);
+        } else {
+          const open = sidebar.classList.toggle('open');
+          overlay.classList.toggle('show', open);
+        }
+      }
+
+      function setHeaderHeight() {
+        const h = document.querySelector('header').offsetHeight;
+        root.style.setProperty('--header-h', h + 'px');
+      }
+
+      // Boutons de la barre d'en-tête
+      langFR.addEventListener('click', () => applyLang('fr'));
+      langEN.addEventListener('click', () => applyLang('en'));
+      themeBtn.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
+      fontPlus.addEventListener('click', () => applyFont(fontSize + 1));
+      fontMinus.addEventListener('click', () => applyFont(fontSize - 1));
+      burgerBtn.addEventListener('click', toggleNav);
+      overlay.addEventListener('click', closeMobileNav);
+
+      // Liens du sommaire : fermeture du tiroir sur mobile
+      sidebar.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (a && !isDesktop()) closeMobileNav();
+      });
+
+      // Échap ferme le tiroir
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMobileNav();
+      });
+
+      // Passage mobile <-> desktop : réinitialise l'état
+      window.addEventListener('resize', () => {
+        setHeaderHeight();
+        if (isDesktop()) closeMobileNav();
+      });
+
+      // Surbrillance du lien actif selon le défilement
+      let ticking = false;
+      function updateActive() {
+        ticking = false;
+        const nav = lang === 'fr' ? navFR : navEN;
+        const links = Array.from(nav.querySelectorAll('a'));
+        const offset = (document.querySelector('header').offsetHeight || 60) + 20;
+        let current = null;
+        for (const a of links) {
+          const target = document.getElementById(a.getAttribute('href').slice(1));
+          if (target && target.getBoundingClientRect().top - offset <= 0) current = a;
+        }
+        links.forEach(a => a.classList.toggle('active', a === current));
+        if (current && isDesktop()) {
+          const top = current.offsetTop, bottom = top + current.offsetHeight;
+          if (top < sidebar.scrollTop + 40 || bottom > sidebar.scrollTop + sidebar.clientHeight - 20) {
+            sidebar.scrollTop = Math.max(0, top - sidebar.clientHeight / 2);
+          }
+        }
+      }
+      window.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(updateActive); }
+      }, { passive: true });
+
+      // Changer de langue : revenir en haut et rafraîchir le sommaire
+      const baseApplyLang = applyLang;
+      applyLang = function (l) {
+        baseApplyLang(l);
+        updateActive();
+      };
+
+      setHeaderHeight();
       applyLang(lang);
       applyTheme(theme);
       applyFont(fontSize);
+      updateActive();
     })();
   </script>
 </body>
