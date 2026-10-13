@@ -6,6 +6,10 @@
   <title>Dépendances numériques et résilience organisationnelle | Digital Dependencies and Organisational Resilience</title>
   <meta name="description" content="Une grille d'analyse du risque cyber en contexte géopolitique — An Analytical Grid for Cyber Risk in a Geopolitical Context. Innocent Twagirumukiza, October 2026.">
   <meta name="author" content="Innocent Twagirumukiza">
+  <link rel="canonical" href="https://twagirumukiza.github.io/Cybersecurity-and-geopolitics-/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dépendances numériques et résilience organisationnelle | Digital Dependencies and Organisational Resilience">
+  <meta property="og:url" content="https://twagirumukiza.github.io/Cybersecurity-and-geopolitics-/">
   <style>
     :root {
       --bg: #f8f9fa;
@@ -1140,6 +1144,8 @@
       <a href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>PDF FR</a>
       ·
       <a href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>PDF EN</a>
+      ·
+      <a href="#" id="cookieSettings">Cookies</a>
     </p>
   </footer>
 
@@ -1289,6 +1295,114 @@
       applyTheme(theme);
       applyFont(fontSize);
       updateActive();
+    })();
+  </script>
+
+  <!-- ============ Mesure d'audience avec consentement (RGPD / CNIL) ============ -->
+  <style>
+    #consentBanner {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 2000;
+      background: var(--bg-alt); color: var(--text);
+      border-top: 3px solid var(--accent);
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      padding: 1rem 1.25rem; display: none;
+    }
+    #consentBanner.show { display: block; }
+    #consentBanner .consent-inner { max-width: 900px; margin: 0 auto; }
+    #consentBanner p { margin: 0 0 0.75rem; text-align: left; font-size: 0.9rem; line-height: 1.5; }
+    #consentBanner .consent-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    #consentBanner button {
+      font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      padding: 0.5rem 1.2rem; border-radius: 6px;
+      border: 2px solid var(--accent); background: var(--accent); color: #fff;
+    }
+    [data-theme="dark"] #consentBanner button { color: #0a1929; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #consentBanner button { color: #0a1929; } }
+  </style>
+  <div id="consentBanner" role="dialog" aria-live="polite" aria-labelledby="consentText">
+    <div class="consent-inner">
+      <p id="consentText"></p>
+      <div class="consent-actions">
+        <button type="button" id="consentAccept"></button>
+        <button type="button" id="consentRefuse"></button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      /* ----- À RENSEIGNER ----- */
+      var GTM_ID = '';   // ex. 'GTM-ABC1234'  (recommandé : GA4 se configure ensuite dans GTM)
+      var GA4_ID = '';   // ex. 'G-ABCDE12345' (à n'utiliser que si GTM_ID est vide)
+      /* ------------------------ */
+
+      var KEY = 'pub-consent';
+      var banner = document.getElementById('consentBanner');
+      var textEl = document.getElementById('consentText');
+      var btnYes = document.getElementById('consentAccept');
+      var btnNo = document.getElementById('consentRefuse');
+      var settings = document.getElementById('cookieSettings');
+      var enabled = !!(GTM_ID || GA4_ID);
+
+      var T = {
+        fr: {
+          text: "Ce site peut mesurer son audience (Google Tag Manager / Google Analytics) pour comprendre quelles sections sont lues. Aucun traceur n'est déposé sans votre accord, et votre choix est modifiable à tout moment via le lien « Cookies » en bas de page.",
+          yes: "Accepter", no: "Refuser"
+        },
+        en: {
+          text: "This site can measure its audience (Google Tag Manager / Google Analytics) to understand which sections are read. No tracker is set without your consent, and you can change your choice at any time via the “Cookies” link at the bottom of the page.",
+          yes: "Accept", no: "Decline"
+        }
+      };
+
+      function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+      function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+      function render() {
+        var l = (document.documentElement.lang || 'fr').slice(0, 2) === 'en' ? 'en' : 'fr';
+        textEl.textContent = T[l].text;
+        btnYes.textContent = T[l].yes;
+        btnNo.textContent = T[l].no;
+      }
+
+      var loaded = false;
+      function load() {
+        if (loaded || !enabled) return;
+        loaded = true;
+        window.dataLayer = window.dataLayer || [];
+        var s = document.createElement('script');
+        s.async = true;
+        if (GTM_ID) {
+          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          s.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(GTM_ID);
+        } else {
+          window.gtag = function () { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', GA4_ID, { anonymize_ip: true });
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID);
+        }
+        document.head.appendChild(s);
+      }
+
+      function show() { render(); banner.classList.add('show'); }
+      function hide() { banner.classList.remove('show'); }
+
+      btnYes.addEventListener('click', function () { set('granted'); hide(); load(); });
+      btnNo.addEventListener('click', function () {
+        set('denied'); hide();
+        if (loaded) location.reload(); // retire les scripts déjà chargés
+      });
+      if (settings) settings.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (enabled) show();
+      });
+
+      // Met à jour le texte quand la langue change
+      new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+      if (!enabled) { if (settings) settings.style.display = 'none'; return; }
+      var c = get();
+      if (c === 'granted') load();
+      else if (c !== 'denied') show();
     })();
   </script>
 </body>
