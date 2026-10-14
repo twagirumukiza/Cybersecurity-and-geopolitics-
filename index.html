@@ -314,15 +314,23 @@
       .sidebar.collapsed {
         transform: translateX(-100%);
       }
+      /* main occupe tout l'espace à droite du sommaire ;
+         l'article est centré dans cet espace (avec ou sans sommaire) */
       main {
         margin-left: var(--nav-width);
-        max-width: calc(100% - var(--nav-width));
+        margin-right: 0;
+        max-width: none;
         padding-left: 2.5rem;
         padding-right: 2.5rem;
       }
       main.expanded {
         margin-left: 0;
+        max-width: none;
+      }
+      main > article {
         max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
       }
       .overlay { display: none !important; }
       /* Le sommaire se place sous l'en-tête pour ne pas masquer le bouton ☰ */
