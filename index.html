@@ -414,6 +414,7 @@
       <a href="#fr-5-4" class="sub">5.4 Change Healthcare</a>
       <a href="#fr-5-5" class="sub">5.5 Terres rares</a>
       <a href="#fr-5-6" class="sub">5.6 Intelligence artificielle</a>
+      <a href="#fr-5-7" class="sub">5.7 Mécanismes de propagation</a>
       <a href="#fr-6">6. Synthèse et discussion</a>
       <a href="#fr-6-1" class="sub">6.1 Synthèse comparative</a>
       <a href="#fr-6-2" class="sub">6.2 Résultats transversaux</a>
@@ -467,6 +468,7 @@
       <a href="#en-5-4" class="sub">5.4 Change Healthcare</a>
       <a href="#en-5-5" class="sub">5.5 Rare earths</a>
       <a href="#en-5-6" class="sub">5.6 Artificial intelligence</a>
+      <a href="#en-5-7" class="sub">5.7 Propagation mechanisms</a>
       <a href="#en-6">6. Synthesis and discussion</a>
       <a href="#en-6-1" class="sub">6.1 Comparative synthesis</a>
       <a href="#en-6-2" class="sub">6.2 Cross-cutting findings</a>
@@ -520,6 +522,7 @@
       <a href="#zh-5-4" class="sub">5.4 Change Healthcare</a>
       <a href="#zh-5-5" class="sub">5.5 稀土</a>
       <a href="#zh-5-6" class="sub">5.6 人工智能</a>
+      <a href="#zh-5-7" class="sub">5.7 传播机制</a>
       <a href="#zh-6">6. 综合与讨论</a>
       <a href="#zh-6-1" class="sub">6.1 比较综合</a>
       <a href="#zh-6-2" class="sub">6.2 横向发现</a>
@@ -725,7 +728,22 @@
       <p>La dimension géopolitique est établie. Les autorités britanniques et américaines ont publiquement attribué NotPetya à l'armée russe le 15 février 2018 (The White House, 2018), et l'inculpation d'officiers du renseignement militaire russe en 2020 y a rattaché l'opération (U.S. Department of Justice, 2020). Le cas relève du niveau A. Il montre qu'une action menée dans un contexte régional peut produire des effets économiques bien au-delà de son théâtre initial.</p>
       <p>Lecture par la grille : la dépendance est élevée, la concentration modérée (un logiciel répandu mais local), la substitution modérée (le logiciel comptable est lui-même remplaçable ; c'est la reconstruction du parc informatique, de l'ordre de quelques jours à quelques semaines selon les récits disponibles, qui a conditionné la reprise), la propagation élevée et la résilience faible, la reprise ayant tenu à des circonstances en partie fortuites. Pour l'organisation, l'enseignement est qu'elle doit être en mesure de contenir les effets d'une attaque qui ne la visait pas nécessairement en priorité.</p>
 
-      <h3 id="fr-5-2">5.2 SolarWinds (2020)</h3>
+      <p>Maersk n'est pas le seul groupe touché. Chez Maersk, la paralysie des systèmes a affecté la coordination des navires, la gestion des installations portuaires et le suivi des conteneurs (A. P. Moller-Maersk, 2018). Saint-Gobain a estimé l'effet de l'attaque à moins de 250 millions d'euros sur son chiffre d'affaires de l'année, et Merck a indiqué que certaines de ses opérations restaient perturbées (Help Net Security, 2017). Le tableau suivant résume les enseignements du cas.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dimension</th><th>Fait documenté</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Géopolitique régionale</td><td>Opération attribuée à l'armée russe et dirigée contre l'Ukraine</td></tr>
+            <tr><td>Vecteur de transmission</td><td>Compromission de la mise à jour d'un logiciel comptable local (chaîne d'approvisionnement)</td></tr>
+            <tr><td>Cybersécurité mondiale</td><td>Propagation automatique, au-delà de la cible visée, dans les réseaux d'entreprises multinationales</td></tr>
+            <tr><td>Conséquence économique</td><td>Paralysie d'entreprises étrangères au conflit (Maersk, Saint-Gobain, Merck) et perturbation de chaînes logistiques physiques</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="fr-5-2">5.2 SolarWinds (2020)</h3>
       <p>La compromission de la plateforme de supervision Orion de SolarWinds, révélée en décembre 2020, illustre une autre forme de dépendance : celle qui repose sur la confiance accordée aux outils logiciels et à leurs mécanismes de mise à jour. Des versions légitimes du logiciel avaient été altérées pour y intégrer le code malveillant SUNBURST. Les mises à jour distribuées aux clients ont ainsi servi de vecteur d'intrusion. Selon l'éditeur, qui avait notifié environ 33 000 clients d'Orion, moins de 18 000 clients auraient installé une version contenant le code malveillant (SolarWinds Corporation, 2020). Le CERT-FR a documenté l'incident et recommandé aux organisations concernées de vérifier leurs versions, de rechercher des signes de compromission et de tenir compte du risque pesant sur les environnements administrés par la plateforme (CERT-FR, 2020). La CISA américaine a, de son côté, imposé aux agences fédérales la déconnexion des produits Orion concernés (CISA, 2020).</p>
       <p>Le problème dépasse la vulnérabilité d'un produit. Un outil de supervision dispose d'une visibilité étendue sur les infrastructures qu'il administre. La confiance qui lui est accordée et les privilèges qui lui sont attribués en font un point d'entrée vers des ressources sensibles. Le cas montre que la conformité d'un fournisseur, la légitimité d'une mise à jour et la réputation d'un éditeur ne suffisent pas à garantir l'intégrité d'une chaîne logicielle : la relation de confiance est elle-même une composante du risque.</p>
       <p>Les autorités américaines ont formellement attribué l'opération au service de renseignement extérieur russe (SVR) en avril 2021, en estimant que la compromission de la chaîne logicielle lui donnait la capacité d'espionner ou de perturber plus de 16 000 systèmes informatiques dans le monde (The White House, 2021 ; CISA, 2020) : niveau A.</p>
@@ -749,11 +767,51 @@
       <p>Ce cas n'est pas une cyberattaque. Il élargit pourtant l'analyse : une organisation peut disposer d'une infrastructure numérique correctement sécurisée et rester vulnérable à une décision extérieure qui coupe l'accès à un composant indispensable. Le niveau de preuve est D, puisque la perturbation résulte d'une décision publique.</p>
       <p>Lecture par la grille : dépendance élevée, concentration élevée, substitution élevée, propagation élevée, résilience partielle, les entreprises concernées ayant pu, pour certaines, ajuster leur production sans l'interrompre complètement.</p>
 
-      <h3 id="fr-5-6">5.6 L'intelligence artificielle et les dépendances de calcul (cas prospectif)</h3>
+      <p>Pour les organisations, les conséquences possibles de cette situation sont les suivantes. Il s'agit d'une lecture de l'auteur, qui reste à tester et que le cas n'établit pas : allongement de la durée de vie du matériel, avec davantage de vulnérabilités non corrigées ; recours à des achats de dépannage moins sûrs, avec le risque de composants contrefaits ou mal qualifiés ; pression budgétaire au détriment de la sécurité ; fragilité de la couche physique du numérique, notamment les pièces de rechange des centres de données et des systèmes industriels.</p>
+
+<h3 id="fr-5-6">5.6 L'intelligence artificielle et les dépendances de calcul (cas prospectif)</h3>
       <p>Le développement de systèmes d'IA avancés repose sur des ressources interdépendantes : semi-conducteurs spécialisés, infrastructures de calcul, centres de données, énergie, données d'entraînement, modèles, compétences scientifiques et services d'informatique en nuage. Leur maîtrise est inégalement répartie entre États et acteurs industriels. Une organisation peut posséder ses données et définir ses politiques de sécurité tout en dépendant d'un fournisseur extérieur pour accéder à un modèle, exécuter des traitements ou maintenir un service essentiel.</p>
       <p>L'IA transforme aussi le paysage des menaces. L'ENISA observe un recours croissant à l'IA par des groupes malveillants, principalement pour faciliter ou amplifier leurs activités, et note que l'intégration de systèmes d'IA dans les environnements professionnels élargit la surface d'attaque : ces systèmes sont à la fois des outils et des cibles (ENISA, 2025 ; ENISA, 2026b). Le NIST a par ailleurs formalisé les catégories d'attaques contre les systèmes d'apprentissage automatique : évasion, empoisonnement et atteintes à la confidentialité pour l'IA prédictive, auxquelles s'ajoutent, pour l'IA générative, les attaques sur la chaîne d'approvisionnement, l'injection d'instructions et les détournements d'usage (Vassilev et al., 2025). Les restrictions à l'exportation de technologies de calcul avancé montrent enfin que les composants nécessaires à l'IA sont devenus des instruments de politique de sécurité nationale. Le cadre dit de diffusion de l'IA, publié en janvier 2025 (U.S. Department of Commerce / BIS, 2025), a toutefois fait l'objet d'une annonce d'abrogation par le BIS en mai 2025, avant son entrée en application, et son remplacement n'était toujours pas publié à la mi-2026, les contrôles antérieurs sur les puces avancées demeurant en vigueur (Miller & Chevalier, 2026). Cette instabilité illustre elle-même le caractère mouvant de ces leviers.</p>
       <p>Ce cas diffère des précédents : il ne s'appuie pas sur un incident documenté de perturbation massive. Il est retenu parce que la structure de dépendance y est visible avant toute crise, ce qui permet d'éprouver la grille de manière préventive. La question devient : de quoi dépend notre IA ? Modèle, nuage, données, interfaces de programmation, infrastructure, éditeur, processeurs graphiques, chaîne logicielle. Une indisponibilité de quarante-huit heures d'un fournisseur de modèle serait-elle supportable pour les fonctions qui s'appuient sur lui ?</p>
       <p>Lecture par la grille : le codage est indicatif : dépendance modérée à élevée selon les organisations, concentration élevée, substitution élevée, propagation modérée, résilience à documenter. Le niveau de preuve est D, pour la couche de calcul.</p>
+
+      <p>Le tableau suivant propose une lecture des positions des grands blocs. C'est une hypothèse de travail de l'auteur, appuyée sur les sources citées ci-dessus, et non un résultat empirique.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Bloc</th><th>Position géopolitique</th><th>Priorité en cybersécurité</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>États-Unis</td><td>Dominant, protecteur</td><td>Protéger la propriété intellectuelle et contrôler la diffusion des technologies de calcul avancé</td></tr>
+            <tr><td>Chine</td><td>Challenger en quête d'autonomie</td><td>Développer des alternatives souveraines et réduire la dépendance aux puces avancées soumises à restrictions</td></tr>
+            <tr><td>Europe</td><td>Dépendante, régulatrice</td><td>Gérer le risque de rupture de service et sécuriser les usages (AI Act, NIS2, RGPD)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="fr-5-7">5.7 Mécanismes de propagation : lecture transversale</h3>
+      <p>Les six cas permettent une lecture transversale des voies par lesquelles un événement géopolitique régional peut devenir un risque pour des organisations éloignées de son théâtre. Cette lecture est une analyse de l'auteur. Deux des quatre mécanismes ci-dessous sont observés dans les cas, les deux autres sont des hypothèses à éprouver. Proposer de telles hypothèses relève du rôle d'un cadre conceptuel : elles ne constituent pas des résultats.</p>
+      <ul>
+        <li><strong>Débordement technique (cyber spillover).</strong> Un code malveillant conçu pour un théâtre régional se propage de façon non maîtrisée. Mécanisme observé : NotPetya (5.1).</li>
+        <li><strong>Fragilisation de la chaîne d'approvisionnement mondiale.</strong> Des éditeurs ou des fournisseurs à portée mondiale sont compromis, ou l'accès à des composants est restreint. Mécanisme observé : SolarWinds (5.2) et terres rares (5.5).</li>
+        <li><strong>Mobilisation d'acteurs non étatiques.</strong> Des groupes hacktivistes ou criminels amplifient un front de conflit. Hypothèse : Change Healthcare (5.4) montre l'impact sectoriel d'un groupe criminel, mais aucun cas du corpus ne documente une mobilisation de ce type liée à un conflit.</li>
+        <li><strong>Fragmentation des réseaux et rupture de confiance réglementaire.</strong> Les contrôles à l'exportation et les exigences de souveraineté se durcissent, au point de fragmenter les environnements technologiques. Hypothèse, illustrée en partie par les contrôles sur les terres rares (5.5) et l'instabilité du cadre applicable aux puces d'IA (5.6) ; la fragmentation d'Internet elle-même n'est pas observée dans le corpus.</li>
+      </ul>
+      <p>Le tableau suivant met ces mécanismes en regard de l'événement qui les déclenche et de leur conséquence possible pour la cybersécurité d'organisations éloignées.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Événement géopolitique régional</th><th>Mécanisme de transmission</th><th>Conséquence possible pour des organisations éloignées</th><th>Statut</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Conflit armé, cyberattaque ciblée</td><td>Propagation incontrôlée du code malveillant</td><td>Paralysie collatérale de réseaux d'entreprises étrangères au conflit</td><td>Observé (NotPetya)</td></tr>
+            <tr><td>Pression, sanctions, blocus</td><td>Compromission d'éditeurs et de fournisseurs ; restriction d'accès aux composants</td><td>Vulnérabilité de la chaîne d'approvisionnement logicielle et matérielle</td><td>Observé (SolarWinds, terres rares)</td></tr>
+            <tr><td>Tensions diplomatiques</td><td>Mobilisation de groupes proxies et hacktivistes</td><td>Hausse possible des attaques par déni de service et des fuites de données</td><td>Hypothèse de l'auteur</td></tr>
+            <tr><td>Rupture d'alliances</td><td>Durcissement des lois et des contrôles à l'exportation</td><td>Refonte des architectures de sécurité et isolement de dépendances technologiques</td><td>Hypothèse de l'auteur, illustrée en partie (5.5, 5.6)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>Source : analyse de l'auteur, à partir des cas 5.1 à 5.6.</em> Les lignes 3 et 4 restent à éprouver sur d'autres cas, par exemple des campagnes de déni de service liées à un conflit ou des épisodes de fragmentation réglementaire. Elles figurent ici pour ouvrir la discussion, ce qui prolonge les limites exposées en section 8.</p>
 
       <h2 id="fr-6">6. Synthèse et discussion</h2>
       <h3 id="fr-6-1">6.1 Synthèse comparative</h3>
@@ -837,6 +895,7 @@
         <li>Farrell, H., &amp; Newman, A. L. (2019). Weaponized interdependence: How global economic networks shape state coercion. <em>International Security, 44</em>(1), 42-79.</li>
         <li>Flyvbjerg, B. (2006). Five misunderstandings about case-study research. <em>Qualitative Inquiry, 12</em>(2), 219-245.</li>
         <li>Greenberg, A. (2018, 22 août). The untold story of NotPetya, the most devastating cyberattack in history. <em>Wired</em>.</li>
+        <li>Help Net Security. (2017, 17 août). <em>NotPetya aftermath: Companies lost hundreds of millions</em>. https://www.helpnetsecurity.com/2017/08/17/notpetya-losses/</li>
         <li>Hollnagel, E., Woods, D. D., &amp; Leveson, N. (Eds.). (2006). <em>Resilience engineering: Concepts and precepts</em>. Ashgate.</li>
         <li>International Energy Agency. (2025). <em>With new export controls on critical minerals, supply concentration risks become reality</em>. https://www.iea.org/</li>
         <li>ISO. (2019). <em>ISO 22301:2019 Sécurité et résilience : systèmes de management de la continuité d'activité</em>.</li>
@@ -884,7 +943,7 @@
         <table>
           <thead><tr><th>Cas</th><th>Sources principales</th></tr></thead>
           <tbody>
-            <tr><td>NotPetya et Maersk</td><td>A. P. Moller-Maersk (2018) ; The White House (2018) ; U.S. Department of Justice (2020) ; Greenberg (2018)</td></tr>
+            <tr><td>NotPetya et Maersk</td><td>A. P. Moller-Maersk (2018) ; The White House (2018) ; U.S. Department of Justice (2020) ; Greenberg (2018) ; Help Net Security (2017)</td></tr>
             <tr><td>SolarWinds</td><td>CERT-FR (2020) ; CISA (2020) ; SolarWinds Corporation (2020) ; The White House (2021)</td></tr>
             <tr><td>Réseau électrique ukrainien</td><td>CISA (2016) ; Lee et al. (2016) ; U.S. Department of Justice (2020)</td></tr>
             <tr><td>Change Healthcare</td><td>U.S. GAO (2024) ; UnitedHealth Group (2025)</td></tr>
@@ -1110,7 +1169,22 @@
       <p>The geopolitical dimension is established. The British and American authorities publicly attributed NotPetya to the Russian military on 15 February 2018 (The White House, 2018), and the 2020 indictment of Russian military intelligence officers linked the operation to them (U.S. Department of Justice, 2020). The case falls under level A. It shows that an action conducted in a regional context can produce economic effects well beyond its initial theatre.</p>
       <p>Reading through the grid: dependency is high, concentration moderate (widespread but local software), substitution moderate (the accounting software is itself replaceable; it was the rebuilding of the IT estate, of the order of a few days to a few weeks according to available accounts, that conditioned recovery), propagation high and resilience low, recovery having owed to partly fortuitous circumstances. For the organisation, the lesson is that it must be able to contain the effects of an attack that did not necessarily target it in the first place.</p>
 
-      <h3 id="en-5-2">5.2 SolarWinds (2020)</h3>
+      <p>Maersk was not the only group affected. At Maersk, the paralysis of systems affected vessel coordination, the management of port facilities and container tracking (A. P. Moller-Maersk, 2018). Saint-Gobain estimated the effect of the attack at less than 250 million euros on its full-year sales, and Merck indicated that some of its operations were still disrupted (Help Net Security, 2017). The following table summarises the lessons of the case.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Dimension</th><th>Documented fact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Regional geopolitics</td><td>Operation attributed to the Russian military and directed against Ukraine</td></tr>
+            <tr><td>Transmission vector</td><td>Compromise of the update of local accounting software (supply chain)</td></tr>
+            <tr><td>Global cybersecurity</td><td>Automatic propagation, beyond the intended target, through the networks of multinational companies</td></tr>
+            <tr><td>Economic consequence</td><td>Paralysis of companies with no part in the conflict (Maersk, Saint-Gobain, Merck) and disruption of physical logistics chains</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="en-5-2">5.2 SolarWinds (2020)</h3>
       <p>The compromise of SolarWinds’ Orion monitoring platform, revealed in December 2020, illustrates another form of dependency: one that rests on the trust placed in software tools and their update mechanisms. Legitimate versions of the software had been altered to embed the SUNBURST malicious code. The updates distributed to customers thus served as an intrusion vector. According to the vendor, which had notified approximately 33,000 Orion customers, fewer than 18,000 customers are believed to have installed a version containing the malicious code (SolarWinds Corporation, 2020). CERT-FR documented the incident and recommended that the organisations concerned check their versions, look for signs of compromise and take into account the risk weighing on the environments administered by the platform (CERT-FR, 2020). The American CISA, for its part, ordered federal agencies to disconnect the affected Orion products (CISA, 2020).</p>
       <p>The problem goes beyond a product’s vulnerability. A monitoring tool has extensive visibility over the infrastructure it administers. The trust placed in it and the privileges assigned to it make it an entry point to sensitive resources. The case shows that a supplier’s compliance, the legitimacy of an update and a vendor’s reputation are not enough to guarantee the integrity of a software chain: the trust relationship is itself a component of risk.</p>
       <p>The American authorities formally attributed the operation to the Russian foreign intelligence service (SVR) in April 2021, judging that the compromise of the software chain gave it the capacity to spy on or disrupt more than 16,000 computer systems worldwide (The White House, 2021; CISA, 2020): level A.</p>
@@ -1134,11 +1208,51 @@
       <p>This case is not a cyberattack. It nonetheless broadens the analysis: an organisation may have a properly secured digital infrastructure and remain vulnerable to an external decision that cuts off access to an indispensable component. The evidence level is D, since the disruption results from a public decision.</p>
       <p>Reading through the grid: high dependency, high concentration, high substitution, high propagation, partial resilience, some of the companies concerned having been able to adjust their production without halting it completely.</p>
 
-      <h3 id="en-5-6">5.6 Artificial intelligence and computing dependencies (prospective case)</h3>
+      <p>For organisations, the possible consequences of this situation are as follows. This is the author's reading, which remains to be tested and which the case does not establish: longer service life of equipment, with more unpatched vulnerabilities; stopgap purchases that are less safe, with the risk of counterfeit or poorly qualified components; budget pressure at the expense of security; and fragility of the physical layer of digital systems, notably spare parts for data centres and industrial systems.</p>
+
+<h3 id="en-5-6">5.6 Artificial intelligence and computing dependencies (prospective case)</h3>
       <p>The development of advanced AI systems rests on interdependent resources: specialised semiconductors, computing infrastructure, data centres, energy, training data, models, scientific expertise and cloud computing services. Control of them is unevenly distributed between states and industrial actors. An organisation may own its data and define its security policies while depending on an external provider to access a model, run processing or maintain an essential service.</p>
       <p>AI also transforms the threat landscape. ENISA observes a growing use of AI by malicious groups, mainly to facilitate or amplify their activities, and notes that the integration of AI systems into professional environments widens the attack surface: these systems are both tools and targets (ENISA, 2025; ENISA, 2026b). NIST has, moreover, formalised the categories of attacks against machine learning systems: evasion, poisoning and privacy attacks for predictive AI, to which are added, for generative AI, supply chain attacks, prompt injection and misuse (Vassilev et al., 2025). Export restrictions on advanced computing technologies finally show that the components needed for AI have become instruments of national security policy. The so-called AI diffusion framework, published in January 2025 (U.S. Department of Commerce / BIS, 2025), was however announced as rescinded by BIS in May 2025, before it took effect, and its replacement had still not been published by mid-2026, the earlier controls on advanced chips remaining in force (Miller &amp; Chevalier, 2026). This instability itself illustrates the shifting nature of these levers.</p>
       <p>This case differs from the previous ones: it does not rest on a documented incident of massive disruption. It is retained because the structure of dependency is visible in it before any crisis, which makes it possible to test the grid preventively. The question becomes: what does our AI depend on? Model, cloud, data, programming interfaces, infrastructure, vendor, graphics processors, software chain. Would a forty-eight-hour unavailability of a model provider be bearable for the functions that rely on it?</p>
       <p>Reading through the grid: the coding is indicative: moderate to high dependency depending on the organisation, high concentration, high substitution, moderate propagation, resilience to be documented. The evidence level is D, for the computing layer.</p>
+
+      <p>The following table offers a reading of the positions of the main blocs. It is a working hypothesis of the author, based on the sources cited above, and not an empirical result.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Bloc</th><th>Geopolitical position</th><th>Cybersecurity priority</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>United States</td><td>Dominant, protector</td><td>Protect intellectual property and control the diffusion of advanced computing technologies</td></tr>
+            <tr><td>China</td><td>Challenger seeking autonomy</td><td>Develop sovereign alternatives and reduce dependence on restricted advanced chips</td></tr>
+            <tr><td>Europe</td><td>Dependent, regulator</td><td>Manage the risk of service disruption and secure uses (AI Act, NIS2, GDPR)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="en-5-7">5.7 Propagation mechanisms: a cross-case reading</h3>
+      <p>The six cases allow a cross-case reading of the routes by which a regional geopolitical event can become a risk for organisations far from its theatre. This reading is the author's analysis. Two of the four mechanisms below are observed in the cases; the other two are hypotheses to be tested. Putting forward such hypotheses is part of the role of a conceptual framework: they are not results.</p>
+      <ul>
+        <li><strong>Technical spillover (cyber spillover).</strong> Malicious code designed for a regional theatre spreads in an uncontrolled way. Observed mechanism: NotPetya (5.1).</li>
+        <li><strong>Weakening of the global supply chain.</strong> Vendors or suppliers with global reach are compromised, or access to components is restricted. Observed mechanism: SolarWinds (5.2) and rare earths (5.5).</li>
+        <li><strong>Mobilisation of non-state actors.</strong> Hacktivist or criminal groups amplify a conflict front. Hypothesis: Change Healthcare (5.4) shows the sector-wide impact of a criminal group, but no case in the corpus documents mobilisation of this kind linked to a conflict.</li>
+        <li><strong>Network fragmentation and breakdown of regulatory trust.</strong> Export controls and sovereignty requirements tighten, to the point of fragmenting technology environments. Hypothesis, partly illustrated by the controls on rare earths (5.5) and the instability of the framework applying to AI chips (5.6); the fragmentation of the Internet itself is not observed in the corpus.</li>
+      </ul>
+      <p>The following table sets these mechanisms against the event that triggers them and their possible consequence for the cybersecurity of distant organisations.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Regional geopolitical event</th><th>Transmission mechanism</th><th>Possible consequence for distant organisations</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Armed conflict, targeted cyberattack</td><td>Uncontrolled propagation of malicious code</td><td>Collateral paralysis of the networks of companies with no part in the conflict</td><td>Observed (NotPetya)</td></tr>
+            <tr><td>Pressure, sanctions, blockade</td><td>Compromise of vendors and suppliers; restricted access to components</td><td>Vulnerability of the software and hardware supply chain</td><td>Observed (SolarWinds, rare earths)</td></tr>
+            <tr><td>Diplomatic tensions</td><td>Mobilisation of proxy and hacktivist groups</td><td>Possible rise in denial-of-service attacks and data leaks</td><td>Author's hypothesis</td></tr>
+            <tr><td>Breakdown of alliances</td><td>Tightening of laws and export controls</td><td>Redesign of security architectures and isolation of technological dependencies</td><td>Author's hypothesis, partly illustrated (5.5, 5.6)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>Source: author's analysis, based on cases 5.1 to 5.6.</em> Rows 3 and 4 remain to be tested on other cases, for example conflict-related denial-of-service campaigns or episodes of regulatory fragmentation. They are included here to open the discussion, which extends the limitations set out in section 8.</p>
 
       <h2 id="en-6">6. Synthesis and discussion</h2>
       <h3 id="en-6-1">6.1 Comparative synthesis</h3>
@@ -1222,6 +1336,7 @@
         <li>Farrell, H., &amp; Newman, A. L. (2019). Weaponized interdependence. <em>International Security, 44</em>(1), 42-79.</li>
         <li>Flyvbjerg, B. (2006). Five misunderstandings about case-study research. <em>Qualitative Inquiry, 12</em>(2), 219-245.</li>
         <li>Greenberg, A. (2018, August 22). The untold story of NotPetya. <em>Wired</em>.</li>
+        <li>Help Net Security. (2017, August 17). <em>NotPetya aftermath: Companies lost hundreds of millions</em>. https://www.helpnetsecurity.com/2017/08/17/notpetya-losses/</li>
         <li>Hollnagel, E., Woods, D. D., &amp; Leveson, N. (Eds.). (2006). <em>Resilience engineering: Concepts and precepts</em>. Ashgate.</li>
         <li>International Energy Agency. (2025). <em>With new export controls on critical minerals</em>. https://www.iea.org/</li>
         <li>ISO. (2019). <em>ISO 22301:2019 Security and resilience: Business continuity management systems</em>.</li>
@@ -1269,7 +1384,7 @@
         <table>
           <thead><tr><th>Case</th><th>Main sources</th></tr></thead>
           <tbody>
-            <tr><td>NotPetya and Maersk</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018)</td></tr>
+            <tr><td>NotPetya and Maersk</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018); Help Net Security (2017)</td></tr>
             <tr><td>SolarWinds</td><td>CERT-FR (2020); CISA (2020); SolarWinds Corporation (2020); The White House (2021)</td></tr>
             <tr><td>Ukrainian power grid</td><td>CISA (2016); Lee et al. (2016); U.S. Department of Justice (2020)</td></tr>
             <tr><td>Change Healthcare</td><td>U.S. GAO (2024); UnitedHealth Group (2025)</td></tr>
@@ -1493,7 +1608,22 @@
       <p>地缘政治维度是确立的。英国和美国当局于2018年2月15日公开将 NotPetya 归因于俄罗斯军方（The White House, 2018），2020年对俄罗斯军事情报人员的起诉书也将该行动与他们联系起来（U.S. Department of Justice, 2020）。该案例属于A级。它表明，在区域背景下实施的行动，可以产生远远超出其最初战场的经济影响。</p>
       <p>通过框架解读：依赖高，集中度中（广泛但局限于本地的软件），可替代性中（会计软件本身是可替换的；决定恢复进程的是信息系统整体的重建，据现有叙述约为数日至数周），传导高，韧性低，恢复部分得益于偶然的情况。对组织而言，教训是必须能够遏制一次本来未必以其为目标的攻击所产生的影响。</p>
 
-      <h3 id="zh-5-2">5.2 SolarWinds（2020）</h3>
+      <p>受影响的不只是马士基。在马士基，系统瘫痪影响了船舶协调、港口设施管理和集装箱追踪（A. P. Moller-Maersk, 2018）。圣戈班估计，此次攻击对其全年销售额的影响低于2.5亿欧元；默克表示其部分业务仍受到干扰（Help Net Security, 2017）。下表概括了该案例的经验。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>维度</th><th>已记录的事实</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>区域地缘政治</td><td>被归因于俄罗斯军方、针对乌克兰的行动</td></tr>
+            <tr><td>传播载体</td><td>乌克兰本地会计软件的更新被攻陷（供应链）</td></tr>
+            <tr><td>全球网络安全</td><td>超出预定目标，在跨国企业网络中自动传播</td></tr>
+            <tr><td>经济后果</td><td>与冲突无关的企业陷入瘫痪（马士基、圣戈班、默克），实体物流链受到干扰</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="zh-5-2">5.2 SolarWinds（2020）</h3>
       <p>2020年12月披露的 SolarWinds Orion 监控平台被攻陷事件，说明了另一种形式的依赖：建立在对软件工具及其更新机制的信任之上的依赖。软件的合法版本被篡改，嵌入了 SUNBURST 恶意代码。分发给客户的更新因而成为入侵的载体。据该供应商称，其已通知约33,000名 Orion 客户，其中不到18,000名客户被认为安装了含有恶意代码的版本（SolarWinds Corporation, 2020）。法国 CERT-FR 记录了该事件，并建议相关组织检查其版本、查找被攻陷的迹象，并考虑该平台所管理环境面临的风险（CERT-FR, 2020）。美国 CISA 则要求联邦机构断开受影响的 Orion 产品（CISA, 2020）。</p>
       <p>问题超出了某个产品的漏洞。监控工具对其所管理的基础设施拥有广泛的可见性。对它的信任及其被赋予的权限，使其成为通向敏感资源的入口。该案例表明，供应商的合规性、更新的合法性和厂商的声誉，都不足以保证软件链的完整性：信任关系本身就是风险的组成部分。</p>
       <p>美国当局于2021年4月正式将该行动归因于俄罗斯对外情报局（SVR），并判断软件链被攻陷使其有能力对全球超过16,000个计算机系统进行监视或破坏（The White House, 2021; CISA, 2020）：A级。</p>
@@ -1517,11 +1647,51 @@
       <p>该案例并非网络攻击，但它拓宽了分析：一个组织可能拥有安全无虞的数字基础设施，却仍然容易受到切断某一不可或缺组件获取渠道的外部决策的影响。证据等级为D级，因为中断源于一项公共决策。</p>
       <p>通过框架解读：依赖高，集中度高，可替代性高，传导高，韧性为部分，因为部分相关企业能够调整其生产而不至于完全停产。</p>
 
-      <h3 id="zh-5-6">5.6 人工智能与算力依赖（前瞻性案例）</h3>
+      <p>对组织而言，这种局面可能带来以下后果。这是作者的解读，仍有待检验，且该案例并未证实：设备使用寿命延长，未修补的漏洞增多；应急采购的安全性较低，存在假冒或资质不足部件的风险；预算压力以牺牲安全为代价；数字系统物理层变得脆弱，尤其是数据中心和工业系统的备件。</p>
+
+<h3 id="zh-5-6">5.6 人工智能与算力依赖（前瞻性案例）</h3>
       <p>先进人工智能系统的发展，建立在相互依赖的资源之上：专用半导体、算力基础设施、数据中心、能源、训练数据、模型、科学专业知识和云计算服务。对它们的控制权在国家与产业行为者之间分布不均。一个组织可能拥有自己的数据并制定自己的安全策略，却仍然依赖外部服务商来访问模型、运行处理或维持某项关键服务。</p>
       <p>人工智能也改变了威胁态势。ENISA 观察到恶意团体越来越多地使用人工智能，主要是为了便利或放大其活动，并指出人工智能系统融入专业环境扩大了攻击面：这些系统既是工具，也是目标（ENISA, 2025; ENISA, 2026b）。此外，NIST 对针对机器学习系统的攻击类别作了形式化：针对预测式人工智能的规避、投毒和隐私攻击，以及针对生成式人工智能的供应链攻击、提示注入和滥用（Vassilev et al., 2025）。对先进计算技术的出口限制最终表明，人工智能所需的组件已成为国家安全政策的工具。2025年1月发布的所谓人工智能扩散框架（U.S. Department of Commerce / BIS, 2025）于2025年5月被BIS宣布废止，尚未生效，截至2026年年中其替代方案仍未公布，此前对先进芯片的管制仍然有效（Miller &amp; Chevalier, 2026）。这种不稳定性本身就说明了这些杠杆的多变性质。</p>
       <p>该案例与前述案例不同：它并非基于有文献记录的大规模中断事件。之所以保留它，是因为在任何危机发生之前，依赖的结构就已清晰可见，这使得我们能够对框架进行预防性检验。问题于是变成：我们的人工智能依赖于什么？模型、云、数据、编程接口、基础设施、供应商、图形处理器、软件链。如果模型服务商出现四十八小时的不可用，依赖它的职能能否承受？</p>
       <p>通过框架解读：编码仅供参考：依赖为中至高（视组织而定），集中度高，可替代性高，传导中，韧性有待记录。证据等级为D级，针对算力层。</p>
+
+      <p>下表给出对主要阵营立场的解读。这是作者的工作假设，依据上文引用的来源，并非实证结果。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>阵营</th><th>地缘政治立场</th><th>网络安全优先事项</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>美国</td><td>主导者、保护者</td><td>保护知识产权，控制先进计算技术的扩散</td></tr>
+            <tr><td>中国</td><td>寻求自主的挑战者</td><td>发展自主可控的替代方案，降低对受限先进芯片的依赖</td></tr>
+            <tr><td>欧洲</td><td>依赖者、监管者</td><td>管理服务中断风险，确保使用安全（AI Act、NIS2、GDPR）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+<h3 id="zh-5-7">5.7 传播机制：跨案例解读</h3>
+      <p>六个案例使我们能够对区域性地缘政治事件如何成为远离其发生地的组织的风险这一路径作跨案例解读。这一解读是作者的分析。下列四种机制中，两种在案例中得到观察，另外两种是有待检验的假设。提出这类假设是概念框架的职责所在：它们不是研究结果。</p>
+      <ul>
+        <li><strong>技术外溢（cyber spillover）。</strong>为区域战场设计的恶意代码失控扩散。已观察到的机制：NotPetya（5.1）。</li>
+        <li><strong>全球供应链的脆弱化。</strong>具有全球影响的软件商或供应商被攻陷，或部件的获取受到限制。已观察到的机制：SolarWinds（5.2）和稀土（5.5）。</li>
+        <li><strong>非国家行为体的动员。</strong>黑客行动主义团体或犯罪团体放大冲突战线。假设：Change Healthcare（5.4）显示了犯罪团体对整个行业的影响，但语料中没有案例记录到与冲突相关的此类动员。</li>
+        <li><strong>网络碎片化与监管信任的断裂。</strong>出口管制和主权要求趋于收紧，以致技术环境被分割。假设，部分体现在稀土管制（5.5）和适用于人工智能芯片的框架的不稳定（5.6）上；互联网本身的碎片化在语料中并未观察到。</li>
+      </ul>
+      <p>下表将这些机制与触发事件及其对远方组织网络安全的可能后果对应起来。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>区域地缘政治事件</th><th>传导机制</th><th>对远方组织的可能后果</th><th>状态</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>武装冲突、定向网络攻击</td><td>恶意代码失控传播</td><td>与冲突无关的企业网络出现附带性瘫痪</td><td>已观察到（NotPetya）</td></tr>
+            <tr><td>施压、制裁、封锁</td><td>软件商和供应商被攻陷；部件获取受限</td><td>软件和硬件供应链的脆弱性</td><td>已观察到（SolarWinds、稀土）</td></tr>
+            <tr><td>外交紧张</td><td>代理团体和黑客行动主义团体被动员</td><td>拒绝服务攻击和数据泄露可能增加</td><td>作者的假设</td></tr>
+            <tr><td>联盟破裂</td><td>法律和出口管制趋严</td><td>安全架构重构，技术依赖被隔离</td><td>作者的假设，部分得到印证（5.5、5.6）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>来源：作者的分析，基于5.1至5.6的案例。</em>第3行和第4行仍有待在其他案例上检验，例如与冲突相关的拒绝服务攻击行动或监管碎片化的事例。将其列于此处是为了展开讨论，这延伸了第8节所述的局限。</p>
 
       <h2 id="zh-6">6. 综合与讨论</h2>
       <h3 id="zh-6-1">6.1 比较综合</h3>
@@ -1605,6 +1775,7 @@
         <li>Farrell, H., &amp; Newman, A. L. (2019). Weaponized interdependence. <em>International Security, 44</em>(1), 42-79.</li>
         <li>Flyvbjerg, B. (2006). Five misunderstandings about case-study research. <em>Qualitative Inquiry, 12</em>(2), 219-245.</li>
         <li>Greenberg, A. (2018, August 22). The untold story of NotPetya. <em>Wired</em>.</li>
+        <li>Help Net Security. (2017, August 17). <em>NotPetya aftermath: Companies lost hundreds of millions</em>. https://www.helpnetsecurity.com/2017/08/17/notpetya-losses/</li>
         <li>Hollnagel, E., Woods, D. D., &amp; Leveson, N. (Eds.). (2006). <em>Resilience engineering: Concepts and precepts</em>. Ashgate.</li>
         <li>International Energy Agency. (2025). <em>With new export controls on critical minerals</em>. https://www.iea.org/</li>
         <li>ISO. (2019). <em>ISO 22301:2019 Security and resilience: Business continuity management systems</em>.</li>
@@ -1652,7 +1823,7 @@
         <table>
           <thead><tr><th>案例</th><th>主要资料来源</th></tr></thead>
           <tbody>
-            <tr><td>NotPetya 与马士基</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018)</td></tr>
+            <tr><td>NotPetya 与马士基</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018); Help Net Security (2017)</td></tr>
             <tr><td>SolarWinds</td><td>CERT-FR (2020); CISA (2020); SolarWinds Corporation (2020); The White House (2021)</td></tr>
             <tr><td>乌克兰电网</td><td>CISA (2016); Lee et al. (2016); U.S. Department of Justice (2020)</td></tr>
             <tr><td>Change Healthcare</td><td>U.S. GAO (2024); UnitedHealth Group (2025)</td></tr>
