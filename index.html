@@ -286,6 +286,12 @@
       transition: background 0.2s;
     }
     .dl-btn:hover { background: var(--accent-hover); }
+    .dl-btn.xl { background: #1b5e20; }
+    .dl-btn.xl:hover { background: #2e7d32; }
+    [data-theme="dark"] .dl-btn.xl { background: #81c784; color: #0a1929; }
+    [data-theme="dark"] .dl-btn.xl:hover { background: #a5d6a7; }
+    .step-list { margin: 0.5rem 0 1rem 1.5rem; }
+    .step-list li { margin-bottom: 0.3rem; }
     [data-theme="dark"] .dl-btn { color: #0a1929; }
     .toc-inline {
       background: var(--bg-alt);
@@ -394,6 +400,7 @@
       <a href="#fr-3-3" class="sub">3.3 Typologie</a>
       <a href="#fr-3-4" class="sub">3.4 Grille d'analyse</a>
       <a href="#fr-3-5" class="sub">3.5 Propositions</a>
+      <a href="#fr-3-6" class="sub">3.6 Matrice géopolitique</a>
       <a href="#fr-4">4. Méthodologie</a>
       <a href="#fr-4-1" class="sub">4.1 Design de la recherche</a>
       <a href="#fr-4-2" class="sub">4.2 Critères de sélection des cas</a>
@@ -446,6 +453,7 @@
       <a href="#en-3-3" class="sub">3.3 Typology</a>
       <a href="#en-3-4" class="sub">3.4 Analytical grid</a>
       <a href="#en-3-5" class="sub">3.5 Propositions</a>
+      <a href="#en-3-6" class="sub">3.6 Geopolitical matrix</a>
       <a href="#en-4">4. Methodology</a>
       <a href="#en-4-1" class="sub">4.1 Research design</a>
       <a href="#en-4-2" class="sub">4.2 Case selection criteria</a>
@@ -498,6 +506,7 @@
       <a href="#zh-3-3" class="sub">3.3 类型学</a>
       <a href="#zh-3-4" class="sub">3.4 分析框架</a>
       <a href="#zh-3-5" class="sub">3.5 命题</a>
+      <a href="#zh-3-6" class="sub">3.6 地缘政治矩阵</a>
       <a href="#zh-4">4. 研究方法</a>
       <a href="#zh-4-1" class="sub">4.1 研究设计</a>
       <a href="#zh-4-2" class="sub">4.2 案例选择标准</a>
@@ -543,6 +552,9 @@
         <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 Télécharger le PDF (FR)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 Download PDF (EN)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 Télécharger le PDF (中文)</a>
+        <a class="dl-btn xl" href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>📊 Télécharger la matrice Excel (FR)</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>📊 Download Excel matrix (EN)</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>📊 Télécharger la matrice Excel (中文)</a>
       </div>
 
       <section id="fr-abstract" class="abstract-box">
@@ -569,7 +581,7 @@
 
       <h3 id="fr-1-3">1.3 Statut des énoncés et plan</h3>
       <p>Les énoncés de l'article n'ont pas tous le même statut, et le lecteur doit pouvoir les distinguer. Les faits tirés de rapports institutionnels, de documents officiels ou de comptes rendus d'audit sont présentés comme des constats documentés. Les liens établis entre ces constats et la géopolitique des dépendances relèvent de l'interprétation de l'auteur. Les recommandations de la section 7 sont des propositions de gouvernance, non des conclusions empiriques.</p>
-      <p>La suite s'organise ainsi. La section 2 situe l'article dans la littérature et le cadre réglementaire. La section 3 présente le cadre conceptuel et la section 4 la méthode. La section 5 analyse six cas, la section 6 les compare et discute les propositions formulées. La section 7 en tire des implications pour la GRC, la section 8 expose les limites, la section 9 conclut.</p>
+      <p>La suite s'organise ainsi. La section 2 situe l'article dans la littérature et le cadre réglementaire. La section 3 présente le cadre conceptuel, y compris une matrice d'intégration de la dimension géopolitique (3.6), et la section 4 la méthode. La section 5 analyse six cas, la section 6 les compare et discute les propositions formulées. La section 7 en tire des implications pour la GRC, la section 8 expose les limites, la section 9 conclut.</p>
 
       <h2 id="fr-2">2. Cadre théorique et état de l'art</h2>
       <h3 id="fr-2-1">2.1 Interdépendance et coercition</h3>
@@ -639,13 +651,58 @@
         </table>
       </div>
       <p>Les quatre premières dimensions mesurent une exposition : plus le niveau est élevé, plus l'organisation est exposée. La cinquième décrit une capacité : plus elle est solide, plus l'exposition est contenue. Les seuils proposés pour la substitution distinguent trois ordres de grandeur : la reprise opérationnelle (jours), la reconfiguration (semaines à quelques mois) et le remplacement structurel (plus de trois mois). Ils sont indicatifs, relèvent d'un choix de l'auteur et devront être calibrés par secteur, par exemple à partir des objectifs de temps de reprise des analyses d'impact.</p>
-      <p>La dimension géopolitique n'entre pas dans la grille comme un score de plus. Elle est lue à travers des facteurs observables : restrictions commerciales, tensions diplomatiques, concentration industrielle, dépendance à des infrastructures situées à l'étranger, contraintes juridiques, possibilité de sanctions, difficultés d'accès aux services de maintenance. Pour les cas étudiés, elle est consignée à part, sous la forme d'un niveau de preuve défini en 4.4.</p>
+      <p>La dimension géopolitique n'entre pas dans la grille comme un score de plus. Elle est lue à travers des facteurs observables : restrictions commerciales, tensions diplomatiques, concentration industrielle, dépendance à des infrastructures situées à l'étranger, contraintes juridiques, possibilité de sanctions, difficultés d'accès aux services de maintenance. Pour les cas étudiés, elle est consignée à part, sous la forme d'un niveau de preuve défini en 4.4. La section 3.6 propose une matrice pour intégrer cette couche à chaque phase de l'analyse.</p>
 
       <h3 id="fr-3-5">3.5 Propositions</h3>
       <p>Le cadre conduit à trois propositions, que la section 6 confronte aux cas. Elles sont formulées comme des hypothèses de travail : P1 et P3 sont proches de l'intuition et servent surtout à vérifier que la grille ordonne correctement les cas, tandis que P2, qui oppose le caractère étatique de l'acteur à la position structurelle de la dépendance, est la plus discriminante.</p>
       <p><strong>P1.</strong> La criticité d'une dépendance augmente avec la concentration de l'offre et avec le délai de substitution, quelle que soit la nature, cyber ou non, de l'événement qui la révèle.</p>
       <p><strong>P2.</strong> La gravité de l'impact sur une organisation dépend moins du caractère étatique de l'acteur à l'origine de la perturbation que de la place qu'occupe la dépendance dans l'architecture des fonctions essentielles, en particulier lorsqu'elle s'accompagne de privilèges étendus ou d'une position centrale dans un secteur.</p>
       <p><strong>P3.</strong> La capacité de fonctionner en mode dégradé modère la relation entre indisponibilité d'une ressource et perte de fonction : plus elle est solide, plus la durée de la perte est limitée.</p>
+
+      <h3 id="fr-3-6">3.6 Matrice d'intégration de la dimension géopolitique</h3>
+      <p>La grille de 3.4 mesure une exposition structurelle, et la lecture géopolitique y est tenue à part (3.4, 4.4, 6.5). Pour que cette couche ne reste pas un simple principe, nous proposons une matrice en trois volets qui permet de l'intégrer à chaque phase de l'analyse. Elle prolonge la grille sans la remplacer et ne modifie pas la cotation des cinq dimensions. Son statut est celui d'une proposition de l'auteur : elle n'a pas été validée empiriquement (voir 8.1).</p>
+      <p><strong>Volet 1 : phases d'analyse et questions géopolitiques.</strong> Le premier volet associe à chacune des sept phases de l'analyse (cadrage, cartographie, scénarios, évaluation, traitement, tests, veille) la question géopolitique à poser, les facteurs observables à consulter et le livrable attendu.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Phase</th><th>Question géopolitique à poser</th><th>Facteurs observables</th><th>Livrable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cadrage</td><td>Quelles fonctions essentielles souffriraient si le contexte international se dégradait ?</td><td>Secteur, présence à l'étranger, rôle dans des infrastructures critiques</td><td>Fonctions essentielles, périmètre de dépendance</td></tr>
+            <tr><td>Cartographie</td><td>De quelles ressources externes dépend-on, et où sont-elles localisées ou juridiquement rattachées ?</td><td>Localisation, juridiction, sous-traitants de rang deux, origine des composants</td><td>Dépendances classées dans les cinq catégories</td></tr>
+            <tr><td>Scénarios</td><td>Quel levier géopolitique pourrait s'exercer sur chaque dépendance ?</td><td>Opération étatique, sanctions, contrôle à l'exportation, pression sur un nœud central</td><td>Scénarios cyber et non cyber</td></tr>
+            <tr><td>Évaluation</td><td>Quelle est la cotation sur les cinq dimensions, et quelle est l'activation géopolitique, notée à part ?</td><td>Restrictions commerciales, tensions diplomatiques, concentration industrielle, contraintes juridiques, accès à la maintenance</td><td>Fiche par dépendance</td></tr>
+            <tr><td>Traitement</td><td>Faut-il réduire, diversifier, surveiller ou compenser la dépendance ?</td><td>Délai de substitution, stratégies de sortie, accords de secours</td><td>Décision de gouvernance motivée</td></tr>
+            <tr><td>Tests</td><td>Que devient la fonction si la ressource manque 48 heures, une semaine, un mois ?</td><td>Procédures dégradées, autonomie en durée</td><td>Cote de résilience mise à jour</td></tr>
+            <tr><td>Veille et revue</td><td>Quel signal déclenche une réévaluation de la couche géopolitique ?</td><td>Nouvelles restrictions, sanctions, attributions officielles</td><td>Déclencheurs de révision</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Volet 2 : couche d'activation géopolitique.</strong> Le deuxième volet est une fiche par dépendance. Il note trois modulateurs, chacun à trois niveaux (faible, modéré, élevé) : la probabilité de ciblage, la durée probable de la perturbation et l'accès à la maintenance et aux mises à jour. Ces modulateurs reprennent ce que 6.5 attribue à la géopolitique : augmenter la probabilité d'un ciblage, allonger la durée d'une restriction, compliquer l'accès à la maintenance ou aux mises à jour. Chaque cotation est accompagnée d'un niveau de preuve (A à D, défini en 4.4 et à l'annexe A), de la source du signal et d'une date de revue, afin que la couche reste révisable (7.2). Pour une dépendance en cours d'analyse, le niveau de preuve qualifie la source du signal et non un incident passé. Le croisement des catégories de dépendances (3.3) avec leurs leviers possibles guide cette cotation.</p>
+      <p><strong>Volet 3 : règle de priorisation.</strong> L'exposition structurelle (moyenne des quatre premières dimensions, codées de 1 à 3) et l'activation géopolitique (moyenne des trois modulateurs) sont ramenées à trois niveaux : élevé si la moyenne atteint 2,5, modéré à partir de 1,75, faible sinon. Leur croisement donne une priorité de base sur une échelle de cinq crans. La résilience ajuste ensuite cette priorité d'un cran, vers le haut si elle est faible et vers le bas si elle est solide, en cohérence avec P3.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Exposition \ Activation</th><th>Faible</th><th>Modérée</th><th>Élevée</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Élevée</strong></td><td>Surveiller</td><td>Traiter</td><td>Traiter en priorité</td></tr>
+            <tr><td><strong>Modérée</strong></td><td>Accepter et suivre</td><td>Surveiller</td><td>Traiter</td></tr>
+            <tr><td><strong>Faible</strong></td><td>Accepter</td><td>Accepter et suivre</td><td>Surveiller</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Deux garde-fous découlent de l'article. Une activation élevée adossée à un niveau de preuve C (aucun lien établi) est signalée pour vérification, et l'absence de niveau de preuve est signalée dès que l'activation dépasse le niveau faible : on évite ainsi de présumer une dimension géopolitique non démontrée (4.4). Par ailleurs, une exposition structurelle élevée n'est jamais classée au niveau le plus bas, même lorsque l'activation est faible. La matrice ne dit pas que la géopolitique est la cause du risque, mais qu'elle en module la priorité (P2).</p>
+      <p><strong>Fonctionnement pas à pas.</strong></p>
+      <ol class="step-list">
+        <li>Partir de la cartographie des dépendances (7.1) et classer chacune dans l'une des cinq catégories (3.3).</li>
+        <li>Coter les quatre dimensions d'exposition et la résilience selon la grille (3.4).</li>
+        <li>Coter les trois modulateurs géopolitiques, puis renseigner le niveau de preuve, la source du signal et la date de revue.</li>
+        <li>Lire l'exposition structurelle, l'activation et la priorité finale, et vérifier les alertes de cohérence.</li>
+        <li>Décider (réduire, diversifier, surveiller ou compenser, 7.6) et fixer un déclencheur de révision.</li>
+      </ol>
+      <p><strong>Illustration.</strong> Reprenons le distributeur régional de 7.6. La grille donne une dépendance élevée, une concentration élevée, une substitution modérée (une migration prendrait plusieurs semaines), une propagation élevée et une résilience faible : l'exposition structurelle est élevée (moyenne de 2,75). Supposons qu'aucun signal géopolitique ne touche le prestataire d'hébergement et que l'accès à la maintenance dépende de lui : les modulateurs sont faible, faible et modéré, l'activation est faible (moyenne de 1,33) et le niveau de preuve est C. La priorité de base est « surveiller », que la résilience faible relève d'un cran : « traiter ». La décision n'est donc pas de changer de prestataire mais de compenser, en documentant un mode dégradé et en testant une indisponibilité de quarante-huit heures, comme le propose 7.6. Si une tension documentée touchait ensuite l'hébergeur, l'activation monterait et la priorité avec elle.</p>
+      <p><strong>Outil.</strong> Les trois volets sont réunis dans un classeur Excel téléchargeable, avec listes déroulantes, calcul automatique de la priorité, alertes de cohérence et synthèse : <a href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>Excel (FR)</a> · <a href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>Excel (EN)</a> · <a href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>Excel (中文)</a>. Les seuils et la matrice de priorité sont des paramètres modifiables, à calibrer par secteur comme les seuils de substitution (3.4).</p>
 
       <h2 id="fr-4">4. Méthodologie</h2>
       <h3 id="fr-4-1">4.1 Design de la recherche</h3>
@@ -739,7 +796,7 @@
       <h3 id="fr-7-1">7.1 Cartographier les dépendances réelles</h3>
       <p>Le questionnaire annuel de conformité reste utile, mais il décrit ce que le fournisseur déclare, non ce dont l'organisation dépend. La première étape consiste à partir des fonctions essentielles et à remonter vers les ressources qui les soutiennent, y compris les sous-traitants de rang deux et les composants matériels. Cette cartographie alimente directement les dimensions de dépendance, de concentration et de propagation de la grille.</p>
       <h3 id="fr-7-2">7.2 Intégrer la dimension géopolitique dans l'analyse des fournisseurs</h3>
-      <p>La géopolitique ne doit pas se réduire à un indicateur fondé sur la nationalité du fournisseur. Elle gagne à s'appuyer sur des facteurs observables : restrictions commerciales, tensions diplomatiques, concentration industrielle, dépendance à des infrastructures situées à l'étranger, contraintes juridiques, possibilités de sanctions, difficultés d'accès à la maintenance. Ces facteurs se consignent comme une couche d'analyse distincte, révisable quand le contexte évolue.</p>
+      <p>La géopolitique ne doit pas se réduire à un indicateur fondé sur la nationalité du fournisseur. Elle gagne à s'appuyer sur des facteurs observables : restrictions commerciales, tensions diplomatiques, concentration industrielle, dépendance à des infrastructures situées à l'étranger, contraintes juridiques, possibilités de sanctions, difficultés d'accès à la maintenance. Ces facteurs se consignent comme une couche d'analyse distincte, révisable quand le contexte évolue. La matrice de la section 3.6 propose une manière de consigner cette couche et de la relier à la priorisation des dépendances.</p>
       <h3 id="fr-7-3">7.3 Tester le fonctionnement en mode dégradé</h3>
       <p>Aucune organisation ne peut raisonnablement postuler qu'elle empêchera toutes les attaques. Il faut donc savoir combien de temps elle peut fonctionner si un fournisseur critique devient indisponible. Des exercices portant sur des durées de quarante-huit heures, d'une semaine et d'un mois permettent de distinguer les fonctions qui tiennent de celles qui s'arrêtent, et d'alimenter la dimension de résilience. Le cas ukrainien rappelle ce que valent des procédures manuelles conservées et entretenues.</p>
       <h3 id="fr-7-4">7.4 Étendre le périmètre de la continuité d'activité</h3>
@@ -752,7 +809,7 @@
 
       <h2 id="fr-8">8. Limites et pistes de recherche</h2>
       <h3 id="fr-8-1">8.1 Limites</h3>
-      <p>Cette étude comporte plusieurs limites. Le corpus est restreint : six situations, choisies pour leur variété et non pour leur représentativité, ne permettent aucune généralisation statistique. Les sources sont documentaires et de qualité inégale. Un rapport annuel d'entreprise ou une estimation d'audit public ne livrent pas des mesures comparables, et plusieurs montants cités sont des estimations datées. Le codage a été réalisé par un seul analyste, sans double codage, et les seuils de la dimension de substitution sont indicatifs. Le cas de l'IA est prospectif : il ne repose pas sur un incident et son codage reste provisoire. Aucune validation auprès de praticiens n'a été menée. Enfin, le sujet évolue vite, et certaines sources récentes pourront être précisées ou révisées.</p>
+      <p>Cette étude comporte plusieurs limites. Le corpus est restreint : six situations, choisies pour leur variété et non pour leur représentativité, ne permettent aucune généralisation statistique. Les sources sont documentaires et de qualité inégale. Un rapport annuel d'entreprise ou une estimation d'audit public ne livrent pas des mesures comparables, et plusieurs montants cités sont des estimations datées. Le codage a été réalisé par un seul analyste, sans double codage, et les seuils de la dimension de substitution sont indicatifs. Le cas de l'IA est prospectif : il ne repose pas sur un incident et son codage reste provisoire. Aucune validation auprès de praticiens n'a été menée. La matrice d'intégration de la section 3.6 est une proposition non testée : ses seuils et sa règle de priorisation n'ont été ni calibrés par secteur ni soumis à des praticiens. Enfin, le sujet évolue vite, et certaines sources récentes pourront être précisées ou révisées.</p>
       <p>S'y ajoutent les biais déjà évoqués en 4.5 : la documentation abondante des grands incidents, qui peut donner une image plus spectaculaire que la moyenne, et le regard rétrospectif.</p>
       <h3 id="fr-8-2">8.2 Pistes de recherche</h3>
       <p>Quatre prolongements paraissent naturels. Le premier est une validation par entretiens semi-directifs auprès de RSSI et de responsables du risque, afin de tester la lisibilité et l'utilité de la grille. Le deuxième est une démarche de type Delphi pour calibrer les seuils de substitution par secteur. Le troisième est un double codage indépendant des cas, qui permettrait d'estimer la fiabilité inter-codeurs. Le quatrième est une application sectorielle (santé, énergie, finance), éventuellement sous la forme d'une étude de cas interne anonymisée, reliant la grille aux registres de prestataires que prévoit DORA ou aux analyses d'impact existantes.</p>
@@ -881,6 +938,9 @@
         <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 Download PDF (FR)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 Download PDF (EN)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 Download PDF (中文)</a>
+        <a class="dl-btn xl" href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>📊 Download Excel matrix (FR)</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>📊 Download Excel matrix (EN)</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>📊 Download Excel matrix (中文)</a>
       </div>
 
       <section id="en-abstract" class="abstract-box">
@@ -907,7 +967,7 @@
 
       <h3 id="en-1-3">1.3 Status of statements and outline</h3>
       <p>The statements in the article do not all have the same status, and the reader must be able to tell them apart. Facts drawn from institutional reports, official documents or audit reports are presented as documented findings. The links drawn between these findings and the geopolitics of dependencies are the author’s interpretation. The recommendations in Section 7 are governance proposals, not empirical conclusions.</p>
-      <p>The remainder is organised as follows. Section 2 places the article in the literature and the regulatory framework. Section 3 presents the conceptual framework and Section 4 the method. Section 5 analyses six cases; Section 6 compares them and discusses the propositions put forward. Section 7 draws implications for GRC, Section 8 sets out the limitations, and Section 9 concludes.</p>
+      <p>The remainder is organised as follows. Section 2 places the article in the literature and the regulatory framework. Section 3 presents the conceptual framework, including a matrix for integrating the geopolitical dimension (3.6), and Section 4 the method. Section 5 analyses six cases; Section 6 compares them and discusses the propositions put forward. Section 7 draws implications for GRC, Section 8 sets out the limitations, and Section 9 concludes.</p>
 
       <h2 id="en-2">2. Theoretical framework and literature review</h2>
       <h3 id="en-2-1">2.1 Interdependence and coercion</h3>
@@ -976,13 +1036,58 @@
           </tbody>
         </table>
       </div>
-      <p>The geopolitical dimension does not enter the grid as one more score. It is read through observable factors: trade restrictions, diplomatic tensions, industrial concentration, dependence on infrastructure located abroad, legal constraints, the possibility of sanctions, difficulties of access to maintenance services. For the cases studied, it is recorded separately, in the form of an evidence level defined in 4.4.</p>
+      <p>The geopolitical dimension does not enter the grid as one more score. It is read through observable factors: trade restrictions, diplomatic tensions, industrial concentration, dependence on infrastructure located abroad, legal constraints, the possibility of sanctions, difficulties of access to maintenance services. For the cases studied, it is recorded separately, in the form of an evidence level defined in 4.4. Section 3.6 proposes a matrix for integrating this layer into each phase of the analysis.</p>
 
       <h3 id="en-3-5">3.5 Propositions</h3>
       <p>The framework leads to three propositions, which Section 6 confronts with the cases. They are formulated as working hypotheses: P1 and P3 are close to intuition and serve mainly to check that the grid orders the cases correctly, whereas P2, which sets the state character of the actor against the structural position of the dependency, is the most discriminating.</p>
       <p><strong>P1.</strong> The criticality of a dependency increases with supply concentration and with substitution time, whatever the nature, cyber or otherwise, of the event that reveals it.</p>
       <p><strong>P2.</strong> The severity of the impact on an organisation depends less on the state character of the actor behind the disruption than on the place the dependency occupies in the architecture of essential functions, particularly when it comes with extended privileges or a central position in a sector.</p>
       <p><strong>P3.</strong> The capacity to operate in degraded mode moderates the relationship between the unavailability of a resource and the loss of function: the stronger it is, the more limited the duration of the loss.</p>
+
+      <h3 id="en-3-6">3.6 Matrix for integrating the geopolitical dimension</h3>
+      <p>The grid in 3.4 measures structural exposure, and the geopolitical reading is kept apart from it (3.4, 4.4, 6.5). So that this layer does not remain a mere principle, we propose a three-part matrix that integrates it into each phase of the analysis. It extends the grid without replacing it and does not alter the rating of the five dimensions. Its status is that of a proposal by the author: it has not been empirically validated (see 8.1).</p>
+      <p><strong>Part 1: analysis phases and geopolitical questions.</strong> The first part associates with each of the seven phases of the analysis (scoping, mapping, scenarios, assessment, treatment, testing, monitoring) the geopolitical question to ask, the observable factors to consult and the expected deliverable.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Phase</th><th>Geopolitical question to ask</th><th>Observable factors</th><th>Deliverable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Scoping</td><td>Which essential functions would suffer if the international context deteriorated?</td><td>Sector, presence abroad, role in critical infrastructure</td><td>Essential functions, dependency perimeter</td></tr>
+            <tr><td>Mapping</td><td>Which external resources do we depend on, and where are they located or legally attached?</td><td>Location, jurisdiction, tier-two subcontractors, origin of components</td><td>Dependencies classified in the five categories</td></tr>
+            <tr><td>Scenarios</td><td>Which geopolitical lever could be exercised over each dependency?</td><td>State operation, sanctions, export controls, pressure on a central node</td><td>Cyber and non-cyber scenarios</td></tr>
+            <tr><td>Assessment</td><td>What is the rating on the five dimensions, and what is the geopolitical activation, rated separately?</td><td>Trade restrictions, diplomatic tensions, industrial concentration, legal constraints, access to maintenance</td><td>Worksheet per dependency</td></tr>
+            <tr><td>Treatment</td><td>Should the dependency be reduced, diversified, monitored or offset?</td><td>Substitution time, exit strategies, backup agreements</td><td>Reasoned governance decision</td></tr>
+            <tr><td>Testing</td><td>What happens to the function if the resource is missing for 48 hours, one week, one month?</td><td>Degraded procedures, duration of autonomy</td><td>Updated resilience rating</td></tr>
+            <tr><td>Monitoring and review</td><td>Which signal triggers a reassessment of the geopolitical layer?</td><td>New restrictions, sanctions, official attributions</td><td>Review triggers</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Part 2: geopolitical activation layer.</strong> The second part is a worksheet per dependency. It rates three modulators, each on three levels (low, moderate, high): the likelihood of targeting, the probable duration of the disruption, and access to maintenance and updates. These modulators take up what 6.5 attributes to geopolitics: increasing the probability of targeting, lengthening the duration of a restriction, complicating access to maintenance or updates. Each rating is accompanied by an evidence level (A to D, defined in 4.4 and Appendix A), the source of the signal and a review date, so that the layer remains revisable (7.2). For a dependency under analysis, the evidence level qualifies the source of the signal rather than a past incident. Crossing the categories of dependency (3.3) with their possible levers guides this rating.</p>
+      <p><strong>Part 3: prioritisation rule.</strong> Structural exposure (average of the first four dimensions, coded 1 to 3) and geopolitical activation (average of the three modulators) are brought down to three levels: high if the average reaches 2.5, moderate from 1.75, low otherwise. Their cross-tabulation gives a base priority on a five-step scale. Resilience then adjusts this priority by one step, upwards if it is low and downwards if it is strong, consistently with P3.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Exposure \ Activation</th><th>Low</th><th>Moderate</th><th>High</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>High</strong></td><td>Monitor</td><td>Treat</td><td>Treat first</td></tr>
+            <tr><td><strong>Moderate</strong></td><td>Accept and track</td><td>Monitor</td><td>Treat</td></tr>
+            <tr><td><strong>Low</strong></td><td>Accept</td><td>Accept and track</td><td>Monitor</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Two safeguards follow from the article. A high activation backed by evidence level C (no established link) is flagged for checking, and a missing evidence level is flagged as soon as activation exceeds the low level: this avoids presuming a geopolitical dimension that has not been demonstrated (4.4). Moreover, a high structural exposure is never ranked at the lowest level, even when activation is low. The matrix does not say that geopolitics causes the risk, but that it modulates its priority (P2).</p>
+      <p><strong>Step by step.</strong></p>
+      <ol class="step-list">
+        <li>Start from the mapping of dependencies (7.1) and classify each in one of the five categories (3.3).</li>
+        <li>Rate the four exposure dimensions and resilience using the grid (3.4).</li>
+        <li>Rate the three geopolitical modulators, then enter the evidence level, the source of the signal and the review date.</li>
+        <li>Read the structural exposure, the activation and the final priority, and check the consistency warnings.</li>
+        <li>Decide (reduce, diversify, monitor or offset, 7.6) and set a review trigger.</li>
+      </ol>
+      <p><strong>Illustration.</strong> Take the regional distributor of 7.6. The grid yields high dependency, high concentration, moderate substitution (a migration would take several weeks), high propagation and low resilience: structural exposure is high (average of 2.75). Suppose no geopolitical signal affects the hosting provider and access to maintenance depends on it: the modulators are low, low and moderate, activation is low (average of 1.33) and the evidence level is C. The base priority is “monitor”, which low resilience raises by one step: “treat”. The decision is therefore not to change provider but to offset, by documenting a degraded mode and testing a forty-eight-hour unavailability, as 7.6 proposes. If a documented tension were later to affect the host, activation would rise and priority with it.</p>
+      <p><strong>Tool.</strong> The three parts are brought together in a downloadable Excel workbook, with drop-down lists, automatic calculation of priority, consistency warnings and a summary: <a href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>Excel (FR)</a> · <a href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>Excel (EN)</a> · <a href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>Excel (中文)</a>. The thresholds and the priority matrix are editable parameters, to be calibrated by sector like the substitution thresholds (3.4).</p>
 
       <h2 id="en-4">4. Methodology</h2>
       <h3 id="en-4-1">4.1 Research design</h3>
@@ -1076,7 +1181,7 @@
       <h3 id="en-7-1">7.1 Map real dependencies</h3>
       <p>The annual compliance questionnaire remains useful, but it describes what the supplier declares, not what the organisation depends on. The first step is to start from essential functions and work back to the resources that support them, including second-tier subcontractors and hardware components. This mapping directly feeds the dependency, concentration and propagation dimensions of the grid.</p>
       <h3 id="en-7-2">7.2 Integrate the geopolitical dimension into supplier analysis</h3>
-      <p>Geopolitics should not be reduced to an indicator based on the supplier’s nationality. It benefits from resting on observable factors: trade restrictions, diplomatic tensions, industrial concentration, dependence on infrastructure located abroad, legal constraints, the possibility of sanctions, difficulties of access to maintenance. These factors are recorded as a distinct layer of analysis, revisable as the context evolves.</p>
+      <p>Geopolitics should not be reduced to an indicator based on the supplier’s nationality. It benefits from resting on observable factors: trade restrictions, diplomatic tensions, industrial concentration, dependence on infrastructure located abroad, legal constraints, the possibility of sanctions, difficulties of access to maintenance. These factors are recorded as a distinct layer of analysis, revisable as the context evolves. The matrix in Section 3.6 proposes a way of recording this layer and linking it to the prioritisation of dependencies.</p>
       <h3 id="en-7-3">7.3 Test degraded-mode operation</h3>
       <p>No organisation can reasonably assume that it will prevent all attacks. It is therefore necessary to know how long it can operate if a critical supplier becomes unavailable. Exercises covering durations of forty-eight hours, one week and one month make it possible to distinguish the functions that hold from those that stop, and to feed the resilience dimension. The Ukrainian case is a reminder of the value of manual procedures that are kept and maintained.</p>
       <h3 id="en-7-4">7.4 Extend the scope of business continuity</h3>
@@ -1089,7 +1194,7 @@
 
       <h2 id="en-8">8. Limitations and research directions</h2>
       <h3 id="en-8-1">8.1 Limitations</h3>
-      <p>This study has several limitations. The corpus is small: six situations, chosen for their variety rather than their representativeness, allow no statistical generalisation. The sources are documentary and of uneven quality. A corporate annual report or a public audit estimate does not provide comparable measures, and several of the amounts cited are dated estimates. The coding was carried out by a single analyst, without double coding, and the thresholds of the substitution dimension are indicative. The AI case is prospective: it does not rest on an incident and its coding remains provisional. No validation with practitioners has been carried out. Finally, the subject evolves quickly, and some recent sources may be clarified or revised.</p>
+      <p>This study has several limitations. The corpus is small: six situations, chosen for their variety rather than their representativeness, allow no statistical generalisation. The sources are documentary and of uneven quality. A corporate annual report or a public audit estimate does not provide comparable measures, and several of the amounts cited are dated estimates. The coding was carried out by a single analyst, without double coding, and the thresholds of the substitution dimension are indicative. The AI case is prospective: it does not rest on an incident and its coding remains provisional. No validation with practitioners has been carried out. The integration matrix in Section 3.6 is an untested proposal: its thresholds and prioritisation rule have been neither calibrated by sector nor submitted to practitioners. Finally, the subject evolves quickly, and some recent sources may be clarified or revised.</p>
       <p>To these are added the biases already mentioned in 4.5: the abundant documentation of major incidents, which may give a more spectacular picture than the average, and hindsight.</p>
       <h3 id="en-8-2">8.2 Research directions</h3>
       <p>Four extensions seem natural. The first is validation through semi-structured interviews with CISOs and risk managers, in order to test the legibility and usefulness of the grid. The second is a Delphi-type approach to calibrate the substitution thresholds by sector. The third is independent double coding of the cases, which would make it possible to estimate inter-coder reliability. The fourth is a sectoral application (healthcare, energy, finance), possibly in the form of an anonymised internal case study, linking the grid to the provider registers required by DORA or to existing impact analyses.</p>
@@ -1216,6 +1321,9 @@
         <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 下载 PDF（法语）</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 下载 PDF（英语）</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 下载 PDF（中文）</a>
+        <a class="dl-btn xl" href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>📊 下载 Excel 矩阵（法语）</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>📊 下载 Excel 矩阵（英语）</a>
+        <a class="dl-btn xl" href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>📊 下载 Excel 矩阵（中文）</a>
       </div>
 
       <section id="zh-abstract" class="abstract-box">
@@ -1242,7 +1350,7 @@
 
       <h3 id="zh-1-3">1.3 陈述的性质与行文结构</h3>
       <p>本文中的陈述并不具有同等地位，读者应当能够加以区分。取自机构报告、官方文件或审计报告的事实，作为有文献记录的发现呈现。这些发现与依赖的地缘政治之间所建立的联系，属于笔者的解释。第7节的建议则是治理方面的主张，而非实证结论。</p>
-      <p>后文安排如下。第2节将本文置于文献与监管框架之中。第3节阐述概念框架，第4节说明方法。第5节分析六个案例；第6节对其进行比较并讨论所提出的命题。第7节得出对GRC的启示，第8节阐明局限，第9节为结论。</p>
+      <p>后文安排如下。第2节将本文置于文献与监管框架之中。第3节阐述概念框架（含地缘政治维度整合矩阵，见3.6），第4节说明方法。第5节分析六个案例；第6节对其进行比较并讨论所提出的命题。第7节得出对GRC的启示，第8节阐明局限，第9节为结论。</p>
 
       <h2 id="zh-2">2. 理论框架与文献综述</h2>
       <h3 id="zh-2-1">2.1 相互依存与胁迫</h3>
@@ -1311,13 +1419,58 @@
           </tbody>
         </table>
       </div>
-      <p>地缘政治维度不是作为又一个分值进入该框架的，而是通过可观察的因素来解读：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护服务的困难。对于所研究的案例，它以4.4中定义的证据等级的形式单独记录。</p>
+      <p>地缘政治维度不是作为又一个分值进入该框架的，而是通过可观察的因素来解读：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护服务的困难。对于所研究的案例，它以4.4中定义的证据等级的形式单独记录。第3.6节提出了一个矩阵，用于把这一层纳入分析的每个阶段。</p>
 
       <h3 id="zh-3-5">3.5 命题</h3>
       <p>该框架引出三个命题，第6节将其与案例相对照。它们以工作假设的形式提出：P1 和 P3 接近直觉，主要用于检验该框架能否正确地对案例排序；而 P2 将行为者的国家性质与依赖的结构性位置相对照，是最具区分力的命题。</p>
       <p><strong>P1。</strong>一项依赖的关键性随供给集中度和替代时间的增加而上升，无论揭示它的事件是否属于网络性质。</p>
       <p><strong>P2。</strong>对组织的影响严重程度，较少取决于引发中断的行为者是否具有国家性质，更多取决于该依赖在关键职能架构中所处的位置，尤其是当它拥有扩展权限或在行业中处于核心位置时。</p>
       <p><strong>P3。</strong>在降级模式下运行的能力调节着资源不可用与职能丧失之间的关系：该能力越强，职能丧失的持续时间就越有限。</p>
+
+      <h3 id="zh-3-6">3.6 地缘政治维度整合矩阵</h3>
+      <p>3.4中的分析框架衡量结构性暴露，地缘政治解读与之分开处理（3.4、4.4、6.5）。为使这一层不止停留在原则上，我们提出一个由三部分组成的矩阵，把它纳入分析的每个阶段。它是对框架的延伸而非取代，也不改变五个维度的评级。其性质是笔者提出的方案：尚未经过实证验证（见8.1）。</p>
+      <p><strong>第一部分：分析阶段与地缘政治问题。</strong>第一部分为分析的七个阶段（界定范围、绘制图谱、情景设定、评估、处置、测试、监测与复核）分别列出应提出的地缘政治问题、可参考的可观察因素以及预期成果。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>阶段</th><th>应提出的地缘政治问题</th><th>可观察因素</th><th>成果</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>界定范围</td><td>如果国际环境恶化，哪些关键职能会受到影响？</td><td>所属行业、境外业务、在关键基础设施中的角色</td><td>关键职能、依赖边界</td></tr>
+            <tr><td>绘制图谱</td><td>我们依赖哪些外部资源，它们位于何处或在法律上归属何处？</td><td>所在地、司法管辖、二级分包商、组件来源</td><td>按五类划分的依赖清单</td></tr>
+            <tr><td>情景设定</td><td>每项依赖可能被施加何种地缘政治杠杆？</td><td>国家行动、制裁、出口管制、对核心节点施压</td><td>网络与非网络情景</td></tr>
+            <tr><td>评估</td><td>五个维度的评级是什么？单独评定的地缘政治激活程度是什么？</td><td>贸易限制、外交紧张、产业集中、法律约束、获得维护的难度</td><td>每项依赖的评估表</td></tr>
+            <tr><td>处置</td><td>应当减少、分散、监控还是抵消这项依赖？</td><td>替代时间、退出策略、备份协议</td><td>有理有据的治理决策</td></tr>
+            <tr><td>测试</td><td>如果该资源缺失48小时、一周、一个月，这项职能会怎样？</td><td>降级程序、自主运行时长</td><td>更新后的韧性评级</td></tr>
+            <tr><td>监测与复核</td><td>哪些信号会触发对地缘政治层的重新评估？</td><td>新的限制措施、制裁、官方归因</td><td>复核触发条件</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>第二部分：地缘政治激活层。</strong>第二部分是每项依赖一张的评估表。它对三个调节因子分别评定三个等级（低、中、高）：被瞄准的概率、中断的可能持续时间，以及获得维护和更新的难度。这三个调节因子对应6.5中归于地缘政治的作用：提高被瞄准的概率、延长限制措施的持续时间、使获得维护或更新变得复杂。每项评级都附有证据等级（A至D，定义见4.4和附录A）、信号来源和复核日期，使这一层保持可修订（7.2）。对于正在分析的依赖，证据等级说明的是信号的来源，而不是过去的某起事件。将依赖类别（3.3）与其可能的杠杆交叉对照，有助于进行这一评级。</p>
+      <p><strong>第三部分：优先级规则。</strong>结构性暴露（前四个维度的平均值，按1至3编码）和地缘政治激活程度（三个调节因子的平均值）各归为三个等级：平均值达到2.5为高，达到1.75为中，否则为低。二者的交叉给出五级刻度上的基础优先级。随后由韧性对该优先级调整一级：韧性低则上调，韧性强则下调，这与P3一致。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>暴露 ＼ 激活</th><th>低</th><th>中</th><th>高</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>高</strong></td><td>监控</td><td>处理</td><td>优先处理</td></tr>
+            <tr><td><strong>中</strong></td><td>接受并跟踪</td><td>监控</td><td>处理</td></tr>
+            <tr><td><strong>低</strong></td><td>接受</td><td>接受并跟踪</td><td>监控</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>两项保障措施源自论文本身。若激活程度为高却只有C级证据（没有确立的关联），会提示核实；只要激活程度高于低，缺少证据等级也会提示。这样可以避免预设一个尚未得到证明的地缘政治维度（4.4）。此外，高结构性暴露即使在激活程度低时也不会被归入最低等级。该矩阵并不是说地缘政治造成了风险，而是说它调节风险的优先级（P2）。</p>
+      <p><strong>逐步操作。</strong></p>
+      <ol class="step-list">
+        <li>从依赖图谱（7.1）出发，把每项依赖归入五个类别之一（3.3）。</li>
+        <li>按框架（3.4）评定四个暴露维度和韧性。</li>
+        <li>评定三个地缘政治调节因子，然后填写证据等级、信号来源和复核日期。</li>
+        <li>读取结构性暴露、激活程度和最终优先级，并查看一致性提示。</li>
+        <li>作出决策（减少、分散、监控或抵消，7.6），并设定复核触发条件。</li>
+      </ol>
+      <p><strong>示例。</strong>回到7.6中的区域性分销商。框架给出：依赖高、集中度高、可替代性中（迁移需要数周）、传导高、韧性低，因此结构性暴露为高（平均值2.75）。假设没有任何地缘政治信号涉及托管服务商，而维护的获得取决于该服务商：三个调节因子分别为低、低、中，激活程度为低（平均值1.33），证据等级为C。基础优先级为“监控”，韧性低将其上调一级，成为“处理”。因此决策不是更换服务商，而是抵消：按7.6的建议记录降级模式，并测试四十八小时的不可用。如果随后有已被记录的紧张局势波及托管方，激活程度会上升，优先级也会随之上升。</p>
+      <p><strong>工具。</strong>三个部分汇集在一个可下载的Excel工作簿中，含下拉列表、优先级自动计算、一致性提示和汇总：<a href="Matrice_geopolitique_risque_cyber_FR.xlsx" download>Excel（法语）</a> · <a href="Geopolitical_Cyber_Risk_Matrix_EN.xlsx" download>Excel（英语）</a> · <a href="Geopolitical_Cyber_Risk_Matrix_ZH.xlsx" download>Excel（中文）</a>。阈值和优先级矩阵是可修改的参数，应像可替代性阈值（3.4）一样按行业校准。</p>
 
       <h2 id="zh-4">4. 研究方法</h2>
       <h3 id="zh-4-1">4.1 研究设计</h3>
@@ -1411,7 +1564,7 @@
       <h3 id="zh-7-1">7.1 绘制真实依赖图谱</h3>
       <p>年度合规调查问卷仍然有用，但它描述的是供应商所声明的内容，而不是组织真正依赖的对象。第一步是从关键职能出发，逆向追溯到支撑这些职能的资源，包括二级分包商和硬件组件。这一图谱直接为框架中的依赖、集中度和传导维度提供输入。</p>
       <h3 id="zh-7-2">7.2 将地缘政治维度纳入供应商分析</h3>
-      <p>不应把地缘政治简化为基于供应商国籍的指标。更可取的是建立在可观察的因素之上：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护的困难。这些因素作为一个独立的分析层予以记录，并随环境演变而修订。</p>
+      <p>不应把地缘政治简化为基于供应商国籍的指标。更可取的是建立在可观察的因素之上：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护的困难。这些因素作为一个独立的分析层予以记录，并随环境演变而修订。第3.6节的矩阵提出了一种记录这一层并将其与依赖优先级排序相联系的方法。</p>
       <h3 id="zh-7-3">7.3 测试降级模式下的运行</h3>
       <p>任何组织都不能合理地假定自己能够阻止所有攻击。因此有必要知道，一旦某个关键供应商不可用，自己还能运转多久。覆盖四十八小时、一周和一个月时长的演练，能够区分哪些职能能够维持、哪些会停摆，并为韧性维度提供输入。乌克兰案例提醒我们，保留并维护手动程序是有价值的。</p>
       <h3 id="zh-7-4">7.4 扩展业务连续性的范围</h3>
@@ -1424,7 +1577,7 @@
 
       <h2 id="zh-8">8. 局限与研究方向</h2>
       <h3 id="zh-8-1">8.1 局限</h3>
-      <p>本研究有若干局限。语料规模很小：六种情形是因其多样性而非代表性被选中，不允许做统计推广。资料来源属于文献性质，质量参差不齐。企业年报或公共审计的估算并不提供可比的度量，所引用的若干金额是带有时间性的估计。编码由单一分析者完成，未做双重编码，可替代性维度的阈值仅供参考。人工智能案例具有前瞻性：它并非基于某起事件，其编码仍是暂定的。尚未与实务工作者进行验证。最后，该主题演变迅速，部分近期资料可能被澄清或修订。</p>
+      <p>本研究有若干局限。语料规模很小：六种情形是因其多样性而非代表性被选中，不允许做统计推广。资料来源属于文献性质，质量参差不齐。企业年报或公共审计的估算并不提供可比的度量，所引用的若干金额是带有时间性的估计。编码由单一分析者完成，未做双重编码，可替代性维度的阈值仅供参考。人工智能案例具有前瞻性：它并非基于某起事件，其编码仍是暂定的。尚未与实务工作者进行验证。第3.6节的整合矩阵是尚未经过检验的方案：其阈值和优先级规则既未按行业校准，也未提交给实务工作者检验。最后，该主题演变迅速，部分近期资料可能被澄清或修订。</p>
       <p>此外还有4.5中已提到的偏差：重大事件的文献丰富，可能呈现出比平均情况更惊人的图景，以及后见之明。</p>
       <h3 id="zh-8-2">8.2 研究方向</h3>
       <p>有四个方向看来是自然的延伸。第一是通过对CISO和风险管理者的半结构化访谈进行验证，以检验该框架的易读性和实用性。第二是采用德尔菲法，按行业校准可替代性的阈值。第三是对案例进行独立的双重编码，从而可以估计编码者间信度。第四是行业应用（医疗、能源、金融），可采用匿名内部案例研究的形式，将该框架与DORA所要求的服务商登记册或现有的影响分析联系起来。</p>
