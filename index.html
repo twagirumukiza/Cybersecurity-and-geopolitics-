@@ -341,6 +341,17 @@
       }
     }
 
+
+    /* Chinois simplifié : polices CJK, sans césure ni espacement latin */
+    #content-zh, #content-zh * {
+      font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "WenQuanYi Micro Hei", "Segoe UI", system-ui, sans-serif;
+    }
+    #content-zh p, #content-zh li { line-height: 1.95; hyphens: none; text-align: justify; }
+    #content-zh h1 { line-height: 1.45; }
+    #content-zh td { word-break: break-word; }
+    #content-zh th { word-break: keep-all; min-width: 4.2em; }
+    .ref-list { word-break: break-word; }
+
     /* Ancres : ne pas disparaître sous l'en-tête fixe */
     [id] { scroll-margin-top: calc(var(--header-h, 52px) + 12px); }
   </style>
@@ -353,6 +364,7 @@
       <div class="controls">
         <button class="ctrl-btn" id="langFR" title="Français">FR</button>
         <button class="ctrl-btn" id="langEN" title="English">EN</button>
+        <button class="ctrl-btn" id="langZH" title="中文（普通话）">中文</button>
         <button class="ctrl-btn" id="themeBtn" title="Thème">🌓</button>
         <button class="ctrl-btn" id="fontMinus" title="Réduire la taille">A−</button>
         <button class="ctrl-btn" id="fontPlus" title="Augmenter la taille">A+</button>
@@ -467,6 +479,58 @@
       <a href="#en-refs">References</a>
       <a href="#en-annexes">Appendices</a>
     </div>
+    <div id="navZH" class="lang-nav" style="display:none">
+      <a href="#zh-abstract">摘要</a>
+      <a href="#zh-1">1. 引言</a>
+      <a href="#zh-1-1" class="sub">1.1 背景与问题</a>
+      <a href="#zh-1-2" class="sub">1.2 研究问题</a>
+      <a href="#zh-1-3" class="sub">1.3 陈述的性质</a>
+      <a href="#zh-2">2. 理论框架</a>
+      <a href="#zh-2-1" class="sub">2.1 相互依存与胁迫</a>
+      <a href="#zh-2-2" class="sub">2.2 网络、冲突与混合威胁</a>
+      <a href="#zh-2-3" class="sub">2.3 系统性风险</a>
+      <a href="#zh-2-4" class="sub">2.4 组织韧性</a>
+      <a href="#zh-2-5" class="sub">2.5 欧洲监管框架</a>
+      <a href="#zh-2-6" class="sub">2.6 已识别的空白</a>
+      <a href="#zh-3">3. 概念框架</a>
+      <a href="#zh-3-1" class="sub">3.1 边界</a>
+      <a href="#zh-3-2" class="sub">3.2 从依赖到关键性</a>
+      <a href="#zh-3-3" class="sub">3.3 类型学</a>
+      <a href="#zh-3-4" class="sub">3.4 分析框架</a>
+      <a href="#zh-3-5" class="sub">3.5 命题</a>
+      <a href="#zh-4">4. 研究方法</a>
+      <a href="#zh-4-1" class="sub">4.1 研究设计</a>
+      <a href="#zh-4-2" class="sub">4.2 案例选择标准</a>
+      <a href="#zh-4-3" class="sub">4.3 资料来源</a>
+      <a href="#zh-4-4" class="sub">4.4 编码</a>
+      <a href="#zh-4-5" class="sub">4.5 效度与偏差</a>
+      <a href="#zh-5">5. 案例分析</a>
+      <a href="#zh-5-1" class="sub">5.1 NotPetya 与马士基</a>
+      <a href="#zh-5-2" class="sub">5.2 SolarWinds</a>
+      <a href="#zh-5-3" class="sub">5.3 乌克兰电网</a>
+      <a href="#zh-5-4" class="sub">5.4 Change Healthcare</a>
+      <a href="#zh-5-5" class="sub">5.5 稀土</a>
+      <a href="#zh-5-6" class="sub">5.6 人工智能</a>
+      <a href="#zh-6">6. 综合与讨论</a>
+      <a href="#zh-6-1" class="sub">6.1 比较综合</a>
+      <a href="#zh-6-2" class="sub">6.2 横向发现</a>
+      <a href="#zh-6-3" class="sub">6.3 回到命题</a>
+      <a href="#zh-6-4" class="sub">6.4 相对于现有框架的贡献</a>
+      <a href="#zh-6-5" class="sub">6.5 地缘政治增加了什么</a>
+      <a href="#zh-7">7. 对GRC的启示</a>
+      <a href="#zh-7-1" class="sub">7.1 绘制真实依赖图谱</a>
+      <a href="#zh-7-2" class="sub">7.2 地缘政治维度</a>
+      <a href="#zh-7-3" class="sub">7.3 测试降级模式</a>
+      <a href="#zh-7-4" class="sub">7.4 扩展业务连续性</a>
+      <a href="#zh-7-5" class="sub">7.5 人工智能及其供应链</a>
+      <a href="#zh-7-6" class="sub">7.6 整合各项职能</a>
+      <a href="#zh-8">8. 局限与研究方向</a>
+      <a href="#zh-8-1" class="sub">8.1 局限</a>
+      <a href="#zh-8-2" class="sub">8.2 研究方向</a>
+      <a href="#zh-9">9. 结论</a>
+      <a href="#zh-refs">参考文献</a>
+      <a href="#zh-annexes">附录与声明</a>
+    </div>
   </nav>
 
   <main id="mainContent">
@@ -478,6 +542,7 @@
       <div class="download-btns">
         <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 Télécharger le PDF (FR)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 Download PDF (EN)</a>
+        <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 Télécharger le PDF (中文)</a>
       </div>
 
       <section id="fr-abstract" class="abstract-box">
@@ -815,6 +880,7 @@
       <div class="download-btns">
         <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 Download PDF (FR)</a>
         <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 Download PDF (EN)</a>
+        <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 Download PDF (中文)</a>
       </div>
 
       <section id="en-abstract" class="abstract-box">
@@ -1142,6 +1208,341 @@
         <li><strong>Use of generative AI tools:</strong> AI was used for proofreading.</li>
       </ul>
     </article>
+    <article id="content-zh" class="lang-block" lang="zh-CN">
+      <h1>数字依赖与组织韧性：地缘政治背景下网络风险的分析框架</h1>
+      <p class="meta">Innocent Twagirumukiza · 2026年10月</p>
+
+      <div class="download-btns">
+        <a class="dl-btn" href="Dependances_numeriques_resilience_organisationnelle_FR.pdf" download>📄 下载 PDF（法语）</a>
+        <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_EN.pdf" download>📄 下载 PDF（英语）</a>
+        <a class="dl-btn" href="Digital_Dependencies_Organisational_Resilience_ZH.pdf" download>📄 下载 PDF（中文）</a>
+      </div>
+
+      <section id="zh-abstract" class="abstract-box">
+        <h2>摘要</h2>
+        <p><strong>背景。</strong>网络风险至今仍主要围绕组织自身管理的技术边界来界定。然而，近期的机构报告和多起重大事件表明，组织所面临的风险敞口还来自其无法控制的资源：软件供应商、服务中介、基础设施、硬件组件和算力。</p>
+        <p><strong>目的。</strong>本文探讨：在什么条件下，外部依赖会成为网络风险传导的载体（包括该风险产生于地缘政治背景之时）；地缘政治维度在其中发挥何种作用；以及网络风险治理如何将其纳入考量。</p>
+        <p><strong>方法。</strong>通过概念分析，提出五类依赖的类型学和五个维度的分析框架（依赖、集中度、可替代性、传导、韧性）。随后将该框架应用于公开资料中记录的六种情形：NotPetya 与马士基、SolarWinds、2015年乌克兰电网攻击、Change Healthcare、稀土，以及与人工智能相关的依赖。每个案例的地缘政治维度均给出证据等级。</p>
+        <p><strong>结果。</strong>区分技术安全边界与依赖边界，使我们得以将性质迥异的事件放在一起解读。在所考察的案例中，一项依赖的关键性似乎更多地与供给集中度、替代时间以及降级模式的缺失相关，而与引发中断的行为者的性质关系较小。只有部分案例存在正式确立的地缘政治关联。</p>
+        <p><strong>启示。</strong>本文向治理、风险与合规（GRC）职能提出六项方向，从绘制真实依赖图谱，到测试降级模式下的运行，再到将人工智能供应链纳入考量。</p>
+        <p><strong>局限。</strong>本研究依赖公开文献资料、少量案例以及单一分析者的编码，未提供原创的实证验证。</p>
+        <p class="keywords"><strong>关键词：</strong>网络安全；风险管理；数字依赖；组织韧性；地缘政治；供应链；治理；GRC。</p>
+      </section>
+
+      <h2 id="zh-1">1. 引言</h2>
+      <h3 id="zh-1-1">1.1 背景与问题</h3>
+      <p>大多数网络风险管理框架都从组织所管理的对象出发：工作站、服务器、应用、网络、身份和数据。这种做法是合理的，因为这是组织可以直接采取行动的边界。然而，一旦业务连续性依赖于该边界之外的资源——第三方发布的软件、基础设施服务、电信运营商、支付服务商、电子元器件、能源——这种做法就显得不够了。</p>
+      <p>战略环境加剧了这一局限。欧盟理事会在2026年3月16日的结论中强调，恶意网络活动往往是更广泛的混合行动的重要组成部分，这些行动由国家行为者或充当国家代理人的非国家行为者实施（Council of the European Union, 2026, point 12）。欧盟网络安全局（ENISA）在其2026年威胁态势报告中指出，针对数字依赖的攻击，包括针对供应链和第三方的攻击，通常会引发大规模或高影响的事件（ENISA, 2026a; ENISA, 2026b）。公共行政部门是遭受攻击最多的行业，占2025年记录案例的32%（ENISA, 2026b）。</p>
+      <p>由此可见，组织无需成为攻击目标也会暴露于风险之中。一家并无特殊政治或军事利益的企业，仍然身处某个生态系统之中：它依赖云服务商、电信运营商、服务提供商、境外开发的软件、能源供应商和银行。这些行为者中任何一方遭到攻击，其影响都可能波及该企业，而企业本身从未被瞄准。于是，通常的问题（“我是目标吗？”）让位于另一个问题：我的业务依赖于什么，谁可能把这种依赖变成杠杆？</p>
+      <p>这一转变对研究和实践都提出了问题。关于相互依存与胁迫的研究主要针对国家；关于供应链的研究往往笼统地看待中断；而网络风险管理框架则始终以技术边界为中心。这三类研究很少交汇，没有一类能为首席信息安全官（CISO）提供方法，以便在地缘政治环境恶化时判断哪些外部依赖值得特别关注。</p>
+
+      <h3 id="zh-1-2">1.2 研究问题与贡献</h3>
+      <p>本文的核心问题如下：在什么条件下，外部依赖会成为地缘政治背景下网络风险传导的载体；地缘政治维度在其中起什么作用；网络风险治理又如何将其纳入考量？这一问题分解为三个子问题。如何刻画一项真正重要的依赖，以区别于单纯的商业关系？哪些传导机制能够区分性质不同的事件，无论其是否属于网络攻击？对于治理、风险与合规（GRC）职能，应当得出哪些结论？</p>
+      <p>本文有四项贡献。其一，区分了技术安全边界与依赖边界。其二，提出了五类依赖的类型学和五个维度的分析框架。其三，将该框架应用于六种有文献记录的情形，并为每种情形说明地缘政治关联的证据等级。其四，由此推导出面向GRC的六项操作性方向。本文采用概念性论文的路径：先综合文献，再将所提出的框架与案例相对照（Jaakkola, 2020）。本文不主张进行统计检验。</p>
+
+      <h3 id="zh-1-3">1.3 陈述的性质与行文结构</h3>
+      <p>本文中的陈述并不具有同等地位，读者应当能够加以区分。取自机构报告、官方文件或审计报告的事实，作为有文献记录的发现呈现。这些发现与依赖的地缘政治之间所建立的联系，属于笔者的解释。第7节的建议则是治理方面的主张，而非实证结论。</p>
+      <p>后文安排如下。第2节将本文置于文献与监管框架之中。第3节阐述概念框架，第4节说明方法。第5节分析六个案例；第6节对其进行比较并讨论所提出的命题。第7节得出对GRC的启示，第8节阐明局限，第9节为结论。</p>
+
+      <h2 id="zh-2">2. 理论框架与文献综述</h2>
+      <h3 id="zh-2-1">2.1 相互依存与胁迫</h3>
+      <p>Keohane 与 Nye（1977）指出，不对称的相互依存是权力的来源：最容易摆脱这一关系的一方，对另一方拥有杠杆。Farrell 与 Newman（2019）更新了这一推理，指出全球经济网络（金融、通信、生产）并非均匀分布，而是围绕核心节点组织起来。对这些节点行使权力的国家可以由此获得两种效果：全景监控效应，即获取网络中流通的信息；以及咽喉节点效应，即能够阻止对手接入网络。云计算平台、支付系统、软件更新渠道和先进半导体制造商，恰恰具备核心节点的这些特征。</p>
+      <p>因此，这一框架提供了以组织为中心的方法所缺少的地缘政治机制。但就我们的目的而言，它也有局限：它描述的是国家的战略，而不是下游组织的处境——正是下游组织承受杠杆的施加或其附带效应。</p>
+
+      <h3 id="zh-2-2">2.2 网络、冲突与混合威胁</h3>
+      <p>Rid（2012）认为，大多数网络行动属于破坏、间谍和颠覆，而非严格意义上的战争。Buchanan（2017）描述了网络空间特有的安全困境：出于防御或情报目的的入侵，可能被解读为攻击的准备，从而助长升级。近期的机构文件延伸了这些分析。欧盟理事会指出，混合威胁往往综合运用多种手段，包括信息操纵与干预、网络攻击、经济胁迫、外交胁迫和军事力量威胁，其设计意图是停留在会被视为战争行为的门槛之下（Council of the European Union, 2026）。</p>
+      <p>因此，一次行动的目标并不限于窃取数据或勒索赎金。它们可能包括搜集情报、为未来行动做准备、扰乱某一行业、中断某项服务、测试某种能力、施加压力、影响舆论或产生经济效应。还有一个解释上的困难：勒索软件可能追求经济目的，拒绝服务攻击可能来自黑客活动分子，间谍行动可能来自国家行为者，而这些类别相互重叠。对于组织而言，在必须作出决策的时刻，归因往往无从获得。</p>
+
+      <h3 id="zh-2-3">2.3 系统性风险与供应链</h3>
+      <p>Perrow（1984）表明，既复杂又紧密耦合的系统会产生操作者既无法预见也无法及时阻止的事故。当代数字链条同时具备这两种属性。供应链文献由此引出了脆弱性的概念：Christopher 与 Peck（2004）将韧性与行为者之间的可见性、灵活性和协作联系起来，而 Sheffi（2005）则强调集中于少数供应商所带来的隐性成本。</p>
+      <p>数字领域还有一个特殊之处：信任关系（一次经过签名的更新、一款拥有扩展权限的监控工具）本身就成为风险的组成部分。ENISA 还指出，数字依赖扩大了攻击面，需要新一级的警惕（ENISA, 2026b）。欧盟NIS合作小组于2026年2月13日通过的ICT供应链安全工具箱，提出了识别、评估和缓解这些风险的共同方法，其中包括对高风险供应商的依赖所带来的风险（European Commission / NIS Cooperation Group, 2026）。</p>
+
+      <h3 id="zh-2-4">2.4 组织韧性</h3>
+      <p>在韧性工程中，韧性指系统在扰动之前、之中和之后调整其运行，以维持所需运作的能力（Hollnagel et al., 2006）。NIST 将网络韧性分解为四个目标：预见、抵御、恢复、适应（Ross et al., 2021）。ISO 22301标准（2019）围绕影响分析和恢复策略来组织业务连续性。</p>
+      <p>这些框架提供了扎实的工具，但它们首先面向的是组织所控制的系统和流程。第三方的失效在其中通常只是影响分析中的众多情景之一，而不是一个独立的分析对象。</p>
+
+      <h3 id="zh-2-5">2.5 欧洲监管框架</h3>
+      <p>NIS2 指令（2022/2555）要求相关实体采取涵盖供应链安全的风险管理措施，包括与直接供应商的关系（第21条），并在欧盟层面规定对关键供应链进行协调的风险评估（第22条）。DORA 条例（2022/2554）对金融行业走得更远：它规范ICT服务提供商所产生的风险，要求评估集中度风险，并规定退出策略。《网络韧性法案》（2024/2847）要求制造商对其产品中集成的第三方组件尽到尽职调查义务。《人工智能法案》（2024/1689）在提供者与部署者之间分配义务，使人工智能价值链成为合规的对象。ISO/IEC 27001:2022 和 ISO/IEC 27036 标准则涉及供应商关系。</p>
+      <p>这些文本有一个共同点：它们要求第三方风险得到识别和处理。然而，如何处理则留给组织自行决定，而主流实践仍然是辅以供应商登记册的合规调查问卷。替代时间、降级模式的保持以及对政治决策的暴露，在这些文本中并未作为明确的标准出现，或者只是部分出现（DORA）。</p>
+
+      <h3 id="zh-2-6">2.6 已识别的空白</h3>
+      <p>可见，三种论述并存却未相交。相互依存理论解释了国家如何利用网络节点，但没有下沉到组织层面。供应链文献分析了组织的脆弱性，但缺少地缘政治胁迫的机制。网络风险管理框架为决策提供了工具，但围绕的是技术边界。本文正位于它们的交汇处：试图在组织层面上，转译武器化的相互依存对数字依赖和物质依赖产生了什么影响。</p>
+
+      <h2 id="zh-3">3. 概念框架</h2>
+      <h3 id="zh-3-1">3.1 技术安全边界与依赖边界</h3>
+      <p>网络风险分析最常围绕组织直接管理的资产来展开。我们把组织自身能够施加保护措施的系统和资产的集合称为<em>技术安全边界</em>。把一旦不可用或被攻陷便可能妨碍组织履行其使命的资源和行为者的集合称为<em>依赖边界</em>。两个边界部分重叠但并不重合。云服务商可能属于后者而不属于前者；一台工作站属于前者，但如果它不支撑任何关键职能，则未必出现在后者之中。</p>
+      <p>这一区分改变了向风险管理者提出的问题。问题不再仅仅是所管理的对象是否得到保护，而是要理解是什么使组织得以运转，以及什么可能使其无法运转。它延伸了业务影响分析背后的直觉，同时将其应用于组织在技术上、法律上乃至地理上都无法控制的资源。</p>
+
+      <h3 id="zh-3-2">3.2 从依赖到关键性</h3>
+      <p>依赖并不等于脆弱性。几乎每个组织都依赖供应商，这种互联是数字经济的常态。当若干条件叠加时，依赖才成为战略性的风险因素：供给高度集中、难以替代、替换时间长、对技术的掌控薄弱，以及暴露于政治决策或国际紧张局势。前三者是结构性的，第四者取决于组织，最后一者取决于环境。我们用<em>关键性</em>来表示某项依赖满足这些条件的程度。</p>
+      <p>这一澄清带来方法论上的后果。供应商的国籍不足以衡量地缘政治暴露，后者必须建立在可观察的因素之上（见3.4）。</p>
+
+      <h3 id="zh-3-3">3.3 依赖的类型学</h3>
+      <p>我们区分五个类别，按组织所依赖资源的性质来界定（表1）。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>类别</th><th>组织所依赖的资源</th><th>典型失效模式</th><th>可能的地缘政治杠杆</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>软件</td><td>第三方软件、更新、监控工具</td><td>分发链被攻陷，完整性丧失</td><td>针对供应商的国家行动，对其施加的法律约束</td></tr>
+            <tr><td>工业（OT）</td><td>控制系统和联网的技术设备</td><td>失去控制，物理服务停止或降级</td><td>对关键基础设施的破坏</td></tr>
+            <tr><td>服务中介</td><td>行业的核心服务商（支付、处理、共享基础设施）</td><td>原本相互独立的组织同时无法获得服务</td><td>对核心节点施压，冲突的附带效应</td></tr>
+            <tr><td>硬件</td><td>原材料、元器件、制造能力</td><td>供应中断或受限</td><td>出口限制、制裁</td></tr>
+            <tr><td>算法</td><td>人工智能模型、算力、数据及相关服务</td><td>失去访问权限、模型被篡改、服务不可用</td><td>对算力组件的出口管制，适用的司法管辖</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>连锁商店的制冷控制系统，是处于情景阶段的工业依赖的一个例子。在多个场所部署的同一种技术形成了共同依赖，而技术过时、维护不足或缺少备用方案，都可能造成同时失效。由于缺少有文献记录的事件，我们没有将这一情景纳入第5节的案例。它仅用于说明这一类别。</p>
+
+      <h3 id="zh-3-4">3.4 分析框架</h3>
+      <p>该框架包含五个维度（表2）。每个维度对应风险管理者可以就某项依赖提出的一个问题。前四个维度衡量风险敞口：水平越高，组织越暴露。第五个维度描述一种能力：越强，敞口越受控制。针对可替代性所提出的阈值区分三个数量级：运行层面的恢复（数日）、重新配置（数周至数月）和结构性替换（三个月以上）。这些阈值仅供参考，反映的是笔者的选择，需要按行业加以校准，例如依据影响分析中的恢复时间目标。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>维度</th><th>问题</th><th>可观察的指标</th><th>解读</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>依赖</td><td>我们的业务离不开哪些外部资源？</td><td>关键职能及其支撑资源的图谱、合同、流程</td><td>低、中或高暴露</td></tr>
+            <tr><td>集中度</td><td>多个关键职能是否依赖同一供应商、同一技术或同一地理区域？</td><td>某一服务商或技术在关键职能中的占比、市场集中度、所在地</td><td>低、中或高暴露</td></tr>
+            <tr><td>可替代性</td><td>替换一项不可用的资源需要多长时间？</td><td>预计替换时间、迁移成本、是否存在合格的替代方案</td><td>低（一周以内）、中（一周至三个月）、高（三个月以上）暴露</td></tr>
+            <tr><td>传导</td><td>哪些业务、子公司、基础设施或合作伙伴会受到影响？</td><td>依赖的职能和实体数量、互联程度</td><td>低、中或高暴露</td></tr>
+            <tr><td>韧性</td><td>哪些职能可以在降级模式下维持，能维持多久，借助什么手段？</td><td>降级程序的存在与演练、自主运行时长、替代手段</td><td>低、部分或强能力</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>地缘政治维度不是作为又一个分值进入该框架的，而是通过可观察的因素来解读：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护服务的困难。对于所研究的案例，它以4.4中定义的证据等级的形式单独记录。</p>
+
+      <h3 id="zh-3-5">3.5 命题</h3>
+      <p>该框架引出三个命题，第6节将其与案例相对照。它们以工作假设的形式提出：P1 和 P3 接近直觉，主要用于检验该框架能否正确地对案例排序；而 P2 将行为者的国家性质与依赖的结构性位置相对照，是最具区分力的命题。</p>
+      <p><strong>P1。</strong>一项依赖的关键性随供给集中度和替代时间的增加而上升，无论揭示它的事件是否属于网络性质。</p>
+      <p><strong>P2。</strong>对组织的影响严重程度，较少取决于引发中断的行为者是否具有国家性质，更多取决于该依赖在关键职能架构中所处的位置，尤其是当它拥有扩展权限或在行业中处于核心位置时。</p>
+      <p><strong>P3。</strong>在降级模式下运行的能力调节着资源不可用与职能丧失之间的关系：该能力越强，职能丧失的持续时间就越有限。</p>
+
+      <h2 id="zh-4">4. 研究方法</h2>
+      <h3 id="zh-4-1">4.1 研究设计</h3>
+      <p>本文结合了概念构建（第3节）和多案例研究（第5节），均为定性的文献研究。这一选择反映了问题的性质：目的不在于衡量某一现象的发生频率，而在于检验一个框架能否使性质不同的事件变得可理解。因此，案例用于探索和讨论该框架，而不是对其进行统计检验。所追求的是分析性推广，而非统计性推广，其含义取自 Yin（2018）。从案例中构建理论的逻辑遵循 Eisenhardt（1989）。</p>
+      <h3 id="zh-4-2">4.2 案例选择标准</h3>
+      <p>案例选择以信息为导向，而不以代表性为准，遵循最大差异的逻辑（Flyvbjerg, 2006）。一个案例需满足五个条件方可入选：事件至少有一项机构来源或一手来源的记录；对组织的业务连续性产生了已证实的影响；涉及与其他案例不同的依赖类型；所涉行为者的性质各不相同（国家、犯罪、公共决策）；并且语料中至少包含一个严格意义上的网络领域之外的案例，以验证该框架是否可扩展到其他形式的依赖。</p>
+      <p>六种情形符合这些标准：NotPetya 与马士基（2017）、SolarWinds（2020）、乌克兰电网攻击（2015）、Change Healthcare（2024）、稀土限制（2025）以及与人工智能相关的依赖。最后一个案例带有前瞻性：它并非基于有文献记录的事件，并按此处理。由于缺少有来源的事件，制冷系统情景被排除在语料之外。</p>
+      <h3 id="zh-4-3">4.3 资料来源</h3>
+      <p>语料来自公共机构和欧洲机构的报告、监管文本、官方归因声明、企业年报和公共审计报告。优先采用一手来源。专业媒体仅用于其他来源所缺少的事实性要素，并会予以标明。文中的每一项事实性陈述都对应参考文献中的一项来源。</p>
+      <h3 id="zh-4-4">4.4 编码</h3>
+      <p>每个案例沿框架的五个维度进行分析（3.4）。前四个维度给出暴露水平（低、中、高），第五个维度给出能力水平（低、部分、强）。编码是定性的；在各案例的正文中予以论证，并在附录D中逐维度说明理由。</p>
+      <p>地缘政治维度通过一个设有四档的证据等级单独处理。A级指官方的国家归因或有文献记录的起诉。B级对应有文献记录的地缘政治背景，但没有共同的正式归因。C级表示有文献记录的系统性影响，但没有确立的地缘政治关联。D级适用于由并非网络行动的公共决策或政策所造成的中断。这种区分避免在地缘政治维度未经证明之处预设其存在，也避免在其已被证明之处否认其存在。</p>
+      <h3 id="zh-4-5">4.5 效度与偏差</h3>
+      <p>建构效度建立在多种来源的三角验证以及对事实、解释和命题的明确区分之上。可能的偏差有三类。文献的可得性偏向大规模且被广泛评论的事件。后见之明容易使因果序列比对当事人而言更清晰。最后，编码由单一分析者完成，限制了编码者间信度。第8节将回到这些局限。</p>
+
+      <h2 id="zh-5">5. 案例分析</h2>
+      <h3 id="zh-5-1">5.1 NotPetya 与马士基（2017）</h3>
+      <p>2017年6月的 NotPetya 事件，为风险如何传播到最初暴露的组织之外提供了清晰的例子。这一恶意软件在被植入乌克兰使用的一条软件分发链之后，在国际上扩散。航运和物流集团 A. P. Moller-Maersk 确认其系统受到影响，业务受到干扰。该公司在2017年年报中估计，此次攻击的影响在2.5亿至3亿美元之间，主要集中在马士基航运（Maersk Line）（A. P. Moller-Maersk, 2018）。详细的新闻报道称，网络的重建部分依赖于一份几乎是偶然保存下来的域控制器副本（Greenberg, 2018）。</p>
+      <p>其中起作用的依赖属于软件类：对更新渠道的信任。该案例的意义，与其说在于信息技术损害的范围，不如说在于一次软件攻陷如何波及一家运营依赖于数字系统、港口设施、货物流和合作伙伴之间协调的公司。内部的中断扩散到实体运营、客户和商业伙伴：一起信息技术事件变成了经济连续性问题。</p>
+      <p>地缘政治维度是确立的。英国和美国当局于2018年2月15日公开将 NotPetya 归因于俄罗斯军方（The White House, 2018），2020年对俄罗斯军事情报人员的起诉书也将该行动与他们联系起来（U.S. Department of Justice, 2020）。该案例属于A级。它表明，在区域背景下实施的行动，可以产生远远超出其最初战场的经济影响。</p>
+      <p>通过框架解读：依赖高，集中度中（广泛但局限于本地的软件），可替代性中（会计软件本身是可替换的；决定恢复进程的是信息系统整体的重建，据现有叙述约为数日至数周），传导高，韧性低，恢复部分得益于偶然的情况。对组织而言，教训是必须能够遏制一次本来未必以其为目标的攻击所产生的影响。</p>
+
+      <h3 id="zh-5-2">5.2 SolarWinds（2020）</h3>
+      <p>2020年12月披露的 SolarWinds Orion 监控平台被攻陷事件，说明了另一种形式的依赖：建立在对软件工具及其更新机制的信任之上的依赖。软件的合法版本被篡改，嵌入了 SUNBURST 恶意代码。分发给客户的更新因而成为入侵的载体。据该供应商称，其已通知约33,000名 Orion 客户，其中不到18,000名客户被认为安装了含有恶意代码的版本（SolarWinds Corporation, 2020）。法国 CERT-FR 记录了该事件，并建议相关组织检查其版本、查找被攻陷的迹象，并考虑该平台所管理环境面临的风险（CERT-FR, 2020）。美国 CISA 则要求联邦机构断开受影响的 Orion 产品（CISA, 2020）。</p>
+      <p>问题超出了某个产品的漏洞。监控工具对其所管理的基础设施拥有广泛的可见性。对它的信任及其被赋予的权限，使其成为通向敏感资源的入口。该案例表明，供应商的合规性、更新的合法性和厂商的声誉，都不足以保证软件链的完整性：信任关系本身就是风险的组成部分。</p>
+      <p>美国当局于2021年4月正式将该行动归因于俄罗斯对外情报局（SVR），并判断软件链被攻陷使其有能力对全球超过16,000个计算机系统进行监视或破坏（The White House, 2021; CISA, 2020）：A级。</p>
+      <p>通过框架解读：依赖高，集中度高（该平台部署于数量庞大的客户处，并拥有扩展权限），可替代性高（替换一款监控工具是一个持续数月的项目），传导高，韧性低，发现较晚。组织的安全不能完全建立在对其所依赖组件的信任之上。</p>
+
+      <h3 id="zh-5-3">5.3 乌克兰电网（2015）</h3>
+      <p>2015年12月针对乌克兰配电运营商的攻击，是理解数字行动实体后果的核心案例。停电影响了约225,000名用户，持续数小时，据分析最长约六小时。攻击者持有合法凭据，控制了指挥界面以造成中断，随后使用 KillDisk 软件清除系统，使远程恢复变得复杂，并迫使运营商切换到手动模式（CISA, 2016; Lee et al., 2016）。</p>
+      <p>该案例凸显了信息系统、运营技术与一个地区关键职能之间的相互依存。控制系统的不可用，并不只是转化为数据丢失或应用中断：它可以直接影响一种不可或缺资源的分配。因此，民用基础设施可能在对抗背景下成为攻击目标，并成为战略施压的工具。</p>
+      <p>证据等级为A级，依据是2020年美国的起诉书，其中指控俄罗斯军事情报人员对乌克兰电网实施攻击（U.S. Department of Justice, 2020）。2016年发布的警报描述了攻击及其机制，但据笔者所知并未点名其实施者（CISA, 2016）：因此，归因仅依赖于该起诉书。</p>
+      <p>通过框架解读：依赖高，集中度中（三家配电商，架构相近），可替代性中（通过手动操作在数小时内恢复供电，但数字控制系统的恢复耗时长得多；手动操作属于韧性，而非可替代性），传导中，韧性为部分。最后一点值得强调：中断持续时间相对较短，得益于运营商保留下来的手动恢复程序。保护一项关键基础设施，意味着即使其数字系统被攻陷，也要保住其提供服务的能力。</p>
+
+      <h3 id="zh-5-4">5.4 Change Healthcare（2024）</h3>
+      <p>Change Healthcare 在2024年2月遭受的勒索软件网络攻击，显示了在关键行业中对某一数字中介高度依赖的后果。这家美国服务商尤其参与医疗相关的支付处理和行政业务。据美国政府问责局（GAO）称，此次攻击包括数据窃取，造成估计8.74亿美元的损失，并对医疗服务提供者和患者护理产生了广泛的影响（U.S. GAO, 2024）。这一数字只是一个快照：就2024年而言，其母公司 UnitedHealth Group 报告的直接应对成本超过二十亿美元（不含业务损失），并为医疗服务提供者设立了超过九十亿美元的贷款计划（UnitedHealth Group, 2025）。</p>
+      <p>该案例揭示了一种集中度风险。当某个服务商在一个行业的运转中处于核心位置时，其不可用可能同时影响在法律上和运营上仍保持独立的组织。每个组织或许都有自己的网络安全安排，却仍然面对同一个失效点。</p>
+      <p>然而，必须把系统性影响与战略意图区分开来。这是一次勒索软件攻击，据笔者所知，没有公开证据将其与国家战略联系起来（U.S. GAO, 2024）。它显示了集中化依赖的后果，但不足以确立这是一次国家层面的破坏行动：C级。</p>
+      <p>通过框架解读：依赖高，集中度高，可替代性高，传导高，韧性低。该案例对命题P2很有价值：在没有被证实的国家行为者的情况下，它造成了相当大的行业影响。</p>
+
+      <h3 id="zh-5-5">5.5 稀土（2025）</h3>
+      <p>依赖的地缘政治并不局限于软件和网络，也涉及制造当代技术所需的材料和元器件。据国际能源署（IEA）称，2024年中国占全球用于磁体的稀土矿产量约60%，占其精炼产量的91%，占相关烧结永磁体全球制造量的94%（IEA, 2025）。因此，战略依赖不仅源于地质上的可得性，也源于工业加工能力的集中。</p>
+      <p>中国于2025年4月4日对七种重稀土、其化合物及相应磁体实施的出口管制，显示了这种集中可能带来的后果。IEA 指出，欧洲、美国及其他地区的汽车制造商遇到了供应困难，部分企业降低了产能利用率或暂时停产。2025年10月9日宣布的更广泛的管制，现在还针对含有中国产稀土的零件、组件和组装件（IEA, 2025）。</p>
+      <p>该案例并非网络攻击，但它拓宽了分析：一个组织可能拥有安全无虞的数字基础设施，却仍然容易受到切断某一不可或缺组件获取渠道的外部决策的影响。证据等级为D级，因为中断源于一项公共决策。</p>
+      <p>通过框架解读：依赖高，集中度高，可替代性高，传导高，韧性为部分，因为部分相关企业能够调整其生产而不至于完全停产。</p>
+
+      <h3 id="zh-5-6">5.6 人工智能与算力依赖（前瞻性案例）</h3>
+      <p>先进人工智能系统的发展，建立在相互依赖的资源之上：专用半导体、算力基础设施、数据中心、能源、训练数据、模型、科学专业知识和云计算服务。对它们的控制权在国家与产业行为者之间分布不均。一个组织可能拥有自己的数据并制定自己的安全策略，却仍然依赖外部服务商来访问模型、运行处理或维持某项关键服务。</p>
+      <p>人工智能也改变了威胁态势。ENISA 观察到恶意团体越来越多地使用人工智能，主要是为了便利或放大其活动，并指出人工智能系统融入专业环境扩大了攻击面：这些系统既是工具，也是目标（ENISA, 2025; ENISA, 2026b）。此外，NIST 对针对机器学习系统的攻击类别作了形式化：针对预测式人工智能的规避、投毒和隐私攻击，以及针对生成式人工智能的供应链攻击、提示注入和滥用（Vassilev et al., 2025）。对先进计算技术的出口限制最终表明，人工智能所需的组件已成为国家安全政策的工具。2025年1月发布的所谓人工智能扩散框架（U.S. Department of Commerce / BIS, 2025）于2025年5月被BIS宣布废止，尚未生效，截至2026年年中其替代方案仍未公布，此前对先进芯片的管制仍然有效（Miller &amp; Chevalier, 2026）。这种不稳定性本身就说明了这些杠杆的多变性质。</p>
+      <p>该案例与前述案例不同：它并非基于有文献记录的大规模中断事件。之所以保留它，是因为在任何危机发生之前，依赖的结构就已清晰可见，这使得我们能够对框架进行预防性检验。问题于是变成：我们的人工智能依赖于什么？模型、云、数据、编程接口、基础设施、供应商、图形处理器、软件链。如果模型服务商出现四十八小时的不可用，依赖它的职能能否承受？</p>
+      <p>通过框架解读：编码仅供参考：依赖为中至高（视组织而定），集中度高，可替代性高，传导中，韧性有待记录。证据等级为D级，针对算力层。</p>
+
+      <h2 id="zh-6">6. 综合与讨论</h2>
+      <h3 id="zh-6-1">6.1 比较综合</h3>
+      <p>表3再现了各案例的编码。前四个维度表示暴露，第五个维度表示能力，最后一列为4.4中定义的地缘政治证据等级。编码出自笔者，理由见附录D，仍可商榷。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>案例</th><th>类别</th><th>依赖</th><th>集中度</th><th>可替代性</th><th>传导</th><th>韧性</th><th>地缘政治证据</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>NotPetya / 马士基（2017）</td><td>软件</td><td>高</td><td>中</td><td>中</td><td>高</td><td>低</td><td>A</td></tr>
+            <tr><td>SolarWinds（2020）</td><td>软件</td><td>高</td><td>高</td><td>高</td><td>高</td><td>低</td><td>A</td></tr>
+            <tr><td>乌克兰电网（2015）</td><td>工业（OT）</td><td>高</td><td>中</td><td>中</td><td>中</td><td>部分</td><td>A</td></tr>
+            <tr><td>Change Healthcare（2024）</td><td>服务中介</td><td>高</td><td>高</td><td>高</td><td>高</td><td>低</td><td>C</td></tr>
+            <tr><td>稀土（2025）</td><td>硬件</td><td>高</td><td>高</td><td>高</td><td>高</td><td>部分</td><td>D</td></tr>
+            <tr><td>人工智能与算力（前瞻）</td><td>算法</td><td>中至高</td><td>高</td><td>高</td><td>中</td><td>有待记录</td><td>D</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="zh-6-2">6.2 横向发现</h3>
+      <p>可以得出三点发现。第一，当一项依赖难以替代并且制约着某项关键职能时，它就变得尤为敏感。集中度和替代难度均高的案例（SolarWinds、Change Healthcare、稀土），也正是影响波及整个行业或一批组织而非单个组织的案例。</p>
+      <p>第二，互联放大了事件在其起点之外的后果。NotPetya 通过乌克兰的税务软件打击了一家物流公司，Change Healthcare 则波及彼此之间除了同一个中介之外毫无联系的医疗行为者。</p>
+      <p>第三，脆弱性既可能源于网络攻击，同样也可能源于产业集中，或源于商业或政治决策。把一次勒索软件攻击和一项出口限制放在同一平面上，只有在牢记它们不同地位的前提下才有意义，而地缘政治证据等级正是将这一点明确了出来。</p>
+
+      <h3 id="zh-6-3">6.3 回到命题</h3>
+      <p>由于编码是由笔者借助框架本身完成的，下文所指出的吻合，更多是检验框架的内部一致性，而非对其加以验证：P1 和 P3 接近直觉，P2 是最具区分力的命题。</p>
+      <p><strong>P1</strong> 与案例一致。集中度高且可替代性高的情形（SolarWinds、Change Healthcare、稀土），影响范围最广；而乌克兰案例中集中度、可替代性和传导均为中等，影响仍局限于三家配电商。该命题跨越了网络事件与非网络事件的界线仍然成立，因为稀土案例在没有任何网络攻击的情况下证实了它。</p>
+      <p><strong>P2</strong> 与案例一致。Change Healthcare 在没有被证实的国家行为者的情况下造成了相当大的行业影响，而被归因于国家行为者的乌克兰攻击，持续时间有限。区分这些情形的，更多在于依赖在职能架构中的位置及其权限（SolarWinds），而非攻击者的身份。不过，行为者的性质确实会改变其他参数，例如被蓄意瞄准的概率或限制措施的持续时间，而现有语料不允许我们对此加以评估。</p>
+      <p><strong>P3</strong> 同样得到支持。在乌克兰案例中，运营商保留了手动程序，中断仅持续数小时；马士基的恢复部分得益于偶然的情况，遭受的中断则更为深重。在稀土案例中，部分制造商得以减产而不是停产。这些比较仍然只是迹象，并不构成检验，每个案例中还有其他因素在起作用。</p>
+
+      <h3 id="zh-6-4">6.4 相对于现有框架的贡献</h3>
+      <p>该框架并不主张发明这些概念：集中度、替代时间和退出策略，已经分别存在于 ISO 22301、DORA 和供应链文献之中。它的贡献在于将它们整合进一个框架，可适用于不同性质的依赖。它既不取代 ISO 22301 的影响分析，也不取代 NIS2 和 DORA 的供应商要求，而是在三个方面予以补充。它将替代时间和降级模式确立为明确且可比较的标准，而相关文本只是要求风险得到处理。它把硬件依赖和算法依赖与数字依赖置于同一框架之内处理。最后，它主张依据可观察的因素而非供应商的国籍来解读地缘政治暴露。</p>
+
+      <h3 id="zh-6-5">6.5 地缘政治增加了什么，又不能解释什么</h3>
+      <p>在所观察的五个案例中，只有三个存在正式确立的地缘政治关联（A级），第六个案例为前瞻性案例。在其余案例中，地缘政治维度或者缺位（C级），或者是间接的（D级）。这一发现要求谨慎：该框架并不证明每一项关键依赖都是地缘政治工具。它表明的是，无论中断源于何处，关键依赖都是传导的载体；而地缘政治主要起调节作用：它提高被瞄准的概率，可能延长限制措施的持续时间，也可能使获得维护或更新变得复杂。因此，地缘政治解读应当是叠加在框架之上的一个分析层，而不是取而代之的标准。</p>
+
+      <h2 id="zh-7">7. 对GRC的启示</h2>
+      <p>以下主张是笔者在前述分析基础上提出的治理建议，而非实证结论。</p>
+      <h3 id="zh-7-1">7.1 绘制真实依赖图谱</h3>
+      <p>年度合规调查问卷仍然有用，但它描述的是供应商所声明的内容，而不是组织真正依赖的对象。第一步是从关键职能出发，逆向追溯到支撑这些职能的资源，包括二级分包商和硬件组件。这一图谱直接为框架中的依赖、集中度和传导维度提供输入。</p>
+      <h3 id="zh-7-2">7.2 将地缘政治维度纳入供应商分析</h3>
+      <p>不应把地缘政治简化为基于供应商国籍的指标。更可取的是建立在可观察的因素之上：贸易限制、外交紧张、产业集中、对境外基础设施的依赖、法律约束、遭受制裁的可能性、获得维护的困难。这些因素作为一个独立的分析层予以记录，并随环境演变而修订。</p>
+      <h3 id="zh-7-3">7.3 测试降级模式下的运行</h3>
+      <p>任何组织都不能合理地假定自己能够阻止所有攻击。因此有必要知道，一旦某个关键供应商不可用，自己还能运转多久。覆盖四十八小时、一周和一个月时长的演练，能够区分哪些职能能够维持、哪些会停摆，并为韧性维度提供输入。乌克兰案例提醒我们，保留并维护手动程序是有价值的。</p>
+      <h3 id="zh-7-4">7.4 扩展业务连续性的范围</h3>
+      <p>连续性计划通常处理内部故障和物理灾害。它们必须把外部数字依赖作为独立的情景纳入其中，附上预估的替代时间和备选方案，而不是将其视为一种隐含的假设。</p>
+      <h3 id="zh-7-5">7.5 将人工智能及其供应链视为一个依赖领域</h3>
+      <p>流程中使用的人工智能服务（模型、云、数据、接口、供应商）必须出现在图谱中，并适用与其他任何依赖相同的问题，此外还要审查欧洲人工智能法规对提供者和部署者所规定的义务。</p>
+      <h3 id="zh-7-6">7.6 在风险治理层面整合各项职能</h3>
+      <p>上述演变并不意味着CISO应当取代采购、运营、连续性或经济情报方面的负责人。它需要跨职能的治理，能够将技术风险、合同风险、产业风险和地缘政治风险联系起来。第3节的框架可以作为共同语言：五个简单的问题，各职能均可在自己的领域内回答。</p>
+      <p>一个虚构的例子说明了这一方法的用法。设想一家区域性分销商，其冷链依赖于一套由服务商托管的单一监控系统。框架给出的结果是：依赖高，集中度高，可替代性中至高（迁移需要数周），传导高（所有场所），韧性低，原因是缺少手动温度记录程序。应对措施未必是更换服务商，而可能是记录一种降级模式（人工读数、缓冲库存、备份协议），并测试四十八小时的不可用。决策仍然属于治理层面的决策：在充分了解事实的前提下，减少、分散、监控或抵消该依赖。韧性并不在于消除所有依赖，而在于识别出那些可能危及关键职能的依赖。</p>
+
+      <h2 id="zh-8">8. 局限与研究方向</h2>
+      <h3 id="zh-8-1">8.1 局限</h3>
+      <p>本研究有若干局限。语料规模很小：六种情形是因其多样性而非代表性被选中，不允许做统计推广。资料来源属于文献性质，质量参差不齐。企业年报或公共审计的估算并不提供可比的度量，所引用的若干金额是带有时间性的估计。编码由单一分析者完成，未做双重编码，可替代性维度的阈值仅供参考。人工智能案例具有前瞻性：它并非基于某起事件，其编码仍是暂定的。尚未与实务工作者进行验证。最后，该主题演变迅速，部分近期资料可能被澄清或修订。</p>
+      <p>此外还有4.5中已提到的偏差：重大事件的文献丰富，可能呈现出比平均情况更惊人的图景，以及后见之明。</p>
+      <h3 id="zh-8-2">8.2 研究方向</h3>
+      <p>有四个方向看来是自然的延伸。第一是通过对CISO和风险管理者的半结构化访谈进行验证，以检验该框架的易读性和实用性。第二是采用德尔菲法，按行业校准可替代性的阈值。第三是对案例进行独立的双重编码，从而可以估计编码者间信度。第四是行业应用（医疗、能源、金融），可采用匿名内部案例研究的形式，将该框架与DORA所要求的服务商登记册或现有的影响分析联系起来。</p>
+
+      <h2 id="zh-9">9. 结论</h2>
+      <p>本文从一个简单的观察出发：保护信息系统，已不足以说明组织要运转依赖于什么。文章提出区分技术安全边界与依赖边界，把依赖分为五类，并通过五个问题加以审视：依赖、集中度、可替代性、传导、韧性。应用于六种情形后，这一框架使我们能够把性质迥异的事件放在一起，从针对软件链的国家行动，到对材料的出口限制。</p>
+      <p>这些案例表明，一项依赖的关键性首先源于供给集中度、替换的困难以及降级模式的缺失。地缘政治在其中的作用是真实的，但是间接的：它改变中断的概率和持续时间，却并非其唯一原因。这一结论是有案例支撑的工作假设，而非已经证明的结果，它有待8.2中所述的验证。</p>
+      <p>对于治理、风险与合规职能而言，其后果是实际的。要做的是绘制业务真正依赖的对象，测试资源缺失时会发生什么，并在充分了解事实的前提下，决定减少、分散、监控或抵消哪些依赖。网络韧性不仅仅在于阻止危机进入组织，还要求在危机已经发生时仍能继续运转。</p>
+
+      <h2 id="zh-refs">参考文献</h2>
+      <ul class="ref-list">
+        <li>A. P. Moller-Maersk. (2018). <em>Annual Report 2017</em>. https://www.maersk.com/</li>
+        <li>Buchanan, B. (2017). <em>The cybersecurity dilemma: Hacking, trust and fear between nations</em>. Oxford University Press.</li>
+        <li>CERT-FR. (2020, updated 2021). <em>Présence de code malveillant dans SolarWinds Orion</em> (Alert CERTFR-2020-ALE-026). https://www.cert.ssi.gouv.fr/</li>
+        <li>Christopher, M., &amp; Peck, H. (2004). Building the resilient supply chain. <em>The International Journal of Logistics Management, 15</em>(2), 1-14.</li>
+        <li>CISA. (2016). <em>Cyber-attack against Ukrainian critical infrastructure</em> (Alert IR-ALERT-H-16-056-01). https://www.cisa.gov/</li>
+        <li>CISA. (2020, December 13). <em>Emergency Directive 21-01: Mitigate SolarWinds Orion code compromise</em>. https://www.cisa.gov/</li>
+        <li>Council of the European Union. (2026, March 16). <em>Council adopts conclusions on advancing the EU’s capacity to counter hybrid threats</em> (Press release 192/26).</li>
+        <li>Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 (NIS 2 Directive). <em>Official Journal of the European Union</em>, L 333, 27 December 2022.</li>
+        <li>Eisenhardt, K. M. (1989). Building theories from case study research. <em>Academy of Management Review, 14</em>(4), 532-550.</li>
+        <li>ENISA. (2025, October 1). <em>ENISA Threat Landscape 2025</em>. European Union Agency for Cybersecurity.</li>
+        <li>ENISA. (2026a, September 22). <em>ENISA Threat Landscape 2026</em>.</li>
+        <li>ENISA. (2026b, September 22). <em>Exploring the evolution of the cyber threat landscape</em> [Press release].</li>
+        <li>European Commission / NIS Cooperation Group. (2026, February 13). <em>Toolbox to improve ICT supply chain security</em>.</li>
+        <li>Farrell, H., &amp; Newman, A. L. (2019). Weaponized interdependence. <em>International Security, 44</em>(1), 42-79.</li>
+        <li>Flyvbjerg, B. (2006). Five misunderstandings about case-study research. <em>Qualitative Inquiry, 12</em>(2), 219-245.</li>
+        <li>Greenberg, A. (2018, August 22). The untold story of NotPetya. <em>Wired</em>.</li>
+        <li>Hollnagel, E., Woods, D. D., &amp; Leveson, N. (Eds.). (2006). <em>Resilience engineering: Concepts and precepts</em>. Ashgate.</li>
+        <li>International Energy Agency. (2025). <em>With new export controls on critical minerals</em>. https://www.iea.org/</li>
+        <li>ISO. (2019). <em>ISO 22301:2019 Security and resilience: Business continuity management systems</em>.</li>
+        <li>ISO/IEC. (2022). <em>ISO/IEC 27001:2022</em>.</li>
+        <li>ISO/IEC. (2021). <span>ISO/IEC 27036-1:2021</span>.</li>
+        <li>Jaakkola, E. (2020). Designing conceptual articles. <em>AMS Review, 10</em>, 18-26.</li>
+        <li>Keohane, R. O., &amp; Nye, J. S. (1977). <em>Power and interdependence</em>. Little, Brown.</li>
+        <li>Lee, R. M., Assante, M. J., &amp; Conway, T. (2016). <em>Analysis of the cyber attack on the Ukrainian power grid</em>. SANS ICS / E-ISAC.</li>
+        <li>Miller &amp; Chevalier. (2026, August 12). <em>BIS export controls 2025 year-in-review and 2026 mid-year update</em>. https://www.millerchevalier.com/publication/bis-export-controls-2025-year-review-and-2026-mid-year-update</li>
+        <li>Perrow, C. (1984). <span>Normal accidents</span>. Basic Books.</li>
+        <li>Regulation (EU) 2022/2554 (DORA). <em>Official Journal of the European Union</em>, L 333, 27 December 2022.</li>
+        <li>Regulation (EU) 2024/1689 (AI Act). <em>Official Journal of the European Union</em>, L, 12 July 2024.</li>
+        <li>Regulation (EU) 2024/2847 (Cyber Resilience Act). <em>Official Journal of the European Union</em>, L, 20 November 2024.</li>
+        <li>Rid, T. (2012). Cyber war will not take place. <em>Journal of Strategic Studies, 35</em>(1), 5-32.</li>
+        <li>Ross, R., et al. (2021). <em>Developing cyber-resilient systems</em> (NIST SP 800-160 Vol. 2 Rev. 1). NIST.</li>
+        <li>Sheffi, Y. (2005). <em>The resilient enterprise</em>. MIT Press.</li>
+        <li>SolarWinds Corporation. (2020, December 14). <em>Form 8-K</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm</li>
+        <li>The White House. (2018, February 15). Statement from the Press Secretary.</li>
+        <li>The White House. (2021, April 15). Fact sheet: Imposing costs for harmful foreign activities by the Russian government.</li>
+        <li>U.S. Department of Commerce / BIS. (2025). Framework for Artificial Intelligence Diffusion. <em>Federal Register, 90</em> FR 4544.</li>
+        <li>U.S. Department of Justice. (2020, October 19). Six Russian GRU officers charged… [Press release].</li>
+        <li>U.S. Government Accountability Office. (2024). <em>Healthcare cybersecurity</em> (GAO-25-107755).</li>
+        <li>UnitedHealth Group. (2025). <em>Form 10-K for the fiscal year ended December 31, 2024</em>. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/731766/000073176625000063/unh-20241231.htm</li>
+        <li>Vassilev, A., Oprea, A., Fordyce, A., Anderson, H., Davies, X., &amp; Hamin, M. (2025). <em>Adversarial machine learning: A taxonomy and terminology of attacks and mitigations</em> (NIST AI 100-2 E2025). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-2e2025</li>
+        <li>Yin, R. K. (2018). <em>Case study research and applications</em> (6th ed.). Sage.</li>
+      </ul>
+
+      <h2 id="zh-annexes">附录与声明</h2>
+      <h3>附录A. 地缘政治证据等级的编码规则</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>等级</th><th>定义</th><th>划分规则</th><th>涉及案例</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>官方的国家归因或有文献记录的起诉</td><td>至少有一个公共机构已正式将该行动归因于某一国家行为者或其代理人</td><td>NotPetya、SolarWinds、乌克兰电网</td></tr>
+            <tr><td>B</td><td>有文献记录的地缘政治背景，但没有共同的正式归因</td><td>机构报告确立了背景，但不存在正式归因</td><td>语料中无</td></tr>
+            <tr><td>C</td><td>有系统性影响，但没有确立的地缘政治关联</td><td>有文献记录的事件；没有任何证据将其与国家战略联系起来</td><td>Change Healthcare</td></tr>
+            <tr><td>D</td><td>由非网络性质的公共决策所造成的中断</td><td>监管、商业或出口管制措施</td><td>稀土、人工智能（算力层）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>如果在两个等级之间存疑，则采用预设地缘政治关联最少的那一级。</p>
+
+      <h3>附录B. 各案例的主要资料来源</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>案例</th><th>主要资料来源</th></tr></thead>
+          <tbody>
+            <tr><td>NotPetya 与马士基</td><td>A. P. Moller-Maersk (2018); The White House (2018); U.S. Department of Justice (2020); Greenberg (2018)</td></tr>
+            <tr><td>SolarWinds</td><td>CERT-FR (2020); CISA (2020); SolarWinds Corporation (2020); The White House (2021)</td></tr>
+            <tr><td>乌克兰电网</td><td>CISA (2016); Lee et al. (2016); U.S. Department of Justice (2020)</td></tr>
+            <tr><td>Change Healthcare</td><td>U.S. GAO (2024); UnitedHealth Group (2025)</td></tr>
+            <tr><td>稀土</td><td>IEA (2025)</td></tr>
+            <tr><td>人工智能与算力</td><td>ENISA (2025, 2026b); Vassilev et al. (2025); U.S. Department of Commerce / BIS (2025); Miller &amp; Chevalier (2026)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>附录C. 术语表</h3>
+      <ul>
+        <li><strong>CISO</strong>：首席信息安全官（法语：RSSI）。</li>
+        <li><strong>GRC</strong>：治理、风险与合规。</li>
+        <li><strong>ICT</strong>：信息与通信技术。</li>
+        <li><strong>IS</strong>：信息系统。</li>
+        <li><strong>NIS</strong>：网络与信息安全。</li>
+        <li><strong>OT</strong>：运营技术（工业控制系统和联网的技术设备）。</li>
+      </ul>
+
+      <h3>附录D. 编码依据</h3>
+      <p>关于可替代性和韧性的判断出自笔者；这些判断应当提交给第二位编码者复核（见8.2）。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>案例</th><th>按维度的依据</th></tr></thead>
+          <tbody>
+            <tr><td>NotPetya / 马士基</td><td>依赖高：会计软件的更新渠道和一个互联的信息系统整体。集中度中：该软件主要在乌克兰广泛使用。可替代性中：整体重建需数日至数周。传导高：港口和物流运营受到干扰。韧性低：恢复依赖于偶然保存下来的一份副本（Greenberg, 2018）。</td></tr>
+            <tr><td>SolarWinds</td><td>依赖和集中度高：监控平台安装于数千家客户处，并拥有扩展权限。可替代性高：替换一款监控工具是一个持续数月的项目（笔者判断）。传导高：客户分布于众多行业。韧性低：发现较晚。</td></tr>
+            <tr><td>乌克兰电网</td><td>依赖高：对配电变电站的远程控制。集中度中：三家配电商，架构相近。可替代性中：数小时内恢复供电，控制系统的恢复较慢。传导中：约225,000名用户。韧性为部分：保留了手动程序。</td></tr>
+            <tr><td>Change Healthcare</td><td>依赖、集中度和传导高：支付处理和医疗行政业务的核心中介。可替代性评为高（流程、合同和集成的迁移）；该编码可商榷，因为部分服务商可能在更短时间内转向其他中介。韧性低：对医疗服务提供者产生广泛影响（U.S. GAO, 2024）。</td></tr>
+            <tr><td>稀土</td><td>依赖、集中度和传导高：中国在稀土和磁体链条上各环节的占比（IEA, 2025）。可替代性高：在中国以外建设精炼和制造能力需要数年（笔者判断）。韧性为部分：部分制造商减产而非停产。</td></tr>
+            <tr><td>人工智能与算力</td><td>编码仅供参考，无有文献记录的事件：集中度和可替代性高（算力、模型、云），依赖为中至高（视组织而定），传导中，韧性有待记录。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>声明</h3>
+      <ul>
+        <li><strong>利益冲突：</strong>无。</li>
+        <li><strong>资助：</strong>作者自有资金（Twagirumukiza）。</li>
+        <li><strong>数据可得性：</strong>数据来自参考文献中引用的公开来源。案例的编码见6.1和附录A。</li>
+        <li><strong>生成式人工智能工具的使用：</strong>人工智能用于校对。</li>
+      </ul>
+    </article>
   </main>
 
   <footer>
@@ -1162,12 +1563,15 @@
       const root = document.documentElement;
       const contentFR = document.getElementById('content-fr');
       const contentEN = document.getElementById('content-en');
+      const contentZH = document.getElementById('content-zh');
       const navFR = document.getElementById('navFR');
       const navEN = document.getElementById('navEN');
+      const navZH = document.getElementById('navZH');
       const headerTitle = document.getElementById('headerTitle');
       const navTitle = document.getElementById('navTitle');
       const langFR = document.getElementById('langFR');
       const langEN = document.getElementById('langEN');
+      const langZH = document.getElementById('langZH');
       const themeBtn = document.getElementById('themeBtn');
       const fontPlus = document.getElementById('fontPlus');
       const fontMinus = document.getElementById('fontMinus');
@@ -1176,34 +1580,33 @@
       const overlay = document.getElementById('overlay');
       const mainContent = document.getElementById('mainContent');
 
-      let lang = localStorage.getItem('pub-lang') || 'fr';
+      let lang = 'fr';
+      try { lang = localStorage.getItem('pub-lang') || 'fr'; } catch (e) {}
       let theme = localStorage.getItem('pub-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       let fontSize = parseInt(localStorage.getItem('pub-font') || '17', 10);
 
+      const LANGS = {
+        fr: { content: contentFR, nav: navFR, btn: langFR, html: 'fr',
+              title: 'Dépendances numériques et résilience organisationnelle', navTitle: 'Sommaire' },
+        en: { content: contentEN, nav: navEN, btn: langEN, html: 'en',
+              title: 'Digital Dependencies and Organisational Resilience', navTitle: 'Contents' },
+        zh: { content: contentZH, nav: navZH, btn: langZH, html: 'zh-CN',
+              title: '数字依赖与组织韧性', navTitle: '目录' }
+      };
+
       function applyLang(l) {
+        if (!LANGS[l]) l = 'fr';
         lang = l;
-        localStorage.setItem('pub-lang', l);
-        if (l === 'fr') {
-          contentFR.classList.add('active');
-          contentEN.classList.remove('active');
-          navFR.style.display = '';
-          navEN.style.display = 'none';
-          headerTitle.textContent = 'Dépendances numériques et résilience organisationnelle';
-          navTitle.textContent = 'Sommaire';
-          langFR.classList.add('active');
-          langEN.classList.remove('active');
-          document.documentElement.lang = 'fr';
-        } else {
-          contentFR.classList.remove('active');
-          contentEN.classList.add('active');
-          navFR.style.display = 'none';
-          navEN.style.display = '';
-          headerTitle.textContent = 'Digital Dependencies and Organisational Resilience';
-          navTitle.textContent = 'Contents';
-          langEN.classList.add('active');
-          langFR.classList.remove('active');
-          document.documentElement.lang = 'en';
-        }
+        try { localStorage.setItem('pub-lang', l); } catch (e) {}
+        Object.keys(LANGS).forEach(function (k) {
+          const on = (k === l);
+          LANGS[k].content.classList.toggle('active', on);
+          LANGS[k].nav.style.display = on ? '' : 'none';
+          LANGS[k].btn.classList.toggle('active', on);
+        });
+        headerTitle.textContent = LANGS[l].title;
+        navTitle.textContent = LANGS[l].navTitle;
+        document.documentElement.lang = LANGS[l].html;
       }
 
       function applyTheme(t) {
@@ -1244,6 +1647,7 @@
       // Boutons de la barre d'en-tête
       langFR.addEventListener('click', () => applyLang('fr'));
       langEN.addEventListener('click', () => applyLang('en'));
+      langZH.addEventListener('click', () => applyLang('zh'));
       themeBtn.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
       fontPlus.addEventListener('click', () => applyFont(fontSize + 1));
       fontMinus.addEventListener('click', () => applyFont(fontSize - 1));
@@ -1271,7 +1675,7 @@
       let ticking = false;
       function updateActive() {
         ticking = false;
-        const nav = lang === 'fr' ? navFR : navEN;
+        const nav = LANGS[lang].nav;
         const links = Array.from(nav.querySelectorAll('a'));
         const offset = (document.querySelector('header').offsetHeight || 60) + 20;
         let current = null;
@@ -1356,6 +1760,10 @@
           text: "Ce site peut mesurer son audience (Google Tag Manager / Google Analytics) pour comprendre quelles sections sont lues. Aucun traceur n'est déposé sans votre accord, et votre choix est modifiable à tout moment via le lien « Cookies » en bas de page.",
           yes: "Accepter", no: "Refuser"
         },
+        zh: {
+          text: "本网站可能使用 Google Tag Manager / Google Analytics 进行访问量统计，以了解哪些章节被阅读。未经您同意，不会设置任何跟踪器；您可随时通过页面底部的“Cookies”链接更改选择。",
+          yes: "接受", no: "拒绝"
+        },
         en: {
           text: "This site can measure its audience (Google Tag Manager / Google Analytics) to understand which sections are read. No tracker is set without your consent, and you can change your choice at any time via the “Cookies” link at the bottom of the page.",
           yes: "Accept", no: "Decline"
@@ -1366,7 +1774,7 @@
       function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
       function render() {
-        var l = (document.documentElement.lang || 'fr').slice(0, 2) === 'en' ? 'en' : 'fr';
+        var h = (document.documentElement.lang || 'fr').slice(0, 2); var l = (h === 'en' || h === 'zh') ? h : 'fr';
         textEl.textContent = T[l].text;
         btnYes.textContent = T[l].yes;
         btnNo.textContent = T[l].no;
